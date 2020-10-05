@@ -36,6 +36,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 ## Simple
 
 >```bkscr
+>*main
 >你好，[l][r]世界！[p]
 >```
 
@@ -49,6 +50,13 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     </src>
   </head>
   <body>
+    <logic>
+  <label>
+  <label_name>
+ main
+  </label_name>
+  </label>
+  </logic>
     <text>
       <character>
 	  	<name>
@@ -296,6 +304,13 @@ rpy有一个比较恶心的地方是
     </src>
   </head>
   <body>
+  <logic>
+  <label>
+  <label_name>
+  start
+  </label_name>
+  </label>
+  </logic>
     <text>
       <character>
         <name>

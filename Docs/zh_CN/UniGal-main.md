@@ -47,7 +47,36 @@ code的原子操作有
 
 ### ~~逻辑控制部分~~
 
-~~若将所有的跳转逻辑单独列为一类操作，将意味着每次跳转前后不同流程图需要对应不同的代码块，需要将UniGal-Script与UniGal-Diagram结合使用（当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）(这还将意味着，一旦出现```<logic></logic>```,就意味着一个剧本文件的结束)~~
+~~若将所有的跳转逻辑单独列为一类操作，将意味着每次跳转前后不同流程图需要对应不同的代码块，需要将UniGal-Script与UniGal-Diagram结合使用（当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）(这还将意味着，一旦出现```<logic></logic>```,就意味着一个剧本文件的结束(除非是label(但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))~~
+
+建议将跳转这个功能封装为
+
+```xml
+<unigal-script>
+    <body>
+        <code>
+            <action>
+                <jump>
+                    <jump_dst>
+                        //目的地标签
+                    </jump_dst>
+                    <jump_addtional>
+                        //附加内容
+                    </jump_addtional>
+                </jump>
+            </action>
+        </code>
+    </body>
+</unigal-script>
+```
+
+但是之前在logic里面也封装了一个jump
+
+所以jump到底算谁
+
+switch到底能不能算一个action
+
+这些实验性功能令人感到W3C一样的屎山
 
 
 
@@ -86,6 +115,9 @@ code的原子操作有
 	  	<color>
           //文本颜色
         </color>
+          <ruby>
+              //可以加入注音
+          </ruby>
         <comment>
           //文本内容
         </comment>
@@ -135,6 +167,11 @@ code的原子操作有
         </action>
     </code>
     <logic>
+        <label>
+            <label_name>
+                //标签的名字,目前标签尚未开发出更多用途
+            </label_name>
+        </label>
         <switch>
             <choise>
                 <choise_name>
