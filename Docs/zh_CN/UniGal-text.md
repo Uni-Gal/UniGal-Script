@@ -42,7 +42,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 ## Translate
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
-<unigal>
+<unigal-script>
   <head>
     <src>
       BKE
@@ -50,12 +50,14 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
   </head>
   <body>
     <text>
-      <name>
-        NULL
+      <character>
+	  	<name>
+          NULL
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           你好，
@@ -75,7 +77,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
       </content>
     </text>
   </body>
-</unigal>
+</unigal-script>
 ```
 # nova
 
@@ -102,20 +104,22 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 ## Translate
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
-<unigal>
+<unigal-script>
   <head>
     <src>
-      BKE
+      nova
     </src>
   </head>
   <body>
     <text>
-      <name>
-        NULL
+      <character>
+	  	<name>
+          NULL
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           坐在车厢里的人总会向外眺望。
@@ -126,12 +130,14 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
       </content>
     </text>
     <text>
-      <name>
-        NULL
+      <character>
+	  	<name>
+          NULL
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           眺望的理由多种多样：
@@ -148,12 +154,14 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
       </content>
     </text>
     <text>
-      <name>
-        NULL
+      <character>
+	  	<name>
+          NULL
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           亦或者只是下意识地一瞥。
@@ -164,12 +172,14 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
       </content>
     </text>
     <text>
-      <name>
-        NULL
+      <character>
+	  	<name>
+          NULL
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           但人们心中压抑的冲动都是相似的。
@@ -180,7 +190,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
       </content>
     </text>
   </body>
-</unigal>
+</unigal-script>
 
 ```
 
@@ -208,20 +218,22 @@ librian中的一个文本是直接结束的
 
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
-<unigal>
+<unigal-script>
   <head>
     <src>
-      BKE
+      Librian
     </src>
   </head>
   <body>
     <text>
-      <name>
-        潘大爺
+      <character>
+	  	<name>
+          潘大爺
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           舟舟！來得正是時候！
@@ -232,7 +244,7 @@ librian中的一个文本是直接结束的
       </content>
     </text>
   </body>
-</unigal>
+</unigal-script>
 ```
 
 # renpy
@@ -277,7 +289,7 @@ rpy有一个比较恶心的地方是
 
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
-<unigal>
+<unigal-script>
   <head>
     <src>
       Renpy
@@ -285,17 +297,17 @@ rpy有一个比较恶心的地方是
   </head>
   <body>
     <text>
-      <name>
-        <people>
+      <character>
+        <name>
           希尔维亚
-        </people>
+        </name>
         <color>
           #c8ffc8
         </color>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           不久之后，我们就抵达了牧场，也是我们俩人出生的地方
@@ -306,14 +318,14 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
     <text>
-      <name>
-        <people>
+      <character>
+        <name>
           鼠宝宝
-        </people>
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           我就是在这样的风景环绕之中成长起来的。这里的秋天格外秀美。
@@ -324,17 +336,17 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
     <text>
-      <name>
-        <people>
+      <character>
+        <name>
           希尔维亚
-        </people>
+        </name>
         <color>
           #c8ffc8
         </color>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           童年时，我们经常在牧场里玩耍，所以这里满满充斥着回忆。
@@ -345,17 +357,17 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
     <text>
-      <name>
-        <people>
+      <character>
+        <name>
           我
-        </people>
+        </name>
         <color>
           #c8c8ff
         </color>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           嗨……唔……
@@ -366,7 +378,7 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
   </body>
-</unigal>
+</unigal-script>
 
 ```
 
@@ -389,7 +401,7 @@ rpy有一个比较恶心的地方是
 
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
-<unigal>
+<unigal-script>
   <head>
     <src>
       AVGPlus
@@ -397,6 +409,14 @@ rpy有一个比较恶心的地方是
   </head>
   <body>
     <text>
+      <character>
+	  	<name>
+          NULL
+        </name>
+        <comment>
+          //姓名
+        </comment>
+      </character>
       <content>
         <part>
           是我，是我先，明明都是我先来的……接吻也好，拥抱也好，还是喜欢上那家伙也好……
@@ -407,7 +427,7 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
   </body>
-</unigal>
+</unigal-script>
 ```
 
 ### Simple-2
@@ -436,7 +456,7 @@ rpy有一个比较恶心的地方是
 
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
-<unigal>
+<unigal-script>
   <head>
     <src>
       AVGPlus
@@ -444,12 +464,14 @@ rpy有一个比较恶心的地方是
   </head>
   <body>
     <text>
-      <name>
-        愤怒的泡面
+      <character>
+	  	<name>
+          愤怒的泡面
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           为什么会变成这样呢……第一次有了喜欢的人。有了能做一辈子朋友的人。
@@ -460,12 +482,14 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
     <text>
-      <name>
-        愤怒的泡面
+      <character>
+	  	<name>
+          愤怒的泡面
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           两件快乐事情重合在一起。而这两份快乐，又给我带来更多的快乐。
@@ -476,12 +500,14 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
     <text>
-      <name>
-        愤怒的泡面
+      <character>
+	  	<name>
+          愤怒的泡面
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           得到的，本该是像梦境一般幸福的时间……但是，为什么，会变成这样呢……~
@@ -492,12 +518,14 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
     <text>
-      <name>
-        愤怒的泡面
+      <character>
+	  	<name>
+          愤怒的泡面
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           只要给 options 对象定义 name 字段，就会在对话中显示名字了。
@@ -508,12 +536,14 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
     <text>
-      <name>
-        愤怒的泡面
+      <character>
+	  	<name>
+          愤怒的泡面
+        </name>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
         <part>
           多次连续对话会使用同一个名字。
@@ -524,6 +554,6 @@ rpy有一个比较恶心的地方是
       </content>
     </text>
   </body>
-</unigal>
+</unigal-script>
 ```
 

@@ -47,11 +47,11 @@ code的原子操作有
 
 
 
-## 全部功能的代码示范
+## 全部功能的代码示范（原型Prototype）
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
-<unigal>
+<unigal-script>
   <head>
     <src>
       krkr/BKE/nova/librian
@@ -65,12 +65,21 @@ code的原子操作有
   </head>
   <body>
     <text>
-      <name>
+      <character>
+	  	<name>
+          NULL
+        </name>
+	    <color>
+          //文本颜色
+        </color>
         <comment>
           //姓名
         </comment>
-      </name>
+      </character>
       <content>
+	  	<color>
+          //文本颜色
+        </color>
         <comment>
           //文本内容
         </comment>
@@ -115,6 +124,6 @@ code的原子操作有
       </resource>
     </code>
   </body>
-</unigal>
+</unigal-script>
 ```
 
