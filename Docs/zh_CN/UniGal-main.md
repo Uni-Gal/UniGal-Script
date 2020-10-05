@@ -41,13 +41,19 @@ text的原子操作有
 3. waitclick
 4. 设置姓名
 
-### 代码控制部分（code）
+### 演出控制部分（code）
 
 code的原子操作有
+
+### ~~逻辑控制部分~~
+
+~~若将所有的跳转逻辑单独列为一类操作，将意味着每次跳转前后不同流程图需要对应不同的代码块，需要将UniGal-Script与UniGal-Diagram结合使用（当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）(这还将意味着，一旦出现```<logic></logic>```,就意味着一个剧本文件的结束)~~
 
 
 
 ## 全部功能的代码示范（原型Prototype）
+
+本次引入了不少全新的实验性模式，具体是否需要保留待定
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -86,7 +92,7 @@ code的原子操作有
       </content>
     </text>
     <code>
-      <resource type="pic">
+      <resource type="image">
         <image>
           <background>
             <comment>
@@ -104,6 +110,8 @@ code的原子操作有
             </comment>
           </tachie>
         </image>
+          </resource>
+          <resource type="sound">
         <sound>
           <voice>
             <comment>
@@ -121,8 +129,37 @@ code的原子操作有
             </comment>
           </effect>
         </sound>
+              
       </resource>
+        <action>
+        </action>
     </code>
+    <logic>
+        <switch>
+            <choise>
+                <choise_name>
+                    //选择支显示名称
+                </choise_name>
+                <choise_label>
+                    //选择支跳转目标
+                </choise_label>
+            </choise>
+            <timer>
+                <timer_num>
+                    //允许您写一个以毫秒为单位的倒计时
+                </timer_num>
+                <timer_default>
+                    //倒计时结束后需要自动选择的选择支的名称
+                </timer_default>
+            </timer>
+        </switch>
+        <jump>
+            //就是单纯的跳转
+        </jump>
+            <comment>
+              //您只能选择switch或jump中的一种logic
+            </comment>
+    </logic>
   </body>
 </unigal-script>
 ```
