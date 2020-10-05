@@ -1,9 +1,9 @@
 # UniGal-Script
 
-A universal galgame scripting language that opens and breaks engine barriers
+Offer a visuable way to switch and show the different possibility of a Galgame
 
 ## UniGal-Script介绍
-UniGal是一个希望能通过统一的语法标准和格式，允许从各种不同的引擎导入，并允许各游戏引擎的开发者构建支持UniGal的导入工具，实现类似ONNX一样的跨框架的方案支持，允许开发者快速从一套框架迁移到另一套更适合的框架，实现迈向开放世界的第一步。
+没啥好介绍的，希望大家原生支持，谢谢
 
 ## UniGal-Script特性
 1. UniGal-Script为创造一种具有普适性的语法标准，因此采用了XML作为基础。之所以采用XML而不是JSON或YAML，可详见备注部分的文档。没有采用JSON或YAML，是为了保证一个能更好的适应更多环境的脚本
@@ -33,6 +33,8 @@ snowing
 unity-nova
 
 unity-xihe animation engine
+
+renpy
 
 ### 可能支持的单向导入的引擎
 unity-Utage

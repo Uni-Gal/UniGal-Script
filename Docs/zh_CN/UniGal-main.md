@@ -1,5 +1,35 @@
 # UniGal-main
 
+
+
+在您拆分原子操作的过程中
+
+将需要大量的参考其他语言的语法文档
+
+在此将一部分有官方文档或高度可信文档的引擎的文档贴在这里
+
+供后面拆原子操作的大佬参考
+
+librian https://doc.librian.net/site/%E4%B8%BB%E9%A0%81.html 官方QQ群618775838
+
+avgplus https://docs.avg-engine.com/ 官方QQ群323092720
+
+BKEngine http://docs.bakery.moe/ 官方QQ群303680897
+
+nova 还没开源呢 官方QQ群（不仅是引擎）876212259
+
+renpy https://www.renpy.org/doc/html/ TG群都莫得就别想QQ了（简中文档https://www.renpy.cn/doc/index.html）
+
+krkr（正在找，不存在的吧
+
+（https://github.com/krkrz/krkrz  这个算吗说实话我对KR系的一大家子产品没啥了解和认识）
+
+（官方不存在了听说这个民间版很有名http://blog.sina.com.cn/s/articlelist_1251573991_5_1.html 和这个 https://tieba.baidu.com/p/1236613654）
+
+
+
+
+
 ## UniGal的全部原子操作的列表
 
 ### 文本处理部分（text）
