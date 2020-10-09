@@ -33,6 +33,8 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 |l|等待点击|插入action宏来分割part|waitclick|
 |p|换页等待，点击后换页|||
 
+注意，所有的换行和点击等一系列函数都不属于单纯的文本处理，应将其视作<code><action></action></code>中的一个函数
+
 ## Simple
 
 >```bkscr
@@ -51,15 +53,15 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
   </head>
   <body>
     <logic>
-  <label>
-  <label_name>
- main
-  </label_name>
-  </label>
-  </logic>
+      <label>
+        <label_name>
+          main
+        </label_name>
+      </label>
+    </logic>
     <text>
       <character>
-	  	<name>
+        <name>
           NULL
         </name>
         <comment>
@@ -70,12 +72,35 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
         <part>
           你好，
         </part>
-        <action>
+        <comment>
+          //文本内容
+        </comment>
+      </content>
+    </text>
+    <code>
+      <action>
+        <textcontrol>
           waitclick
-        </action>
-        <action>
+        </textcontrol>
+      </action>
+    </code>
+    <code>
+      <action>
+        <textcontrol>
           newline
-        </action>
+        </textcontrol>
+      </action>
+    </code>
+    <text>
+      <character>
+        <name>
+          NULL
+        </name>
+        <comment>
+          //姓名
+        </comment>
+      </character>
+      <content>
         <part>
           世界！
         </part>
@@ -87,6 +112,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
   </body>
 </unigal-script>
 ```
+
 # nova
 
 暂未开源
@@ -121,7 +147,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
   <body>
     <text>
       <character>
-	  	<name>
+        <name>
           NULL
         </name>
         <comment>
@@ -139,7 +165,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     </text>
     <text>
       <character>
-	  	<name>
+        <name>
           NULL
         </name>
         <comment>
@@ -150,9 +176,28 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
         <part>
           眺望的理由多种多样：
         </part>
-        <action>
+        <comment>
+          //文本内容
+        </comment>
+      </content>
+    </text>
+    <code>
+      <action>
+        <textcontrol>
           newline
-        </action>
+        </textcontrol>
+      </action>
+    </code>
+    <text>
+      <character>
+        <name>
+          NULL
+        </name>
+        <comment>
+          //姓名
+        </comment>
+      </character>
+      <content>
         <part>
           晕车，发呆，欣赏风景……
         </part>
@@ -163,7 +208,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     </text>
     <text>
       <character>
-	  	<name>
+        <name>
           NULL
         </name>
         <comment>
@@ -181,7 +226,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     </text>
     <text>
       <character>
-	  	<name>
+        <name>
           NULL
         </name>
         <comment>
@@ -199,7 +244,6 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     </text>
   </body>
 </unigal-script>
-
 ```
 
 # Librian
@@ -304,13 +348,13 @@ rpy有一个比较恶心的地方是
     </src>
   </head>
   <body>
-  <logic>
-  <label>
-  <label_name>
-  start
-  </label_name>
-  </label>
-  </logic>
+    <logic>
+      <label>
+        <label_name>
+          start
+        </label_name>
+      </label>
+    </logic>
     <text>
       <character>
         <name>
@@ -394,7 +438,6 @@ rpy有一个比较恶心的地方是
     </text>
   </body>
 </unigal-script>
-
 ```
 
 
@@ -571,4 +614,3 @@ rpy有一个比较恶心的地方是
   </body>
 </unigal-script>
 ```
-

@@ -37,48 +37,34 @@ krkr（正在找，不存在的吧
 text的原子操作有
 
 1. 封装为part
-2. newline
-3. waitclick
-4. 设置姓名
+2. 设置姓名
 
 ### 演出控制部分（code）
 
 code的原子操作有
 
+面向文本控制的action函数textcontrol
+1. newline
+2. waitclick
+面向逻辑的action函数
+1. jump
+2. switch
+面向演出效果的action函数
+1. 若干
+面向资源调度的action函数
+1. 若干
+
 ### ~~逻辑控制部分~~
 
-~~若将所有的跳转逻辑单独列为一类操作，将意味着每次跳转前后不同流程图需要对应不同的代码块，需要将UniGal-Script与UniGal-Diagram结合使用（当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）(这还将意味着，一旦出现```<logic></logic>```,就意味着一个剧本文件的结束(除非是label(但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))~~
+逻辑控制部分属于标记，仅包含label标签和count标签两种
 
-建议将跳转这个功能封装为
+jump和switch等跳转逻辑属于函数，归为code的action所有
 
-```xml
-<unigal-script>
-    <body>
-        <code>
-            <action>
-                <jump>
-                    <jump_dst>
-                        //目的地标签
-                    </jump_dst>
-                    <jump_addtional>
-                        //附加内容
-                    </jump_addtional>
-                </jump>
-            </action>
-        </code>
-    </body>
-</unigal-script>
-```
+将意味着每次跳转前后不同流程图需要对应不同的代码块，需要将UniGal-Script与UniGal-Diagram结合使用
 
-但是之前在logic里面也封装了一个jump
+（当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）
 
-所以jump到底算谁
-
-switch到底能不能算一个action
-
-这些实验性功能令人感到W3C一样的屎山
-
-
+但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))~~
 
 ## 全部功能的代码示范（原型Prototype）
 
@@ -101,10 +87,10 @@ switch到底能不能算一个action
   <body>
     <text>
       <character>
-	  	<name>
+        <name>
           NULL
         </name>
-	    <color>
+        <color>
           //文本颜色
         </color>
         <comment>
@@ -112,12 +98,12 @@ switch到底能不能算一个action
         </comment>
       </character>
       <content>
-	  	<color>
+        <color>
           //文本颜色
         </color>
-          <ruby>
-              //可以加入注音
-          </ruby>
+        <ruby>
+          //可以加入注音
+        </ruby>
         <comment>
           //文本内容
         </comment>
@@ -142,8 +128,8 @@ switch到底能不能算一个action
             </comment>
           </tachie>
         </image>
-          </resource>
-          <resource type="sound">
+      </resource>
+      <resource type="sound">
         <sound>
           <voice>
             <comment>
@@ -161,41 +147,54 @@ switch到底能不能算一个action
             </comment>
           </effect>
         </sound>
-              
       </resource>
-        <action>
-        </action>
-    </code>
-    <logic>
-        <label>
-            <label_name>
-                //标签的名字,目前标签尚未开发出更多用途
-            </label_name>
-        </label>
+      <action>
+        <textcontrol>
+          waitclick
+        </textcontrol>
+        <textcontrol>
+          newline
+        </textcontrol>
         <switch>
-            <choise>
-                <choise_name>
-                    //选择支显示名称
-                </choise_name>
-                <choise_label>
-                    //选择支跳转目标
-                </choise_label>
-            </choise>
-            <timer>
-                <timer_num>
-                    //允许您写一个以毫秒为单位的倒计时
-                </timer_num>
-                <timer_default>
-                    //倒计时结束后需要自动选择的选择支的名称
-                </timer_default>
-            </timer>
+          <choise>
+            <choise_name>
+              //选择支显示名称
+            </choise_name>
+            <choise_label>
+              //选择支跳转目标
+            </choise_label>
+          </choise>
+          <timer>
+            <timer_num>
+              //允许您写一个以毫秒为单位的倒计时
+            </timer_num>
+            <timer_default>
+              //倒计时结束后需要自动选择的选择支的名称
+            </timer_default>
+          </timer>
         </switch>
         <jump>
-            //就是单纯的跳转
+          <jump_dst>
+            //目的地标签
+          </jump_dst>
+          <jump_addtional>
+            //附加内容
+          </jump_addtional>
         </jump>
-            <comment>
-              //您只能选择switch或jump中的一种logic
-            </comment>
+        <comment>
+          //您只能选择switch或jump中的一种logic
+        </comment>
+      </action>
+    </code>
+    <logic>
+      <label>
+        <label_name>
+          //标签的名字,目前标签尚未开发出更多用途
+        </label_name>
+      </label>
+      <conut>
+        //第X句台词的编号
+      </conut>
     </logic>
   </body>
 </unigal-script>
