@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<unigal-script>
+  <head>
+    <src>
+      HandWriting
+    </src>
+    <ver>
+      0.0.1
+    </ver>
+  </head>
+  <body>
+    <text>
+      <character>
+        <name>
+          UniGal
+        </name>
+      </character>
+      <content>
+        <part>
+          你好
+        </part>
+      </content>
+    </text>
+    <code>
+      <action>
+        <textcontrol>
+          newline
+        </textcontrol>
+      </action>
+    </code>
+    <text>
+      <character>
+        <name>
+          UniGal
+        </name>
+      </character>
+      <content>
+        <part>
+          世界
+        </part>
+      </content>
+    </text>
+  </body>
+</unigal-script>
