@@ -36,6 +36,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{F1EB54D0-1
 		Code\XMLFILE.xml = Code\XMLFILE.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Complier", "Complier", "{2BE75352-A9BF-45DD-931B-6FD23D06B8B9}"
+	ProjectSection(SolutionItems) = preProject
+		Complier\Complier.cpp = Complier\Complier.cpp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
