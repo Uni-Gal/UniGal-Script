@@ -16,7 +16,10 @@ avgplus https://docs.avg-engine.com/ 官方QQ群323092720
 
 BKEngine http://docs.bakery.moe/ 官方QQ群303680897
 
-nova 还没开源呢 官方QQ群（不仅是引擎）876212259
+nova [Nova引擎](https://github.com/huisedenanhai/Nova)已于近日以MIT协议开源
+
+Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/huisedenanhai/Nova/blob/master/doc/novascript.md)
+ 官方QQ群（不仅是引擎）876212259
 
 renpy https://www.renpy.org/doc/html/ TG群都莫得就别想QQ了（简中文档https://www.renpy.cn/doc/index.html）
 
