@@ -16,9 +16,11 @@ avgplus https://docs.avg-engine.com/ 官方QQ群323092720
 
 BKEngine http://docs.bakery.moe/ 官方QQ群303680897
 
-nova [Nova引擎](https://github.com/huisedenanhai/Nova)已于近日以MIT协议开源
+nova [Nova引擎](https://github.com/Lunatic-Works/Nova)已于近日以MIT协议开源,[wiki](https://github.com/Lunatic-Works/Nova/wiki)
 
-Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/huisedenanhai/Nova/blob/master/doc/novascript.md)
+[](https://raw.githubusercontent.com/wiki/Lunatic-Works/Nova/img/nova_banner.png)NovaBanner
+
+Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunatic-Works/Nova/wiki/NovaScript)
  官方QQ群（不仅是引擎）876212259
 
 renpy https://www.renpy.org/doc/html/ TG群都莫得就别想QQ了（简中文档https://www.renpy.cn/doc/index.html）
@@ -75,9 +77,18 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
 
 但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))~~
 
-## 全部功能的代码示范（原型Prototype）
+## 实验性功能
 
-本次引入了不少全新的实验性模式，具体是否需要保留待定
+**本次（其实是每次）引入了不少全新的实验性模式，具体是否需要保留待定
+
+这次试图引入一个新的标签，将原有的<src></src>拆分为可以保留更多meta信息的<src_X></src_X>标签。
+X可以是engine，characterset，language等。（没错，野心甚至包含机器自动翻译）
+不仅仅引擎需要标注，不同引擎默认编码可能会有不同，如SHIFT-JIS和UTF-8之间的区别，在转换过程中有必要特别标注，避免出错.
+而属于XML头的<?xml version="1.0" encoding="utf-8"?>则标志着中间体的UniGal脚本使用的是UTF-8编码，并不意味着源文件和目标文件的编码一定都是UTF-8.
+这个实验性的标签在这期间是优先使用，并不强制性的对旧标签进行替换（有HTML的屎山的味道了）**
+
+
+## 全部功能的代码示范（原型Prototype）
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -89,6 +100,24 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
     <dst>
       nova/others
     </dst>
+    <src_engine>
+      krkr/BKE/nova/librian
+    </src_engine>
+    <dst_engine>
+      nova/others
+    </dst_engine>
+    <src_characterset>
+      UTF-8
+    </src_characterset>
+    <dst_characterset>
+      UTF-8
+    </dst_characterset>
+    <src_language>
+      zh_CN
+    </src_language>
+    <dst_language>
+      zh_CN
+    </dst_language>
     <comment>
       //
     </comment>
@@ -102,19 +131,39 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
         <color>
           //文本颜色
         </color>
+		<ruby>
+          //可以加入注音
+        </ruby>
+		<style>
+		  <bold></bold>
+		  <italic></italic>
+		  <deleted></deleted>
+		  <underlined></underlined>
+		  //style中只允许填写bool值，即true与false
+		</style>
         <comment>
-          //姓名
+          //Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的
         </comment>
       </character>
       <content>
+	    <part>
+          内容
+        </part>
         <color>
           //文本颜色
         </color>
         <ruby>
           //可以加入注音
         </ruby>
+		<style>
+		  <bold></bold>
+		  <italic></italic>
+		  <deleted></deleted>
+		  <underlined></underlined>
+		  //style中只允许填写bool值，即true与false
+		</style>
         <comment>
-          //文本内容
+          //content是文本相关，其中part是必须有的，而color和ruby是非必须的
         </comment>
       </content>
     </text>
@@ -137,6 +186,18 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
             </comment>
           </tachie>
         </image>
+        <image_basic>
+          <file>
+            //文件路径
+          </file>
+          <load>
+            //载入内存
+          </load>
+          <free>
+            //从内存释放
+          </free>
+          //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
+        </image_basic>
       </resource>
       <resource type="sound">
         <sound>
@@ -164,30 +225,56 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
         <textcontrol>
           newline
         </textcontrol>
-        <switch>
-          <choise>
-            <choise_name>
-              //选择支显示名称
-            </choise_name>
-            <choise_label>
-              //选择支跳转目标
-            </choise_label>
-          </choise>
-          <timer>
-            <timer_num>
-              //允许您写一个以毫秒为单位的倒计时
-            </timer_num>
-            <timer_default>
-              //倒计时结束后需要自动选择的选择支的名称
-            </timer_default>
-          </timer>
-        </switch>
+        <showimage>
+          //暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer
+          <imgname>
+          </imgname>
+          //提供两种标志图像范围的方法，两点标记或者LURD标记
+          <imgregion>
+            <type>
+              //填写DoublePoint/LURD/LURD_Array
+            </type>
+            <DoublePoint>
+              <Point1>
+                //左上点
+                <pos1>
+                  //row
+                </pos1>
+                <pos2>
+                  //col
+                </pos2>
+              </Point1>
+              <Point2>
+                //右下点
+                <pos1>
+                  //row
+                </pos1>
+                <pos2>
+                  //col
+                </pos2>
+              </Point2>
+            </DoublePoint>
+            <LURD>
+              <L>1</L>
+              <U>2</U>
+              <R>3</R>
+              <D>4</D>
+            </LURD>
+            <LURD_Array>
+              1,2,3,4
+              <comment>
+                //LURD_Array 本格式由Librian开发者Rimochan提出
+              </comment>
+            </LURD_Array>
+            //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为DoublePoint的形式，会自动进行转换。
+          </imgregion>
+        </showimage>
         <comment>
           //您只能选择switch或jump中的一种logic
         </comment>
       </action>
-        <logic>
-                    <jump>
+      <logic>
+        <jump>
           <jump_dst>
             //目的地标签
           </jump_dst>
@@ -195,9 +282,28 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
             //附加内容
           </jump_addtional>
         </jump>
-        </logic>
-        <extension>
-        </extension>
+      </logic>
+      <switch>
+        <choise>
+          <choise_name>
+            //选择支显示名称
+          </choise_name>
+          <choise_label>
+            //选择支跳转目标
+          </choise_label>
+        </choise>
+        <timer>
+          <timer_num>
+            //允许您写一个以毫秒为单位的倒计时
+          </timer_num>
+          <timer_default>
+            //倒计时结束后需要自动选择的选择支的名称
+          </timer_default>
+        </timer>
+      </switch>
+      <extension>
+        //暂未设定
+      </extension>
     </code>
     <struct>
       <label>

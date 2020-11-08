@@ -35,6 +35,8 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 
 注意，所有的换行和点击等一系列函数都不属于单纯的文本处理，应将其视作<code><action></action></code>中的一个函数
 
+此外，加粗/倾斜/删除线/下划线 四个状态已通过/text/character/style或/text/content/style加入到<text></text>中
+
 ## Simple
 
 >```bkscr
@@ -115,9 +117,9 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 
 # nova
 
-[Nova引擎](https://github.com/huisedenanhai/Nova)已于近日以MIT协议开源
+[Nova引擎](https://github.com/Lunatic-Works/Nova)已于近日以MIT协议开源,[wiki](https://github.com/Lunatic-Works/Nova/wiki)
 
-Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/huisedenanhai/Nova/blob/master/doc/novascript.md)
+Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunatic-Works/Nova/wiki/NovaScript)
 
 >一部作品的脚本由许多节点（node）组成。脚本可以被拆分为多个文件，一个文件中可以有多个node。脚本解析的结果与读取文件的顺序无关。
 >
@@ -145,19 +147,22 @@ Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/huised
 >|
 
 <|
-//某条对话的延迟代码块（lazy execution block）//
+//某条控制语句的延迟代码块（lazy execution block）//
+>|
+
 鼠宝宝::今天我们来看看UniGal的脚本吧
 UniGal::请多多指教
 <p/>
 引擎A::“我要原生支持它！”
 引擎B::「啊，果然還是XML的運行程式讓我看起來舒服一些，比YAML好多了！」
 鼠宝宝::不要随便商业互吹啊kura！我自己写的什么东西我会不清楚吗！
->|
 ...
+
 <|
-//某条对话的延迟代码块（lazy execution block）//
-鼠宝宝::那么我们今天的学习就到这里了，同学们再见喵~
+//某条控制语句的延迟代码块（lazy execution block）//
 >|
+
+鼠宝宝::那么我们今天的学习就到这里了，同学们再见喵~
 
 @<|
 //位于结尾的提前代码块（eager execution block）//
@@ -167,20 +172,36 @@ UniGal::请多多指教
 
 
 
-## ~~Simple~~
+## Simple
 
 >```txt
+>@<|
+>label('ch1', '第一章')
+>is_default_start()
 >|>
->坐在车厢里的人总会向外眺望。
->
->眺望的理由多种多样：
->晕车，发呆，欣赏风景……
->
->亦或者只是下意识地一瞥。
->
->但人们心中压抑的冲动都是相似的。
 >
 ><|
+>anim:trans_fade(cam, function()
+>show(ergong, 'normal', pos_c)
+>show(bg, 'room')
+>end, 2)
+>play(bgs, 'rain')
+>anim:volume(bgs, 0.2, 3)
+>box_hide_show(2)
+>auto_voice_on('王二宫', 1)
+>auto_voice_on('陈高天', 1)
+>set_auto_voice_delay(2)
+>|>
+>
+>王二宫：：“真没想到，我们竟然会被暴雨困在了教学楼里。”
+>
+><|
+>show(qianye, 'normal', pos_c)
+>sound('flap', 0.5)
+>|>
+>
+>我出门的时候，依旧可以感觉到有目光追随着我的背影。
+>@<| jump_to 'ch2' |>
 >```
 
 
