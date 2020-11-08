@@ -47,14 +47,16 @@ BKE中的图像资源是被称作sprite的，即所说的精灵。不仅图片�
 
 官方文档位置：
 立绘 https://doc.librian.net/site/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E7%AB%8B%E7%B9%AA.html
+
 背景 https://doc.librian.net/site/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%91%BD%E4%BB%A4.html#bg
+
 以上两个是图像相关的
 
-Librian中的图像调用的语法写的非常简洁，直接说明就可以，而且是从PSD里面调取
-这里不同的是，其人物立绘的调用是和人物名字一起声明的，只要找得到文件就会自动的调用这张立绘，这个处理在Gal引擎里面是罕见的。
+Librian中的图像调用的语法写的非常简洁，直接说明就可以，而且是从PSD里面调取.这里与其他引擎不同的是，其人物立绘的调用是和人物名字一起声明的，只要找得到文件就会自动的调用这张立绘，这个处理在Gal引擎里面是罕见的。
+
 因此较为复杂，暂不提供Translation
 
-## Examples
+## Examples-1
 
 ```
 > BG 魔王城內
@@ -63,7 +65,10 @@ Librian中的图像调用的语法写的非常简洁，直接说明就可以，�
 ```
 作者给出的解读是
 
+```
 BG {文件名} {淡入時間=1} {位置="0% 0%"} {漸變方法='_淡出'}
+```
+## Examples-2
 ```
 @潘大爺 + 裸體    
 潘大爺 「我看看……」
@@ -71,24 +76,26 @@ BG {文件名} {淡入時間=1} {位置="0% 0%"} {漸變方法='_淡出'}
 
 ```
 作者给出的官方解读是
+```
 
     @潘大爺 + 裸體。
-
+    
     後端將 潘大爺 的衣服設置爲 裸體。
-
+    
     潘大爺 「我看看……」 (對話，沒有指定表情)。
-
+    
     後端將 潘大爺 的表情設置爲 _默認 。
-
+    
     前端繪圖，此時 潘大爺 爲 裸體+默認表情 的狀態。因此從「潘大爺.psd」取得 裸體 、 無表情 、 眼睛 三個圖層，從下往上進行疊加。
-
+    
     潘大爺 (大笑)「哈哈哈，你是豬嗎！」 (對話，有表情)。
-
+    
     後端將 潘大爺 的表情設置爲 _大笑 。
-
+    
     前端繪圖，此時 潘大爺 爲 裸體+大笑表情 的狀態。因此從「潘大爺.psd」取得 裸體 、 大笑 、 眼睛 三個圖層，從下往上進行疊加。
 
 librian中载入一个图像（唔，就是malloc吧）是隐式的由引擎来完成的，但是在Unigal中它将会显式的出现。
+```
 
 ## Translation
 
@@ -99,18 +106,25 @@ librian中载入一个图像（唔，就是malloc吧）是隐式的由引擎来�
 # Nova
 
 官方文档位置：https://github.com/Lunatic-Works/Nova/wiki/NovaScript
+
 (里面也包含了音声画色等除了文字以外的所有文档，函数不多，但是每个都得琢磨着看)
 
 Nova的引擎较为复杂，但代码段和文本段好在还有明显的区分。
-一些介绍可以看这篇Docs中的介绍（UniGal内）[Docs/zh_CN/UniGal-Script-text.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-text.md)
-目前暂且认为除了文本以外的其他内容都在提前代码段中，延迟代码段中有控制。而文本不在延迟代码段中直接暴露，可以和本引擎的<text></text>与<code></code>这样的粗暴的两大类分类方法相提并论一起类比。
 
+一些介绍可以看这篇Docs中的介绍（UniGal内）[Docs/zh_CN/UniGal-Script-text.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-text.md)
+
+目前暂且认为除了文本以外的其他内容都在提前代码段中，延迟代码段中有控制。而文本不在延迟代码段中直接暴露，可以和本引擎的```<text></text>```与```<code></code>```这样的粗暴的两大类分类方法相提并论一起类比。
+
+```
 @<|
 //位于开头的提前代码块（eager execution block）//
 >|
+```
 
 目录结构参考这个研究https://github.com/Lunatic-Works/Nova/wiki/Repo-Structure
+
 示范代码可以参考这个文档来https://github.com/Lunatic-Works/Nova/tree/master/Assets/Examples/Colorless/Resources/Colorless/Scenarios
+
 里面全是示范脚本
 
 ## Examples

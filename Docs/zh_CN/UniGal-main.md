@@ -10,28 +10,21 @@
 
 供后面拆原子操作的大佬参考
 
-librian https://doc.librian.net/site/%E4%B8%BB%E9%A0%81.html 官方QQ群618775838
+**librian** https://doc.librian.net/site/%E4%B8%BB%E9%A0%81.html 官方QQ群618775838
 
-avgplus https://docs.avg-engine.com/ 官方QQ群323092720
+**avgplus** https://docs.avg-engine.com/ 官方QQ群323092720
 
-BKEngine http://docs.bakery.moe/ 官方QQ群303680897
+**BKEngine** http://docs.bakery.moe/ 官方QQ群303680897
 
-nova [Nova引擎](https://github.com/Lunatic-Works/Nova)已于近日以MIT协议开源,[wiki](https://github.com/Lunatic-Works/Nova/wiki)
+**nova** [Nova引擎](https://github.com/Lunatic-Works/Nova)已于近日以MIT协议开源,在这里可以查看[wiki](https://github.com/Lunatic-Works/Nova/wiki)。Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunatic-Works/Nova/wiki/NovaScript)    官方QQ群（不仅是引擎）876212259
 
-[](https://raw.githubusercontent.com/wiki/Lunatic-Works/Nova/img/nova_banner.png)NovaBanner
+**renpy** https://www.renpy.org/doc/html/ TG群都莫得就别想QQ了（简中文档https://www.renpy.cn/doc/index.html）
 
-Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunatic-Works/Nova/wiki/NovaScript)
- 官方QQ群（不仅是引擎）876212259
-
-renpy https://www.renpy.org/doc/html/ TG群都莫得就别想QQ了（简中文档https://www.renpy.cn/doc/index.html）
-
-krkr（正在找，不存在的吧
-
-（https://github.com/krkrz/krkrz  这个算吗说实话我对KR系的一大家子产品没啥了解和认识）
+**krkr**（不存在的吧）（https://github.com/krkrz/krkrz  这个算吗说实话我对KR系的一大家子产品没啥了解和认识）
 
 （官方不存在了听说这个民间版很有名http://blog.sina.com.cn/s/articlelist_1251573991_5_1.html 和这个 https://tieba.baidu.com/p/1236613654）
 
-monogarati [官网](https://monogatari.io/)  [教程和文档](https://developers.monogatari.io/documentation/)
+**monogatati** [官网](https://monogatari.io/)  [教程和文档](https://developers.monogatari.io/documentation/)
 
 
 
@@ -81,10 +74,10 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
 
 **本次（其实是每次）引入了不少全新的实验性模式，具体是否需要保留待定
 
-这次试图引入一个新的标签，将原有的<src></src>拆分为可以保留更多meta信息的<src_X></src_X>标签。
-X可以是engine，characterset，language等。（没错，野心甚至包含机器自动翻译）
+这次试图引入一个新的标签，将原有的```<src></src>```拆分为可以保留更多meta信息的```<src_X></src_X>```标签。
+X可以是```engine，characterset，language```等。（没错，野心甚至包含机器自动翻译）
 不仅仅引擎需要标注，不同引擎默认编码可能会有不同，如SHIFT-JIS和UTF-8之间的区别，在转换过程中有必要特别标注，避免出错.
-而属于XML头的<?xml version="1.0" encoding="utf-8"?>则标志着中间体的UniGal脚本使用的是UTF-8编码，并不意味着源文件和目标文件的编码一定都是UTF-8.
+而属于XML头的```<?xml version="1.0" encoding="utf-8"?>```则标志着中间体的UniGal脚本使用的是UTF-8编码，并不意味着源文件和目标文件的编码一定都是UTF-8.
 这个实验性的标签在这期间是优先使用，并不强制性的对旧标签进行替换（有HTML的屎山的味道了）**
 
 
@@ -131,22 +124,22 @@ X可以是engine，characterset，language等。（没错，野心甚至包含�
         <color>
           //文本颜色
         </color>
-		<ruby>
+        <ruby>
           //可以加入注音
         </ruby>
-		<style>
-		  <bold></bold>
-		  <italic></italic>
-		  <deleted></deleted>
-		  <underlined></underlined>
-		  //style中只允许填写bool值，即true与false
-		</style>
+        <style>
+          <bold></bold>
+          <italic></italic>
+          <deleted></deleted>
+          <underlined></underlined>
+          //style中只允许填写bool值，即true与false
+        </style>
         <comment>
           //Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的
         </comment>
       </character>
       <content>
-	    <part>
+        <part>
           内容
         </part>
         <color>
@@ -155,13 +148,13 @@ X可以是engine，characterset，language等。（没错，野心甚至包含�
         <ruby>
           //可以加入注音
         </ruby>
-		<style>
-		  <bold></bold>
-		  <italic></italic>
-		  <deleted></deleted>
-		  <underlined></underlined>
-		  //style中只允许填写bool值，即true与false
-		</style>
+        <style>
+          <bold></bold>
+          <italic></italic>
+          <deleted></deleted>
+          <underlined></underlined>
+          //style中只允许填写bool值，即true与false
+        </style>
         <comment>
           //content是文本相关，其中part是必须有的，而color和ruby是非必须的
         </comment>
@@ -170,23 +163,6 @@ X可以是engine，characterset，language等。（没错，野心甚至包含�
     <code>
       <resource type="image">
         <image>
-          <background>
-            <comment>
-              //背景
-            </comment>
-          </background>
-          <cg>
-            <comment>
-              //CG
-            </comment>
-          </cg>
-          <tachie>
-            <comment>
-              //立绘
-            </comment>
-          </tachie>
-        </image>
-        <image_basic>
           <file>
             //文件路径
           </file>
@@ -197,26 +173,42 @@ X可以是engine，characterset，language等。（没错，野心甚至包含�
             //从内存释放
           </free>
           //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
-        </image_basic>
+        </image>
+        <background>
+          <comment>
+            //背景
+          </comment>
+        </background>
+        <cg>
+          <comment>
+            //CG
+          </comment>
+        </cg>
+        <tachie>
+          <comment>
+            //立绘
+          </comment>
+        </tachie>
       </resource>
       <resource type="sound">
         <sound>
-          <voice>
-            <comment>
-              //人声
-            </comment>
-          </voice>
-          <bgm>
-            <comment>
-              //背景音乐
-            </comment>
-          </bgm>
-          <effect>
-            <comment>
-              //音效
-            </comment>
-          </effect>
+          //文件基本信息
         </sound>
+        <voice>
+          <comment>
+            //人声
+          </comment>
+        </voice>
+        <bgm>
+          <comment>
+            //背景音乐
+          </comment>
+        </bgm>
+        <effect>
+          <comment>
+            //音效
+          </comment>
+        </effect>
       </resource>
       <action>
         <textcontrol>
