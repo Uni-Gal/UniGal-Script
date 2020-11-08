@@ -9,6 +9,11 @@ BKE中的图像资源是被称作sprite的，即所说的精灵。不仅图片�
 因此，我们此处仅针对图像精灵来设定BKE到UniGal的写法。
 此外，这个转换是有损的，因为目前还没有确定好UniGal中的图层是如何写。
 
+我觉得我们真的应该让resource这种action一样的东西尽可能大
+
+它作为被执行的东西，不会和静态的文本一样各种标记。它所携带的，应该是真正被调用的那个函数的各种参数。
+
+我们根据这种参数，不管目标引擎它变成什么名字，都还能认识它。
 
 ## Examples
 
@@ -27,7 +32,6 @@ BKE中的图像资源是被称作sprite的，即所说的精灵。不仅图片�
 [sprite index=2 file="image/character/B/1_normal"]
 [addto index=2 target=10 zorder=10 pos=[40,0] opacity=255]
 //将两个人物立绘添加到了层上，座标是相对于层的原点计算的
-[wait time=5000 canskip=false]
 [addto index=10 target=basic_layer pos=[440,120] zorder=50]
 //改变了层的座标，附加在层上的人物位置也随之改变了
 
@@ -36,6 +40,15 @@ BKE中的图像资源是被称作sprite的，即所说的精灵。不仅图片�
 这样的声明，类似创建一个对象<resource>
 之后的属于<action>的调用
 
+sprite类比load
+
+remove类比free
+
+index对应resource中增加一个resource id
+
+target要涉及图层
+
+pos没问题，files没问题，opacity建议在图层中引入。图层定义时原来不必全都定义，居然也可以写起止范围
 
 ## Translation
 
