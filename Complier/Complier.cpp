@@ -7,7 +7,7 @@ using namespace std;
 
 string DefaultType_text = "text";
 string DefaultType_code = "code";
-string DefaultType_logic = "logic";
+string DefaultType_logic = "struct";
 
 string FormatString(string str)
 {
@@ -135,6 +135,18 @@ int main(void)
 				{
 					;
 				}
+				if (codetype == "logic")
+				{
+					;
+				}
+				if (codetype == "extension")
+				{
+					;
+				}
+			}
+			else if (type == "struct")
+			{
+				;
 			}
 			else
 			{

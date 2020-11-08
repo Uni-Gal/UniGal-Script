@@ -59,13 +59,19 @@ unity-Fungus
 
 以下是UniGal-Script的文档的目录
 
-Docs/zh_CN/UniGal-Script-main
+Docs/zh_CN/UniGal-Script-main.md
 
-Docs/zh_CN/UniGal-Script-text
+Docs/zh_CN/UniGal-Script-text.md
 
-Docs/zh_CN/UniGal-Script-code
+Docs/zh_CN/UniGal-Script-code.md
 
-以下是UniGal-Script的Readme的目录
+Docs/zh_CN/UniGal-Script-basic.md
+
+Docs/zh_CN/UniGal-Script-resource.md
+
+Docs/zh_CN/UniGal-Script-Developer.md
+
+以下是UniGal-Script的多语言Readme的目录
 
 Readme
 

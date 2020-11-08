@@ -29,7 +29,7 @@ krkr（正在找，不存在的吧
 
 （官方不存在了听说这个民间版很有名http://blog.sina.com.cn/s/articlelist_1251573991_5_1.html 和这个 https://tieba.baidu.com/p/1236613654）
 
-
+monogarati 这个存在吗
 
 
 
@@ -42,26 +42,32 @@ text的原子操作有
 1. 封装为part
 2. 设置姓名
 
-### 演出控制部分（code）
+### 函数控制部分（code）
+
+函数包括演出（action）、逻辑控制（logic）、扩展（extension）功能（文件读写，调取第三方api等）等一系列都成为函数。其中一些引擎相关的特有API按照extension来书写，确保引擎的feature不会影响到大部分的内容。比如librian的支持CSS样式和嵌入任何一种语言。比如BKE的支持live2D(如果有其他家也支持的很好，可能会挪动到resource)，比如krkr的一些允许内置浏览器的代码，比如橙光的鲜花（虽然不会支持它的）
 
 code的原子操作有
 
-面向文本控制的action函数textcontrol
+面向文本控制和演出效果的action函数textcontrol
+
 1. newline
 2. waitclick
-面向逻辑的action函数
-1. jump
-2. switch
-面向演出效果的action函数
-1. 若干
-面向资源调度的action函数
-1. 若干
 
-### ~~逻辑控制部分~~
+面向逻辑的logic函数
+3. jump
+4. switch
 
-逻辑控制部分属于标记，仅包含label标签和count标签两种
+面向资源效果的resource函数
+5. showimg
 
-jump和switch等跳转逻辑属于函数，归为code的action所有
+面向特色功能的extension函数
+6. 若干
+
+### ~~静态结构部分~~struct
+
+静态结构部分属于标记，仅包含label标签和count标签两种
+
+jump和switch等跳转逻辑属于函数，归为code的logic所有
 
 将意味着每次跳转前后不同流程图需要对应不同的代码块，需要将UniGal-Script与UniGal-Diagram结合使用
 
@@ -176,7 +182,12 @@ jump和switch等跳转逻辑属于函数，归为code的action所有
             </timer_default>
           </timer>
         </switch>
-        <jump>
+        <comment>
+          //您只能选择switch或jump中的一种logic
+        </comment>
+      </action>
+        <logic>
+                    <jump>
           <jump_dst>
             //目的地标签
           </jump_dst>
@@ -184,12 +195,11 @@ jump和switch等跳转逻辑属于函数，归为code的action所有
             //附加内容
           </jump_addtional>
         </jump>
-        <comment>
-          //您只能选择switch或jump中的一种logic
-        </comment>
-      </action>
+        </logic>
+        <extension>
+        </extension>
     </code>
-    <logic>
+    <struct>
       <label>
         <label_name>
           //标签的名字,目前标签尚未开发出更多用途
@@ -198,7 +208,7 @@ jump和switch等跳转逻辑属于函数，归为code的action所有
       <conut>
         //第X句台词的编号
       </conut>
-    </logic>
+    </struct>
   </body>
 </unigal-script>
 ```
