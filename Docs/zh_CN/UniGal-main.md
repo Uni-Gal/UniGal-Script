@@ -30,16 +30,18 @@
 
 ## UniGal的全部原子操作的列表
 
-### 文本处理部分（text）
+### 文本处理部分(text)
 
 text的原子操作有
 
 1. 封装为part
 2. 设置姓名
 
-### 函数控制部分（code）
+### 函数控制部分(code)
 
-函数包括演出（action）、逻辑控制（logic）、扩展（extension）功能（文件读写，调取第三方api等）等一系列都成为函数。其中一些引擎相关的特有API按照extension来书写，确保引擎的feature不会影响到大部分的内容。比如librian的支持CSS样式和嵌入任何一种语言。比如BKE的支持live2D(如果有其他家也支持的很好，可能会挪动到resource)，比如krkr的一些允许内置浏览器的代码，比如橙光的鲜花（虽然不会支持它的）
+函数包括资源管理（resource）、演出（action）、逻辑控制（logic）、扩展（extension）功能等一系列都成为函数。
+
+其中一些引擎相关的特有API按照extension来书写，确保引擎的feature不会影响到大部分的内容。比如librian的支持CSS样式和嵌入任何一种语言。比如BKE的支持live2D(如果有其他家也支持的很好，可能会挪动到resource)，比如krkr的一些允许内置浏览器的代码，比如橙光的鲜花（虽然不会支持它的）（文件读写，调取第三方api等也属于extension）
 
 code的原子操作有
 
@@ -49,16 +51,19 @@ code的原子操作有
 2. waitclick
 
 面向逻辑的logic函数
+
 3. jump
 4. switch
 
-面向资源效果的resource函数
+面向资源管理和调度的resource函数
+
 5. showimg
 
 面向特色功能的extension函数
+
 6. 若干
 
-### ~~静态结构部分~~struct
+### 静态结构部分(struct)
 
 静态结构部分属于标记，仅包含label标签和count标签两种
 
@@ -68,18 +73,48 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
 
 （当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）
 
-但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))~~
+但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))
 
 ## 实验性功能
 
-**本次（其实是每次）引入了不少全新的实验性模式，具体是否需要保留待定
+**本次（其实是每次）引入了不少全新的实验性模式，具体是否需要保留待定**
 
 这次试图引入一个新的标签，将原有的```<src></src>```拆分为可以保留更多meta信息的```<src_X></src_X>```标签。
 X可以是```engine，characterset，language```等。（没错，野心甚至包含机器自动翻译）
 不仅仅引擎需要标注，不同引擎默认编码可能会有不同，如SHIFT-JIS和UTF-8之间的区别，在转换过程中有必要特别标注，避免出错.
 而属于XML头的```<?xml version="1.0" encoding="utf-8"?>```则标志着中间体的UniGal脚本使用的是UTF-8编码，并不意味着源文件和目标文件的编码一定都是UTF-8.
-这个实验性的标签在这期间是优先使用，并不强制性的对旧标签进行替换（有HTML的屎山的味道了）**
+这个实验性的标签在这期间是优先使用，并不强制性的对旧标签进行替换（有HTML的屎山的味道了）
 
+## 全部功能的树
+(为了人好看所以用了这个玩意，但是突然发现这可能将引导本项目最终全部转投这种格式并且允许人看懂，然后下一步怕不是就开始转投py写解释器了（）)
+```yaml
+- unigal-script
+    - head
+        - src\dst 等 一堆metadata
+    - body
+        - text
+            - character
+                - name
+                - color
+                - style
+            - content
+                - name
+                - color
+                - style
+        - code
+            - action
+                - textcontrol
+                - showimage
+            - resource_image
+            - resource_sound
+            - logic
+                - switch
+                - jump
+            - extension
+        - struct
+            - label
+            - count
+```
 
 ## 全部功能的代码示范（原型Prototype）
 
@@ -212,10 +247,10 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
       </resource>
       <action>
         <textcontrol>
-          waitclick
+          waitclick//重载+1
         </textcontrol>
         <textcontrol>
-          newline
+          newline//重载+1
         </textcontrol>
         <showimage>
           //暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer
@@ -261,9 +296,6 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
             //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为DoublePoint的形式，会自动进行转换。
           </imgregion>
         </showimage>
-        <comment>
-          //您只能选择switch或jump中的一种logic
-        </comment>
       </action>
       <logic>
         <jump>
@@ -274,25 +306,28 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
             //附加内容
           </jump_addtional>
         </jump>
+        <switch>
+          <choise>
+            <choise_name>
+              //选择支显示名称
+            </choise_name>
+            <choise_label>
+              //选择支跳转目标
+            </choise_label>
+          </choise>
+          <timer>
+            <timer_num>
+              //允许您写一个以毫秒为单位的倒计时
+            </timer_num>
+            <timer_default>
+              //倒计时结束后需要自动选择的选择支的名称
+            </timer_default>
+          </timer>
+        </switch>
+        <comment>
+          //您只能选择switch或jump中的一种logic
+        </comment>
       </logic>
-      <switch>
-        <choise>
-          <choise_name>
-            //选择支显示名称
-          </choise_name>
-          <choise_label>
-            //选择支跳转目标
-          </choise_label>
-        </choise>
-        <timer>
-          <timer_num>
-            //允许您写一个以毫秒为单位的倒计时
-          </timer_num>
-          <timer_default>
-            //倒计时结束后需要自动选择的选择支的名称
-          </timer_default>
-        </timer>
-      </switch>
       <extension>
         //暂未设定
       </extension>
