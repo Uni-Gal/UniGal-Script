@@ -52,13 +52,13 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     </src>
   </head>
   <body>
-    <logic>
+    <struct>
       <label>
         <label_name>
           main
         </label_name>
       </label>
-    </logic>
+    </struct>
     <text>
       <character>
         <name>
@@ -398,13 +398,13 @@ rpy有一个比较恶心的地方是
     </src>
   </head>
   <body>
-    <logic>
+    <struct>
       <label>
         <label_name>
           start
         </label_name>
       </label>
-    </logic>
+    </struct>
     <text>
       <character>
         <name>
@@ -495,6 +495,8 @@ rpy有一个比较恶心的地方是
 # AVGPlus
 
 参见https://docs.avg-engine.com/handbook/api/text/
+
+此外，其他同样以JSON存储的引擎还有 GameCreator monogatari
 
 ### Simple-1
 
@@ -664,3 +666,47 @@ rpy有一个比较恶心的地方是
   </body>
 </unigal-script>
 ```
+
+# Monogatari
+
+教程文档https://developers.monogatari.io/documentation/building-blocks/script-and-labels
+
+## Simple-1
+
+```
+const person = {
+    'name': 'Jane Doe',
+    'age': 24
+};
+```
+## Simple-2
+
+```
+monogatari.script ({
+    'Start': [
+        'Hi there!',
+        'This is a list of statements',
+        'jump myLabel'
+    ],
+    'myLabel': [
+        'And this is yet another label',
+        'Also a list of statements',
+        'end'
+    ]
+});
+```
+
+注意label是属于struct的而不是属于logic的了哦
+logic现在是属于code的树下面的一种函数了哦
+
+## Translation
+没啥可翻译的，建议直接看AVGPlus的Translation就好了
+
+# GameCreator
+
+制作中(其实是开发者偶尔看到了日日夜夜的补丁后发现了剧本格式是JSON，现在还没找到GC的官方教程因此不可能把拆包的内容拿出来作为Simple的)
+教程和iFAction一样，都是只有偏重RPG的教程，AVG的文档都没有，怀疑AVG都是拿这个用js改出来的。
+https://www.gamecreator.com.cn/gc/document/?file=003-GC%E6%9C%AC%E4%BD%93%E6%96%87%E6%A1%A3/0001-%E5%85%B3%E4%BA%8EGC
+
+# iFAction
+不会有的，纯商业引擎，一般不考虑导出，而且这个iF是有加密素材的，我们也不可能读取出来，读取它等于和制作方过不去。

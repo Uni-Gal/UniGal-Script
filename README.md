@@ -23,6 +23,8 @@ Offer a visuable way to switch and show the different possibility of a Galgame
 
 首先说明，我们支持的引擎，将尽可能以开源世界和非常具有代表性的引擎为主，不对私有引擎提供支持，因为那将可能意味着本工具被用于破解和解包后重置使用。我们希望它只是一个工具。当然，工具不可能因为使用者的意图而选择展示自己的能力，但我们希望它仅仅是被用来辅助Galgame开发者的，而不是辅助未授权的破解者。
 
+下面的支持列表仅在一定程度上大致表示我们的支持顺序
+
 ### 可能支持的允许导出的引擎
 nova
 
@@ -32,56 +34,63 @@ GameCreator~~（太棒了居然是JSON，差别不大，太棒了）~~（等一�
 
 ### 准备支持的单向导入的引擎
 
-krkr
+BKE 与 librian
 
-BKE
+AVGPlus 与 unity-nova
 
-librian
+krkr 与 renpy/renjs
 
-AVGPlus
+monogatari
 
 snowing
 
-unity-nova
-
 unity-xihe animation engine
-
-renpy
 
 ~~如果66rpg不会打我，我希望能制作橙光导出工具，虽然我在做梦~~
 
 ### 可能支持的单向导入的引擎
+
+（都是商业引擎了，准备放弃）
+
 unity-Utage
 
 unity-Fungus
+
+### 不会考虑支持的引擎（附原因）
+
+橙光文字游戏制作工具：**业界毒瘤**，捆绑平台，逼迫作者吊死在自家一颗树上
+
+iFAction：是商业引擎并有基于账号云端验证的加密功能，作品的打开需要掌握在引擎制作方的手里，提供导出工具既与开发者的盈利和用户素材安全违背，又不符合本项目开放的初衷。
+
+更多引擎，可以见[名单A](https://github.com/topics/visual-novel-engine)和[名单B](https://awesomeopensource.com/projects/visual-novel)，其中已经有一些引擎已在本支持名单中。我们选择支持一个引擎的理由主要是考虑其用户基础和体量，其完成程度，其对开发者的友好程度，其使用的开源协议是否足够开放，其是否有足够的面向中文用户的开发文档，其是否有很好的i18n支持和跨平台支持，其是否有良好的用户社群。
+
+出于便于交流的目的，我们不对Galgame和VisualNovel的词汇进行明确的划分，视为同一含义。
 
 ## 教程与介绍目录
 
 以下是UniGal-Script的文档的目录
 
-Docs/zh_CN/UniGal-Script-main.md
+[Docs/zh_CN/UniGal-Script-main.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-main.md)
 
-Docs/zh_CN/UniGal-Script-text.md
+[Docs/zh_CN/UniGal-Script-text.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-text.md)
 
-Docs/zh_CN/UniGal-Script-code.md
+[Docs/zh_CN/UniGal-Script-code.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-code.md)
 
-Docs/zh_CN/UniGal-Script-basic.md
+[Docs/zh_CN/UniGal-Script-basic.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-basic.md)
 
-Docs/zh_CN/UniGal-Script-resource.md
+[Docs/zh_CN/UniGal-Script-resource.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-resource.md)
 
-Docs/zh_CN/UniGal-Script-Developer.md
+[Docs/zh_CN/UniGal-Script-Developer.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-Developer.md)
 
 以下是UniGal-Script的多语言Readme的目录
 
-Readme
+[zh_CN.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/zh_CN.md)
 
-
+[en_UK.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/en_UK.md)
 
 ~~出于i18n的心态，我们可能会提供多语言文档，但是，众所周知，人类的本质是鸽子，况且本项目也还远未结束~~
 
-~~提供的语言：简体中文、美式英文（其实可以有更多，反正是占坑）~~
-
-
+~~提供的语言：简体中文、英式英文（其实可以有更多，反正是占坑）~~
 
 ## 联系我们
 

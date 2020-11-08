@@ -29,7 +29,7 @@ krkr（正在找，不存在的吧
 
 （官方不存在了听说这个民间版很有名http://blog.sina.com.cn/s/articlelist_1251573991_5_1.html 和这个 https://tieba.baidu.com/p/1236613654）
 
-monogarati 这个存在吗
+monogarati [官网](https://monogatari.io/)  [教程和文档](https://developers.monogatari.io/documentation/)
 
 
 
