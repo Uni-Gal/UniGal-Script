@@ -198,6 +198,9 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
     <code>
       <resource type="image">
         <image>
+          <img_ID>
+
+          </img_ID>
           <file>
             //文件路径
           </file>
@@ -220,6 +223,12 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           </comment>
         </cg>
         <tachie>
+          <pose>
+            动作造型
+          </pose>
+          <expression>
+            //表情
+          <expression>
           <comment>
             //立绘
           </comment>
@@ -245,6 +254,9 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           </comment>
         </effect>
       </resource>
+<resource type="layer">
+
+</resource>
       <action>
         <textcontrol>
           waitclick//重载+1
@@ -257,7 +269,7 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           <imgname>
           </imgname>
           //提供两种标志图像范围的方法，两点标记或者LURD标记
-          <imgregion>
+          <img_region>
             <type>
               //填写DoublePoint/LURD/LURD_Array
             </type>
@@ -294,7 +306,7 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
               </comment>
             </LURD_Array>
             //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为DoublePoint的形式，会自动进行转换。
-          </imgregion>
+          </img_region>
         </showimage>
       </action>
       <logic>
