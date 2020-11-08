@@ -14,5 +14,5 @@ Layer是UniGal推出的图层系统
 </layer_name>
 <layer_opacity>
 255
-</layer_opacity
+</layer_opacity>
 </layer>
