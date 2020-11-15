@@ -13,6 +13,8 @@ Offer a visuable way to switch and show the different possibility of a Galgame
 
 若要直接查看语法标准，请移步[语法标准](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-text.md)
 
+UniGal是一个完整的项目，分为[Script](https://github.com/Uni-Gal/UniGal-Script)(脚本语法)、[Diagram](https://github.com/Uni-Gal/UniGal-Diagram)(流程图语法)、[Complier&Interpreter](https://github.com/Uni-Gal/UniGal-Complier-Interpreter)(编译器和解释器)三部分。欢迎您查看其他两部分的内容。
+
 ## UniGal-Script特性
 
 1. UniGal-Script为创造一种具有普适性的语法标准，因此采用了XML作为基础。之所以采用XML而不是JSON或YAML，可详见备注部分的文档。没有采用JSON或YAML，是为了保证一个能更好的适应更多环境的脚本
