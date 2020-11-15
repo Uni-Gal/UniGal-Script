@@ -62,6 +62,8 @@ unity-XiHe animation engine
 
 unity-Kirino-Engine
 
+QGame(虽然是通用引擎（库）但是有AVG部分)
+
 ### 不会考虑支持的引擎（附原因）
 
 橙光文字游戏制作工具：**业界毒瘤**，捆绑平台，逼迫作者吊死在自家一颗树上

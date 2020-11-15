@@ -199,8 +199,11 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
       <resource type="image">
         <image>
           <img_ID>
-
+		    图像ID
           </img_ID>
+		  <layer_ID>
+		    图层ID，若不声明则放进默认图层，若没有默认图层则放进最高图层
+		  </layer_ID>
           <file>
             //文件路径
           </file>
@@ -210,8 +213,12 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           <free>
             //从内存释放
           </free>
+          <image_opacity>
+            //私以为一个图层如果允许多个图像并存（图层成为图像文件夹的概念了的话），那么每个图像的透明度也是非常有必要引入的
+          </image_opacity>
+		  //英国人如果看到opacity会不会震怒？是否应该加入transparent和opacity的重载？（想啥呢傻了？）
           //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
-        </image>
+		</image>
         <background>
           <comment>
             //背景
@@ -254,9 +261,9 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           </comment>
         </effect>
       </resource>
-<resource type="layer">
+		<resource type="layer">
 
-</resource>
+		</resource>
       <action>
         <textcontrol>
           waitclick//重载+1
