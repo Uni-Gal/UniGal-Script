@@ -116,6 +116,20 @@ iFAction：是商业引擎并有基于账号云端验证的加密功能，作品
 遥远的未来，我们也将随着自己标准的制定，不断推出更完善的官方编译器（complier）（Alang2Blang）和官方解释器（Unigal runtime）。但是我们觉得，我们自己做出来的解释器，无论如何都跟不上标准的不断变大和制定。并且我们本意不是做一个游戏引擎，因此不要奢求我们能做出多么好的解释器，我们只是想定义一个标准
 
 
+4.研发对应的unigal在不同编辑器中统一的着色器，目前的XML着色器并不是最适合我们的，当然unigal的着色器肯定是在xml的基础上来改造。
+例如，resource和action这样的，虽然都是code，但是差别很大，应该使用不同的颜色。
+而code和text虽然都是body下的element，但是差别更大，因此也应该使用不同的颜色。
+而struct一般是用于分割和结构上的提示作用，私以为应该给予非常醒目的表示。
+这件事情宜早不宜迟，需要特事特办，尽快完成。首选sublime（这样就不用VS2017的傻逼着色了），没有人帮忙就自行完成。
+
+此外，其他各种常见语言的Sublime着色器文件在此，均为第三方开发，而非引擎方提供。我们可能会在Unigal着色计划中引用这些开源代码。
+
+BKE  在[官方教程](http://docs.bakery.moe/faq)中提及，在[Github](https://github.com/AllanZyne/BKS4Sublime)上有公开   AllenZyne开发，无人维护
+librian https://github.com/RimoChan/Librian/tree/master/librian/librian%E6%9C%AC%E9%AB%94/%E5%9C%9F%E7%89%B9%E7%94%A2   Rimochan开发，chenmaster05维护
+Nova 抱歉我没找到，我觉得可以滴滴一下开发者们
+
+至于VSCode着色器……这个存在的吗？有这种插件的吗？（笑）
+
 ## 联系我们
 
 ~~联系我们（X）~~

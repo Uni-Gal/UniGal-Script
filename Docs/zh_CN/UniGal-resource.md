@@ -114,8 +114,14 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
       <layerlist>
         <layer_ID>0</layer_ID>
       </layerlist>
+    </code>
+    <struct>
+      <count>
+        1
+      </count>
+    </struct>
+    <code>
       //接下来是声明sprite（即创建resource元素）
-      //#1
       <resource type="image">
         <image>
           <img_ID>
@@ -130,11 +136,20 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
           <image_opacity>
             255//默认在BKE中只要声明图片精灵都是255，把它添加到图层中才是图层中的图名都
           </image_opacity>
-          //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
+          <size>
+            <x></x>
+            <y></y>
+          </size>
         </image>
       </resource>
+    </code>
+    <struct>
+      <count>
+        2
+      </count>
+    </struct>
+    <code>
       //addto是一个函数？
-      //#2
       //这一行分为两部分，一个是将图片插入layer，另一个是展示他。
       //zorder是什么我还么想好
       //第一步，插入图片
@@ -165,7 +180,10 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
           <image_opacity>
             255//默认在BKE中只要声明图片精灵都是255，把它添加到图层中才是图层中的图名都
           </image_opacity>
-          //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
+          <size>
+            <x></x>
+            <y></y>
+          </size>
         </image>
       </resource>
       //第三步，展示
@@ -200,9 +218,15 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
           </img_region>
         </showimage>
       </action>
+    </code>
+    <struct>
+      <count>
+        3
+      </count>
+    </struct>
+    <code>
       //新建图层
       //但我认为layer的w和h可以不用写，我们的layer都是全屏的（然后这个w和h直接用于修建layer的所有image，在unigal到bke的时候，需要检测一下是否所有图像都是一个大小，一样就把它还原回去
-      //#3
       <layer>
         <layer_ID>
           10
@@ -219,9 +243,16 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
         <layer_ID>10</layer_ID>
         <layer_ID>0</layer_ID>
       </layerlist>
+    </code>
+    <struct>
+      <count>
+        4
+      </count>
+    </struct>
+    <code>
       //准备向旧图层添加一个ID为10的图像
-      //#4
       //但是这个图像什么时候定义的？故这个操作应该报错了吧？
+      //还没写第四句对应的代码
     </code>
   </body>
 </unigal-script>
@@ -344,6 +375,14 @@ sound('flap', 0.5)
 ```
 
 我们可以看出，上面这段代码中，文本没有放在延迟代码段中，控制语句放在了延迟代码段中。
+
+Nova的label函数不仅仅是一个标记，而是一个标记对象，这个对象中包含了名称和符号，幸运的是，unigal的label允许用多个属性来模拟这种对象的形式。
+
+其中，show函数可以直接展示一张图片，类似unigal中的showimage函数。当然，在unigal中，一张图片必须先被声明才能被展示
+
+因此nova中直接展示图片的行为，在转化为unigal脚本的时候，将隐式的用resource先进行声明。
+
+而unigal脚本转化到没有声明的语言如nova/librian的时候，我们直接不表达这段声明过程就可以了。
 
 ## Translation
 

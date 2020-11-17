@@ -40,6 +40,8 @@ Simple
 
 ## 文本控制类代码
 
+这类效果应由解释器实现，我们不应过多干涉
+
 text
 textcursor
 textwindow

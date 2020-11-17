@@ -65,7 +65,7 @@ code的原子操作有
 
 ### 静态结构部分(struct)
 
-静态结构部分属于标记，仅包含label标签和count标签两种
+静态结构部分属于标记，仅包含label标签和count标签两种,count就是计数菌了，负责标记准确的行号，对应的galgame语言中的一行的起始。在翻译的时候是源语言的每一行开始的时候加一个count。
 
 jump和switch等跳转逻辑属于函数，归为code的logic所有
 
@@ -199,11 +199,11 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
       <resource type="image">
         <image>
           <img_ID>
-		    图像ID
+            图像ID
           </img_ID>
-		  <layer_ID>
-		    图层ID，若不声明则放进默认图层，若没有默认图层则放进最高图层
-		  </layer_ID>
+          <layer_ID>
+            图层ID，若不声明则放进默认图层，若没有默认图层则放进最高图层
+          </layer_ID>
           <file>
             //文件路径
           </file>
@@ -216,9 +216,13 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           <image_opacity>
             //私以为一个图层如果允许多个图像并存（图层成为图像文件夹的概念了的话），那么每个图像的透明度也是非常有必要引入的
           </image_opacity>
-		  //英国人如果看到opacity会不会震怒？是否应该加入transparent和opacity的重载？（想啥呢傻了？）
+          //英国人如果看到opacity会不会震怒？是否应该加入transparent和opacity的重载？（想啥呢傻了？）
+          <size>
+            <x></x>
+            <y></y>
+          </size>
           //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
-		</image>
+        </image>
         <background>
           <comment>
             //背景
@@ -235,11 +239,11 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           </pose>
           <expression>
             //表情
-          <expression>
-          <comment>
-            //立绘
-          </comment>
-        </tachie>
+            <expression>
+              <comment>
+                //立绘
+              </comment>
+            </tachie>
       </resource>
       <resource type="sound">
         <sound>
@@ -261,9 +265,9 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           </comment>
         </effect>
       </resource>
-		<resource type="layer">
+      <resource type="layer">
 
-		</resource>
+      </resource>
       <action>
         <textcontrol>
           waitclick//重载+1
@@ -278,7 +282,7 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           //提供两种标志图像范围的方法，两点标记或者LURD标记
           <img_region>
             <type>
-              //填写DoublePoint/LURD/LURD_Array
+              //填写DoublePoint/LURD
             </type>
             <DoublePoint>
               <Point1>
@@ -306,13 +310,7 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
               <R>3</R>
               <D>4</D>
             </LURD>
-            <LURD_Array>
-              1,2,3,4
-              <comment>
-                //LURD_Array 本格式由Librian开发者Rimochan提出
-              </comment>
-            </LURD_Array>
-            //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为DoublePoint的形式，会自动进行转换。
+            //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为LURD的形式，会自动进行转换。
           </img_region>
         </showimage>
       </action>
@@ -354,8 +352,14 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
     <struct>
       <label>
         <label_name>
-          //标签的名字,目前标签尚未开发出更多用途
+          //标签的名字,目前标签尚未开发出更多用途。name可以是英文数字字符串，也可以是中文名。
         </label_name>
+		<label_ID>
+		  //标签对应的序号（并非所有引擎都会用到，是扩展属性）。若某语言中是只有序号的，那么应优先使用label_name，仅在同时有名称和序号的时候使用label_ID
+		</label_ID>
+		<label_comment>
+		  //一个标签对应的故事（并非所有引擎都会用到，是扩展属性）
+		</label_comment>
       </label>
       <conut>
         //第X句台词的编号
