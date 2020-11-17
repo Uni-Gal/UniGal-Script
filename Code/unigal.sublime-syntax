@@ -1,0 +1,45 @@
+%YAML 1.2
+---
+name: UniGal
+file_extensions: [unigal, unigal-script, unigal-diagram]
+scope: source.unigal
+
+contexts:
+  main:
+    - match: <unigal-script>
+      scope: keyword.control.xml
+      with_prototype:
+        - match: (?=</unigal-script>)
+          pop: true
+    - match: <head>
+      push: head
+      scope: text.xml meta.tag.xml entity.name.tag.localname.xml
+      with_prototype:
+        - match: (?=</head>)
+          pop: true
+    - match: <body>
+      push: body
+      with_prototype:
+        - match: (?=</head>)
+          pop: true
+    - match: <comment>
+      push:comment
+      with_prototype:
+        - match: (?=</comment>)
+          pop:true
+
+  head:
+    - match: <src>
+      scope: text.xml
+    - match: <dst>
+      scope: text.xml
+
+  string:
+    - meta_scope: string.quoted.double.c
+    - match: \\.
+      scope: constant.character.escape.c
+    - match: '"'
+      pop: true
+
+  comment:
+    - meta_scope: comment.line.unigal
