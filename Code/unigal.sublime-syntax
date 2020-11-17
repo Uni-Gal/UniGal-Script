@@ -1,8 +1,17 @@
 %YAML 1.2
 ---
 name: UniGal
-file_extensions: [unigal, unigal-script, unigal-diagram]
 scope: source.unigal
+version: 1
+
+file_extensions:
+  - unigal
+  - unigal-script
+  - unigal-diagram
+
+first_line_match: (?i)<(xml\s*)?version="1.0" encoding="utf-8"
+
+####################
 
 contexts:
   main:
@@ -13,9 +22,17 @@ contexts:
           pop: true
     - match: <head>
       push: head
-      scope: text.xml meta.tag.xml entity.name.tag.localname.xml
+      scope: 
+        1: text.xml
+        2: meta.tag.xml
+        3: punctuation.definition.tag.begin.xml
       with_prototype:
         - match: (?=</head>)
+          scope:
+            1: text.xml
+            2: meta.tag.xml
+            3: entity.name.tag.localname.xml
+            4: punctuation.definition.tag.end.xml
           pop: true
     - match: <body>
       push: body
@@ -33,13 +50,6 @@ contexts:
       scope: text.xml
     - match: <dst>
       scope: text.xml
-
-  string:
-    - meta_scope: string.quoted.double.c
-    - match: \\.
-      scope: constant.character.escape.c
-    - match: '"'
-      pop: true
 
   comment:
     - meta_scope: comment.line.unigal
