@@ -125,7 +125,9 @@ iFAction：是商业引擎并有基于账号云端验证的加密功能，作品
 此外，其他各种常见语言的Sublime着色器文件在此，均为第三方开发，而非引擎方提供。我们可能会在Unigal着色计划中引用这些开源代码。
 
 BKE  在[官方教程](http://docs.bakery.moe/faq)中提及，在[Github](https://github.com/AllanZyne/BKS4Sublime)上有公开   AllenZyne开发，无人维护
+
 librian https://github.com/RimoChan/Librian/tree/master/librian/librian%E6%9C%AC%E9%AB%94/%E5%9C%9F%E7%89%B9%E7%94%A2   Rimochan开发，chenmaster05维护
+
 Nova 抱歉我没找到，我觉得可以滴滴一下开发者们
 
 至于VSCode着色器……这个存在的吗？有这种插件的吗？（笑）
