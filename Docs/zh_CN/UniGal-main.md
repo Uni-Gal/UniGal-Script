@@ -118,6 +118,8 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
 
 ## 全部功能的代码示范（原型Prototype）
 
+即日起，UniGal的给电脑看的需要展示出来的注释用```<comment></comment>```封装，给人看的纯粹开发的时候方便了解是啥的，今后统一用```<!-- {{comment_content}} -->```写，就不要暴露出来给解析脚本的时候添麻烦了。已有的存量代码逐步实行更改。
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <unigal-script>
