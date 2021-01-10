@@ -121,17 +121,21 @@ iFAction：是商业引擎并有基于账号云端验证的加密功能，作品
 例如，resource和action这样的，虽然都是code，但是差别很大，应该使用不同的颜色。
 而code和text虽然都是body下的element，但是差别更大，因此也应该使用不同的颜色。
 而struct一般是用于分割和结构上的提示作用，私以为应该给予非常醒目的表示。
-这件事情宜早不宜迟，需要特事特办，尽快完成。首选sublime（这样就不用VS2017的傻逼着色了），没有人帮忙就自行完成。
+这件事情宜早不宜迟，需要特事特办，尽快完成。首选sublime（这样就不用VS2017的傻逼着色了），VSCode也是可选可行的。没有人帮忙就自行完成。
 
 此外，其他各种常见语言的Sublime着色器文件在此，均为第三方开发，而非引擎方提供。我们可能会在Unigal着色计划中引用这些开源代码。
 
-BKE  在[官方教程](http://docs.bakery.moe/faq)中提及，在[Github](https://github.com/AllanZyne/BKS4Sublime)上有公开   AllenZyne开发，无人维护
+BKE  
 
-librian https://github.com/RimoChan/Librian/tree/master/librian/librian%E6%9C%AC%E9%AB%94/%E5%9C%9F%E7%89%B9%E7%94%A2   Rimochan开发，chenmaster05维护
+在[官方教程](http://docs.bakery.moe/faq)中提及，在[Github](https://github.com/AllanZyne/BKS4Sublime)上有公开   由AllenZyne开发，无人维护
 
-Nova 抱歉我没找到，我觉得可以滴滴一下开发者们
+librian 
 
-至于VSCode着色器……这个存在的吗？有这种插件的吗？（笑）
+在github上有[librian着色器](https://github.com/RimoChan/Librian/tree/master/librian/librian%E6%9C%AC%E9%AB%94/%E5%9C%9F%E7%89%B9%E7%94%A2) ，由Rimochan开发，由chenmaster05维护
+
+Nova 
+
+官方提供了[Nova基于VSCode的着色插件](https://github.com/zhouhaoyu/vscode-nova-script)，并据开发者称，其语法与lua有相似之处，在着色方案上可以参考。Nova开发团队较活跃，维护较为积极。
 
 ## 联系我们
 
