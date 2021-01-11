@@ -52,16 +52,16 @@ code的原子操作有
 
 面向逻辑的logic函数
 
-3. jump
-4. switch
+1. jump
+2. switch
 
 面向资源管理和调度的resource函数
 
-5. showimg
+1. showimg
 
 面向特色功能的extension函数
 
-6. 若干
+1. 若干
 
 ### 静态结构部分(struct)
 
@@ -149,7 +149,7 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
       zh_CN
     </dst_language>
     <comment>
-      //
+      <!----> 
     </comment>
   </head>
   <body>
@@ -159,41 +159,41 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           NULL
         </name>
         <color>
-          //文本颜色
+          <!--文本颜色-->
         </color>
         <ruby>
-          //可以加入注音
+          <!--可以加入注音-->
         </ruby>
         <style>
           <bold></bold>
           <italic></italic>
           <deleted></deleted>
           <underlined></underlined>
-          //style中只允许填写bool值，即true与false
+          <!--style中只允许填写bool值，即true与false-->
         </style>
         <comment>
-          //Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的
+          <!--Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的-->
         </comment>
       </character>
       <content>
         <part>
-          内容
+          <!--内容-->
         </part>
         <color>
-          //文本颜色
+          <!--文本颜色-->
         </color>
         <ruby>
-          //可以加入注音
+          <!--可以加入注音-->
         </ruby>
         <style>
           <bold></bold>
           <italic></italic>
           <deleted></deleted>
           <underlined></underlined>
-          //style中只允许填写bool值，即true与false
+          <!--style中只允许填写bool值，即true与false-->
         </style>
         <comment>
-          //content是文本相关，其中part是必须有的，而color和ruby是非必须的
+          <!--content是文本相关，其中part是必须有的，而color和ruby是非必须的-->
         </comment>
       </content>
     </text>
@@ -201,105 +201,107 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
       <resource type="image">
         <image>
           <img_ID>
-            图像ID
+            <!--图像ID-->
           </img_ID>
           <layer_ID>
-            图层ID，若不声明则放进默认图层，若没有默认图层则放进最高图层
+            <!--图层ID，若不声明则放进默认图层，若没有默认图层则放进最高图层-->
           </layer_ID>
           <file>
-            //文件路径
+            <!--文件路径-->
           </file>
           <load>
-            //载入内存
+            <!--载入内存-->
           </load>
           <free>
-            //从内存释放
+            <!--从内存释放-->
           </free>
           <image_opacity>
-            //私以为一个图层如果允许多个图像并存（图层成为图像文件夹的概念了的话），那么每个图像的透明度也是非常有必要引入的
+            <!--私以为一个图层如果允许多个图像并存（图层成为图像文件夹的概念了的话）-->
+            <!--那么每个图像的透明度也是非常有必要引入的-->
           </image_opacity>
-          //英国人如果看到opacity会不会震怒？是否应该加入transparent和opacity的重载？（想啥呢傻了？）
+          <!--英国人如果看到opacity会不会震怒？-->
+          <!--是否应该加入transparent和opacity的重载？（想啥呢傻了？）-->
           <size>
             <x></x>
             <y></y>
           </size>
-          //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
+          <!--更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。-->
         </image>
         <background>
           <comment>
-            //背景
+            <!--背景-->
           </comment>
         </background>
         <cg>
           <comment>
-            //CG
+            <!--CG-->
           </comment>
         </cg>
         <tachie>
           <pose>
-            动作造型
+            <!--动作造型-->
           </pose>
           <expression>
-            //表情
-            <expression>
-              <comment>
-                //立绘
-              </comment>
-            </tachie>
+            <!--表情-->
+          </expression>
+          <comment>
+            <!--立绘-->
+          </comment>
+        </tachie>
       </resource>
       <resource type="sound">
         <sound>
-          //文件基本信息
+          <!--文件基本信息-->
         </sound>
         <voice>
           <comment>
-            //人声
+            <!--人声-->
           </comment>
         </voice>
         <bgm>
           <comment>
-            //背景音乐
+            <!--背景音乐-->
           </comment>
         </bgm>
         <effect>
           <comment>
-            //音效
+            <!--音效-->
           </comment>
         </effect>
       </resource>
       <resource type="layer">
-
+        <!---->
       </resource>
       <action>
         <textcontrol>
-          waitclick//重载+1
+          waitclick<!--重载+1-->
         </textcontrol>
         <textcontrol>
-          newline//重载+1
+          newline<!--重载+1-->
         </textcontrol>
         <showimage>
-          //暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer
+          <!--暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer-->
           <imgname>
           </imgname>
           <!-- 提供三种储存图像范围的方法，两点标记，LURD标记以及仿射矩阵 -->
           <img_region>
             <DoublePoint>
               <Point1>
-                //左上点
+                <!--左上点-->
                 <pos1>
-                  //row
+                  <!--row-->
                 </pos1>
                 <pos2>
-                  //col
+                  <!--col-->
                 </pos2>
               </Point1>
               <Point2>
-                //右下点
+                <!--右下点-->
                 <pos1>
-                  //row
+                  <!--row-->
                 </pos1>
                 <pos2>
-                  //col
+                  <!--col-->
                 </pos2>
               </Point2>
             </DoublePoint>
@@ -309,60 +311,64 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
               <R>3</R>
               <D>4</D>
             </LURD>
-			<TransformMatirx>左上,右上,左下,右下,x坐标,y坐标</TransformMatirx>
-            //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为变换矩阵，会自动进行转换。
+            <TransformMatirx>
+              左上,右上,左下,右下,x坐标,y坐标
+            </TransformMatirx>
+            <!--imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为变换矩阵，会自动进行转换。-->
           </img_region>
         </showimage>
       </action>
       <logic>
         <jump>
           <jump_dst>
-            //目的地标签
+            <!--目的地标签-->
           </jump_dst>
           <jump_addtional>
-            //附加内容
+            <!--附加内容-->
           </jump_addtional>
         </jump>
         <switch>
           <choise>
             <choise_name>
-              //选择支显示名称
+              <!--选择支显示名称-->
             </choise_name>
             <choise_label>
-              //选择支跳转目标
+              <!--选择支跳转目标-->
             </choise_label>
           </choise>
           <timer>
             <timer_num>
-              //允许您写一个以毫秒为单位的倒计时
+              <!--允许您写一个以毫秒为单位的倒计时-->
             </timer_num>
             <timer_default>
-              //倒计时结束后需要自动选择的选择支的名称
+              <!--倒计时结束后需要自动选择的选择支的名称-->
             </timer_default>
           </timer>
         </switch>
         <comment>
-          //您只能选择switch或jump中的一种logic
+          <!--您只能选择switch或jump中的一种logic-->
         </comment>
       </logic>
       <extension>
-        //暂未设定
+        <!--暂未设定-->
       </extension>
     </code>
     <struct>
       <label>
         <label_name>
-          //标签的名字,目前标签尚未开发出更多用途。name可以是英文数字字符串，也可以是中文名。
+          <!--标签的名字,目前标签尚未开发出更多用途。-->
+          <!--name可以是英文数字字符串，也可以是中文名。-->
         </label_name>
-		<label_ID>
-		  //标签对应的序号（并非所有引擎都会用到，是扩展属性）。若某语言中是只有序号的，那么应优先使用label_name，仅在同时有名称和序号的时候使用label_ID
-		</label_ID>
-		<label_comment>
-		  //一个标签对应的故事（并非所有引擎都会用到，是扩展属性）
-		</label_comment>
+        <label_ID>
+          <!--标签对应的序号（并非所有引擎都会用到，是扩展属性）。-->
+          <!--若某语言中是只有序号的，那么应优先使用label_name，仅在同时有名称和序号的时候使用label_ID-->
+        </label_ID>
+        <label_comment>
+          <!--一个标签对应的故事（并非所有引擎都会用到，是扩展属性）-->
+        </label_comment>
       </label>
       <conut>
-        //第X句台词的编号
+        <!--第X句台词的编号-->
       </conut>
     </struct>
   </body>
