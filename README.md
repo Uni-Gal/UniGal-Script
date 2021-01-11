@@ -22,6 +22,7 @@ UniGal是一个完整的项目，分为[Script](https://github.com/Uni-Gal/UniGa
 3. UniGal-Script将演出与脚本与代码等合为一体，不再刻意强调演出与剧本之间的工作划分，不将其分割为多个不同文件，不参与素材属于演出还是脚本的名词争端。
 4. UniGal-Script中凡是纯粹的文本内容，都用```<text></text>```包装，其他的均视为```<code></code>```包装。
 5. UniGal-Script中的标签名称，尽可能做到不同层级间独一无二，力求精确，让一类标签和特定属性挂钩。表签尽可能做到语义化，标签名自注释，不和HTML5时代的网页前端一样通过class来进行定义和分类。
+6. UniGal-Script不论是什么文件皆以unigal结尾，若要区别应关注不同文件的根元素的标签值为何。可以为```<unigal-script>```、```<Node>```、```<stylesheet>```
 
 ## 支持计划
 
