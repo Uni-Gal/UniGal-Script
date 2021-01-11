@@ -281,11 +281,8 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
           //暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer
           <imgname>
           </imgname>
-          //提供两种标志图像范围的方法，两点标记或者LURD标记
+          <!-- 提供三种储存图像范围的方法，两点标记，LURD标记以及仿射矩阵 -->
           <img_region>
-            <type>
-              //填写DoublePoint/LURD
-            </type>
             <DoublePoint>
               <Point1>
                 //左上点
@@ -312,7 +309,8 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
               <R>3</R>
               <D>4</D>
             </LURD>
-            //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为LURD的形式，会自动进行转换。
+			<TransformMatirx>左上,右上,左下,右下,x坐标,y坐标</TransformMatirx>
+            //imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为变换矩阵，会自动进行转换。
           </img_region>
         </showimage>
       </action>
