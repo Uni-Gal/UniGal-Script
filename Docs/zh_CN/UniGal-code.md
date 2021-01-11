@@ -1,7 +1,10 @@
 # UniGal-code
-
-**<code></code>**
-
+示例
+```XML
+<code engine="Unity" lang="CSharp">
+    <!-- 实际C#代码 -->
+</code>
+```
 
 
 # BKE
