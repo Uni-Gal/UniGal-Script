@@ -1,32 +1,6 @@
 # UniGal-main
 
-
-
-在您拆分原子操作的过程中
-
-将需要大量的参考其他语言的语法文档
-
-在此将一部分有官方文档或高度可信文档的引擎的文档贴在这里
-
-供后面拆原子操作的大佬参考
-
-**librian** https://doc.librian.net/site/%E4%B8%BB%E9%A0%81.html 官方QQ群618775838
-
-**avgplus** https://docs.avg-engine.com/ 官方QQ群323092720
-
-**BKEngine** http://docs.bakery.moe/ 官方QQ群303680897
-
-**nova** [Nova引擎](https://github.com/Lunatic-Works/Nova)已于近日以MIT协议开源,在这里可以查看[wiki](https://github.com/Lunatic-Works/Nova/wiki)。Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunatic-Works/Nova/wiki/NovaScript)    官方QQ群（不仅是引擎）876212259
-
-**renpy** https://www.renpy.org/doc/html/ TG群都莫得就别想QQ了（简中文档https://www.renpy.cn/doc/index.html）
-
-**krkr**（不存在的吧）（https://github.com/krkrz/krkrz  这个算吗说实话我对KR系的一大家子产品没啥了解和认识）
-
-（官方不存在了听说这个民间版很有名http://blog.sina.com.cn/s/articlelist_1251573991_5_1.html 和这个 https://tieba.baidu.com/p/1236613654）
-
-**monogatati** [官网](https://monogatari.io/)  [教程和文档](https://developers.monogatari.io/documentation/)
-
-
+在您拆分原子操作的过程中,将需要大量的参考其他语言的语法文档.在此将一部分有官方文档或高度可信文档的引擎的文档贴在[UniGal-reference.md](UniGal-reference.md#各引擎维护团队联系名录)中,供后面拆原子操作的大佬参考.
 
 ## UniGal的全部原子操作的列表
 
@@ -85,6 +59,8 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
 而属于XML头的```<?xml version="1.0" encoding="utf-8"?>```则标志着中间体的UniGal脚本使用的是UTF-8编码，并不意味着源文件和目标文件的编码一定都是UTF-8.
 这个实验性的标签在这期间是优先使用，并不强制性的对旧标签进行替换（有HTML的屎山的味道了）
 
+感谢@Fa鸽 的建议和代码贡献，完善了codeblock部分的设想。允许嵌入整段代码段不进行转换。请注意，若您在unigal-script中使用了代码段，在生成目标语言时若目标平台不允许使用此类代码，将会报错。
+
 ## 全部功能的树
 (为了人好看所以用了这个玩意，但是突然发现这可能将引导本项目最终全部转投这种格式并且允许人看懂，然后下一步怕不是就开始转投py写解释器了（）)
 ```yaml
@@ -111,14 +87,13 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
                 - switch
                 - jump
             - extension
+			- codeblock
         - struct
             - label
             - count
 ```
 
 ## 全部功能的代码示范（原型Prototype）
-
-即日起，UniGal的给电脑看的需要展示出来的注释用```<comment></comment>```封装，给人看的纯粹开发的时候方便了解是啥的，今后统一用```<!-- {{comment_content}} -->```写，就不要暴露出来给解析脚本的时候添麻烦了。已有的存量代码逐步实行更改。
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -352,6 +327,9 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
       <extension>
         <!--暂未设定-->
       </extension>
+	  <codeblock>
+	    <!--代码段-->
+	  </codeblock>
     </code>
     <struct>
       <label>

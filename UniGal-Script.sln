@@ -18,11 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en_UK", "en_UK", "{4ADEFF73
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{7CD083C1-0D63-4CBC-8FF0-1C86FB71231F}"
 	ProjectSection(SolutionItems) = preProject
-		Docs\zh_CN\UniGal-basic.md = Docs\zh_CN\UniGal-basic.md
+		Docs\zh_CN\README.md = Docs\zh_CN\README.md
 		Docs\zh_CN\UniGal-code.md = Docs\zh_CN\UniGal-code.md
-		Docs\zh_CN\UniGal-Developer.md = Docs\zh_CN\UniGal-Developer.md
 		Docs\zh_CN\UniGal-layer.md = Docs\zh_CN\UniGal-layer.md
 		Docs\zh_CN\UniGal-main.md = Docs\zh_CN\UniGal-main.md
+		UniGal-reference.mc = UniGal-reference.mc
 		Docs\zh_CN\UniGal-resource.md = Docs\zh_CN\UniGal-resource.md
 		Docs\zh_CN\UniGal-text.md = Docs\zh_CN\UniGal-text.md
 	EndProjectSection
