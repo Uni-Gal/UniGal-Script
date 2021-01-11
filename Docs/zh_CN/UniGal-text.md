@@ -133,7 +133,9 @@ Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunati
 
 在换行时直接自然换行(UNIX-LF)，结尾需要空行。
 
-说实话，NovaScript较难理解，暂时我们还没想出比较好的转换方法，因此下面的Simple和Translation均已过时并是错误的，请不要依照这个作为撰写标准。
+说实话，NovaScript较难理解，暂时我们还没想出比较好的转换方法，请不要依照这个作为撰写标准。
+
+而且我很好奇，何为提前，何为延迟?
 
 ## Guess
 
@@ -141,7 +143,7 @@ Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunati
 
 ~~说实话这个姓名和对话的分割让我想起了命名空间，好嘛，每个人就是一个Class~~
 
-```reStructuredText
+```lua
 @<|
 //位于开头的提前代码块（eager execution block）//
 >|
@@ -170,11 +172,9 @@ UniGal::请多多指教
 ```
 
 
-
-
 ## Simple
 
->```txt
+>```lua
 >@<|
 >label('ch1', '第一章')
 >is_default_start()
@@ -204,119 +204,6 @@ UniGal::请多多指教
 >@<| jump_to 'ch2' |>
 >```
 
-
-## ~~Translate~~
-```unigal
-<?xml version="1.0" encoding="utf-8"?>
-<unigal-script>
-  <head>
-    <src>
-      nova
-    </src>
-  </head>
-  <body>
-    <text>
-      <character>
-        <name>
-          NULL
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
-          坐在车厢里的人总会向外眺望。
-        </part>
-        <comment>
-          //文本内容
-        </comment>
-      </content>
-    </text>
-    <text>
-      <character>
-        <name>
-          NULL
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
-          眺望的理由多种多样：
-        </part>
-        <comment>
-          //文本内容
-        </comment>
-      </content>
-    </text>
-    <code>
-      <action>
-        <textcontrol>
-          newline
-        </textcontrol>
-      </action>
-    </code>
-    <text>
-      <character>
-        <name>
-          NULL
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
-          晕车，发呆，欣赏风景……
-        </part>
-        <comment>
-          //文本内容
-        </comment>
-      </content>
-    </text>
-    <text>
-      <character>
-        <name>
-          NULL
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
-          亦或者只是下意识地一瞥。
-        </part>
-        <comment>
-          //文本内容
-        </comment>
-      </content>
-    </text>
-    <text>
-      <character>
-        <name>
-          NULL
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
-          但人们心中压抑的冲动都是相似的。
-        </part>
-        <comment>
-          //文本内容
-        </comment>
-      </content>
-    </text>
-  </body>
-</unigal-script>
-```
-
-
 # Librian
 
 参见https://doc.librian.net/site/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95.html
@@ -335,8 +222,6 @@ librian中的一个文本是直接结束的
 >潘大爺 「舟舟！來得正是時候！」
 >```
 
-
-
 ### Translation
 
 ```unigal
@@ -350,7 +235,7 @@ librian中的一个文本是直接结束的
   <body>
     <text>
       <character>
-	  	<name>
+	<name>
           潘大爺
         </name>
         <comment>
@@ -541,7 +426,7 @@ rpy有一个比较恶心的地方是
   <body>
     <text>
       <character>
-	  	<name>
+	<name>
           NULL
         </name>
         <comment>
@@ -596,7 +481,7 @@ rpy有一个比较恶心的地方是
   <body>
     <text>
       <character>
-	  	<name>
+	<name>
           愤怒的泡面
         </name>
         <comment>
@@ -614,7 +499,7 @@ rpy有一个比较恶心的地方是
     </text>
     <text>
       <character>
-	  	<name>
+	<name>
           愤怒的泡面
         </name>
         <comment>
@@ -632,7 +517,7 @@ rpy有一个比较恶心的地方是
     </text>
     <text>
       <character>
-	  	<name>
+	<name>
           愤怒的泡面
         </name>
         <comment>
@@ -650,7 +535,7 @@ rpy有一个比较恶心的地方是
     </text>
     <text>
       <character>
-	  	<name>
+	<name>
           愤怒的泡面
         </name>
         <comment>
@@ -668,7 +553,7 @@ rpy有一个比较恶心的地方是
     </text>
     <text>
       <character>
-	  	<name>
+	<name>
           愤怒的泡面
         </name>
         <comment>
