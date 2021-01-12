@@ -76,7 +76,11 @@ iFAction：是商业引擎并有基于账号云端验证的加密功能，作品
 
 ### 更多支持计划
 
-更多引擎，可以见 [名单A-github topic](https://github.com/topics/visual-novel-engine) 和 [名单B 野榜](https://awesomeopensource.com/projects/visual-novel) ，其中已经有一些引擎已在本支持名单中。我们选择支持一个引擎的理由主要是考虑其用户基础和体量，其完成程度，其对开发者的友好程度，其使用的开源协议是否足够开放，其是否有足够的面向中文用户的开发文档，其是否有很好的i18n支持和跨平台支持，其是否有良好的用户社群。
+更多引擎，可以见 [名单A-github topic](https://github.com/topics/visual-novel-engine) 和 [名单B 野榜](https://awesomeopensource.com/projects/visual-novel) ，其中已经有一些引擎已在本支持名单中。
+
+我们选择支持一个引擎的理由主要是考虑其用户基础和体量，其完成程度；
+
+其对开发者的友好程度，其使用的开源协议是否足够开放，其是否有足够的面向中文用户的开发文档，其是否有很好的i18n支持和跨平台支持，其是否有良好的用户社群。
 
 出于便于交流的目的，我们不对Galgame和VisualNovel的词汇进行明确的划分，视为同一含义。
 
@@ -90,9 +94,9 @@ iFAction：是商业引擎并有基于账号云端验证的加密功能，作品
 
 以下是UniGal-Script的多语言Readme的目录
 
-[zh_CN.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/zh_CN.md)
+[zh_CN.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/zh_CN/README.md)
 
-[en_UK.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/en_UK.md)
+[en_UK.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/en_UK/README.md)
 
 ~~出于i18n和a11y的心态，我们可能会提供多语言文档，但是，众所周知，人类的本质是鸽子，况且本项目也还远未结束~~
 
