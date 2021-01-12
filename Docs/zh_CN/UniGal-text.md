@@ -8,7 +8,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 
 
 
-# BKE
+# BKEngine
 
 参见http://docs.bakery.moe/new/quickstart/#_3
 
@@ -255,7 +255,7 @@ librian中的一个文本是直接结束的
 </unigal-script>
 ```
 
-# renpy
+# Renpy
 
 参见https://www.renpy.cn/doc/quickstart.html#a-simple-game
 

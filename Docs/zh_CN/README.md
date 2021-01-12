@@ -1,5 +1,45 @@
 # UniGal-basic
 
+## 文档目录
+
+### [UniGal-main.md](UniGal-main.md)
+
+如果要整体了解所有各类已经有的原子操作，相当于以下resource、text、layer、code的总大纲。
+
+但是都不够详细，适合形成大致印象。
+
+### [UniGal-resource.md](UniGal-resource.md)
+
+想看资源调度和素材管理相关的部分，可以参考本文档。
+
++ [BKEngine](UniGal-resource.md#BKEngine)
++ [Librian](UniGal-resource.md#Librian)
++ [Nova](UniGal-resource.md#Nova)
+
+### [UniGal-text.md](UniGal-text.md)
+
+本文档重点强调了各个引擎中的文本控制方式，也是Galgame的核心——文字。
+
++ [BKEngine](UniGal-text.md#BKEngine)
++ [Nova](UniGal-text.md#Nova)
++ [Librian](UniGal-text.md#Librian)
++ [Renpy](UniGal-text.md#Renpy)
++ [AVGPlus](UniGal-text.md#AVGPlus)
++ [Monogatari](UniGal-text.md#Monogatari)
++ [GameCreator](UniGal-text.md#GameCreator)
++ [iFAction](UniGal-text.md#iFAction)
+
+此外，没有特殊规定的话，本名称均遵守首字母大写，在```<head></head>```中的引擎名称应保持与这里一致，作为本框架对大家的官方称呼。
+
+### [UniGal-layer.md](UniGal-layer.md)
+想看图层的实验性选项，看layer
+
+### [UniGal-codeblock.md](UniGal-codeblock.md)
+想看内嵌代码段，看code
+
+### [UniGal-reference.md](UniGal-reference.md)
+啥都不想看只看还有什么需要拆分操作，看reference
+
 需要提前强调的几件事
 
 1. UniGal-Script/Diagram的后缀名为.unigal
@@ -17,14 +57,3 @@
 
 接下来是各个文件的作用
 
-如果要整体了解所有各类已经有的原子操作，看main，他相当于以下resource、text、layer、code的总大纲，但是都不够详细，适合形成大致印象。
-
-想看资源调度，resource
-
-想看文本输入输出控制，text
-
-想看图层的实验性选项，看layer
-
-想看内嵌代码段，看code
-
-啥都不想看只看还有什么需要拆分操作，看reference

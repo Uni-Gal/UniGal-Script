@@ -1,6 +1,6 @@
 # UniGal-resource
 
-# BKE
+# BKEngine
 
 官方文档位置：http://docs.bakery.moe/old/image/
 

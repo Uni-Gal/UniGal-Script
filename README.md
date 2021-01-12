@@ -82,19 +82,11 @@ iFAction：是商业引擎并有基于账号云端验证的加密功能，作品
 
 ## 教程与介绍目录
 
-以下是UniGal-Script的文档的目录
+以下是UniGal-Script的多语言文档的目录
 
-[Docs/zh_CN/UniGal-main.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-main.md)
+[zh_CN.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/README.md)
 
-[Docs/zh_CN/UniGal-text.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-text.md)
-
-[Docs/zh_CN/UniGal-code.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-code.md)
-
-[Docs/zh_CN/UniGal-basic.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-basic.md)
-
-[Docs/zh_CN/UniGal-resource.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-resource.md)
-
-[Docs/zh_CN/UniGal-Developer.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Developer.md)
+[en_UK.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/en_UK/README.md)
 
 以下是UniGal-Script的多语言Readme的目录
 
@@ -102,7 +94,7 @@ iFAction：是商业引擎并有基于账号云端验证的加密功能，作品
 
 [en_UK.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/en_UK.md)
 
-~~出于i18n的心态，我们可能会提供多语言文档，但是，众所周知，人类的本质是鸽子，况且本项目也还远未结束~~
+~~出于i18n和a11y的心态，我们可能会提供多语言文档，但是，众所周知，人类的本质是鸽子，况且本项目也还远未结束~~
 
 ~~提供的语言：简体中文、英式英文（其实可以有更多，反正是占坑）~~
 
