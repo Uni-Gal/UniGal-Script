@@ -6,10 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B43F9744-BF8F-4BE8-B133-087134F2BCD4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{2ED8A240-0321-4B7B-975A-26A1E2806888}"
-	ProjectSection(SolutionItems) = preProject
-		Readme\en_UK.md = Readme\en_UK.md
-		Readme\zh_CN.md = Readme\zh_CN.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en_UK", "en_UK", "{4ADEFF73-A0AA-4512-8B60-C3FCB103B442}"
 	ProjectSection(SolutionItems) = preProject
@@ -38,6 +34,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{F1EB54D0-1
 		Code\XMLFILE.xml = Code\XMLFILE.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en_UK", "en_UK", "{A31B00CA-C65D-4F59-9F9E-0A3EECC7342D}"
+	ProjectSection(SolutionItems) = preProject
+		Readme\en_UK\README.md = Readme\en_UK\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{E86C4C31-E517-433B-8113-E0B9A7E7A3AC}"
+	ProjectSection(SolutionItems) = preProject
+		Readme\zh_CN\README.md = Readme\zh_CN\README.md
+		Readme\zh_CN\UniGal-supportlist.md = Readme\zh_CN\UniGal-supportlist.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +52,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4ADEFF73-A0AA-4512-8B60-C3FCB103B442} = {B43F9744-BF8F-4BE8-B133-087134F2BCD4}
 		{7CD083C1-0D63-4CBC-8FF0-1C86FB71231F} = {B43F9744-BF8F-4BE8-B133-087134F2BCD4}
+		{A31B00CA-C65D-4F59-9F9E-0A3EECC7342D} = {2ED8A240-0321-4B7B-975A-26A1E2806888}
+		{E86C4C31-E517-433B-8113-E0B9A7E7A3AC} = {2ED8A240-0321-4B7B-975A-26A1E2806888}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3FF480D-C7C6-4724-9CD5-BE787D9B34E0}
