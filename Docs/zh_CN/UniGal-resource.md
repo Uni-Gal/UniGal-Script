@@ -88,12 +88,14 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
 ## Translation
 首先提醒，我们可能未来将不会按照逐句翻译的形式进行转换，第一行和第二行，sprite的声明和addto存在相同之处的地方，可能会考虑合并，本次依然按照逐句转换实现
 
+**这段需要修改！这段需要修改！目前的```<layer>```已经算是```<resource>```的一种，不应单独位于```<code>```下面！**
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <unigal-script>
   <head>
     <src_engine>
-      bkengine
+      BKEngine
     </src_engine>
   </head>
   <body>
@@ -255,7 +257,7 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
       //还没写第四句对应的代码
     </code>
   </body>
-</unigal-script>
+
 ```
 
 # Librian
@@ -312,11 +314,61 @@ BG {文件名} {淡入時間=1} {位置="0% 0%"} {漸變方法='_淡出'}
 librian中载入一个图像（唔，就是malloc吧）是隐式的由引擎来完成的，但是在Unigal中它将会显式的出现。
 ```
 
-## Translation
+## Translation 1
 
 ```
-还没翻译
+<?xml version="1.0" encoding="utf-8"?>
+<unigal-script>
+  <head>
+    <src_engine>
+      Librian
+    </src_engine>
+  </head>
+  <body>
+    <struct>
+      <count>
+        1
+      </count>
+    </struct>
+    <!-- Librian暂无需要预处理的内容，因此直接定义句数就可以 -->
+    <code>
+      <resource type="sound">
+        <sound>
+          <sound_ID>
+            0001<!--声音ID-->
+          </sound_ID>
+          <file>
+            魔王城內
+            <!--我们也不知道是什么格式，不知道就默认mp3好了-->
+          </file>
+        </sound>
+        <bgm>
+          <comment>
+            true<!--是背景音乐-->
+          </comment>
+        </bgm>
+      </resource>
+      <action>
+        <showsound>
+          0001
+        </showsound>
+      </action>
+    </code>
+    <struct>
+      <count>
+        2
+      </count>
+    </struct>
+    <struct>
+      <count>
+        3
+      </count>
+    </struct>
+  </body>
+</unigal-script>
 ```
+
+## Translation 2
 
 # Nova
 

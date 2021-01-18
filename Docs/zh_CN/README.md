@@ -16,6 +16,8 @@
 >给人看的纯粹开发的时候方便了解是啥的，今后统一用```<!-- {{comment_content}} -->```写，就不要暴露出来给解析脚本的时候添麻烦了。已有的存量代码逐步实行更改。
 >
 
+**接下来的工作重点将在codeblock和resource上**
+
 ## [UniGal-main.md](UniGal-main.md)
 
 如果要整体了解所有各类已经有的原子操作，相当于以下resource、text、layer、code的总大纲。
