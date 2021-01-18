@@ -7,19 +7,19 @@
 | UniGal   | UniGal-Prototype     | C++          | 原型         | √（开发中）              |              |                |                |              |
 | krkr     | krkr                 | TJS          | 已停止维护   |                          |              |                | √（开发中）    |              |
 | 面包工坊 | BKEngine             | bkspr        | 已停止维护   |                          |              | √（开发中）    |                |              |
-| Unity    | Unity-Nova           | C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| Unity    | Unity-Nova           | Lua/C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
 | Python   | Librian              | liber        | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
 | js       | AVGPlus              | json         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
 | js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              |
 | js       | Renjs                | javascript   | 未知         |                          |              |                | √（开发中）    |              |
 | Python   | Renpy                | Python       | **活跃**     |                          |              |                | √（开发中）    |              |
-| 弦语蝶梦 | snowing              | C++          | 已停止维护   |                          |              |                |                | √            |
-| json     | monogatari           | json         | **活跃**     |                          |              |                | √（开发中）    |              |
+| 弦语蝶梦 | Snowing              | C++          | 已停止维护   |                          |              |                |                | √            |
+| json     | Monogatari           | json         | **活跃**     |                          |              |                | √（开发中）    |              |
 | json     | GameCreator          | 未知         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
-| Unity    | unity-Utage          | C#           | **活跃**     |                          |              |                |                | √            |
-| Unity    | unity-Fungus         | C#           | **活跃**     |                          |              |                |                | √            |
-| Unity    | unity-Kirino-Engine  | C#           | 已停止维护   |                          |              |                |                | √            |
-| Unity    | unity-XiheAnimation  | C#           | 未知         |                          |              |                |                | √            |
+| Unity    | Unity-Utage          | C#           | **活跃**     |                          |              |                |                | √            |
+| Unity    | Unity-Fungus         | C#           | **活跃**     |                          |              |                |                | √            |
+| Unity    | Unity-Kirino-Engine  | C#           | 已停止维护   |                          |              |                |                | √            |
+| Unity    | Unity-XiheAnimation  | C#           | 未知         |                          |              |                |                | √            |
 | SDL      | QGame                | C++          | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
 | 橙光     | 橙光文字游戏制作工具 | 可视化       | **生不如死** |                          |              |                |                | √            |
 | 橙光     | iFAction             | 可视化       | 活跃         |                          |              |                |                | √            |
