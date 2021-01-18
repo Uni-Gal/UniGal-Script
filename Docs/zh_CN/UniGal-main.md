@@ -20,7 +20,7 @@ text的原子操作有
 
 ### 函数控制部分(code)
 
-函数包括资源管理（resource）、演出（action）、逻辑控制（logic）、扩展（extension）功能等一系列都成为函数。
+函数包括资源管理（resource）、演出（action）、逻辑控制（logic）、扩展（extension）功能等一系列都成为函数。**一切皆函数~~（大雾）~~**
 
 其中一些引擎相关的特有API按照extension来书写，确保引擎的feature不会影响到大部分的内容。比如librian的支持CSS样式和嵌入任何一种语言。比如BKE的支持live2D(如果有其他家也支持的很好，可能会挪动到resource)，比如krkr的一些允许内置浏览器的代码，比如橙光的鲜花（虽然不会支持它的）（文件读写，调取第三方api等也属于extension）
 
@@ -82,18 +82,6 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
 （当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）
 
 但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))
-
-## 实验性功能
-
-**本次（其实是每次）引入了不少全新的实验性模式，具体是否需要保留待定**
-
-这次试图引入一个新的标签，将原有的```<src></src>```拆分为可以保留更多meta信息的```<src_X></src_X>```标签。
-X可以是```engine，characterset，language```等。（没错，野心甚至包含机器自动翻译）
-不仅仅引擎需要标注，不同引擎默认编码可能会有不同，如SHIFT-JIS和UTF-8之间的区别，在转换过程中有必要特别标注，避免出错.
-而属于XML头的```<?xml version="1.0" encoding="utf-8"?>```则标志着中间体的UniGal脚本使用的是UTF-8编码，并不意味着源文件和目标文件的编码一定都是UTF-8.
-这个实验性的标签在这期间是优先使用，并不强制性的对旧标签进行替换（有HTML的屎山的味道了）
-
-感谢@Fa鸽 的建议和代码贡献，完善了codeblock部分的设想。允许嵌入整段代码段不进行转换。请注意，若您在unigal-script中使用了代码段，在生成目标语言时若目标平台不允许使用此类代码，将会报错。
 
 ## 全部功能的树
 (为了人好看所以用了这个玩意，但是突然发现这可能将引导本项目最终全部转投这种格式并且允许人看懂，然后下一步怕不是就开始转投py写解释器了（）)
@@ -414,3 +402,41 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
 </unigal-script>
 ```
 
+## 草案提出者
+
+仅在第4级节点上展示该节点及其各层次子节点的草案提出者
+
+```yaml
+- unigal-script
+    - head
+        - src\dst 等 一堆metadata
+    - body
+        - text
+            - character[快乐的老鼠宝宝]
+                - name
+                - color
+                - style
+            - content[快乐的老鼠宝宝]
+                - name
+                - color
+                - style
+        - code
+            - action[快乐的老鼠宝宝]
+                - textcontrol
+                - showimage
+                - showsound
+            - resource_image[Fa鸽、快乐的老鼠宝宝]
+            - resource_sound[快乐的老鼠宝宝]
+            - resource_layer[快乐的老鼠宝宝]
+            - resource_channel[快乐的老鼠宝宝]
+            - resource_live2d[快乐的老鼠宝宝]
+            - resource_spine[快乐的老鼠宝宝]
+            - logic[快乐的老鼠宝宝]
+                - switch
+                - jump
+            - extension
+			- codeblock[Fa鸽、快乐的老鼠宝宝]
+        - struct
+            - label[快乐的老鼠宝宝]
+            - count[快乐的老鼠宝宝]
+```
