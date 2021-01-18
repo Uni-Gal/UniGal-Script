@@ -1,7 +1,7 @@
 # UniGal-filesystem
 
 
-## 路径
+## UniGal路径规则
 
 目前的文件路径有三种，绝对路径、相对路径、包路径。
 
@@ -84,3 +84,29 @@
 ```
 (['data/image/background/campus.bmp']@{"D:\Games\Galgame\UniGal.zip"})
 ```
+
+## 其他引擎中的路径规则和文件系统规则
+
+### BKEngine
+
+图像：http://docs.bakery.moe/old/image/
+
+音频：http://docs.bakery.moe/old/sound/
+
+读文件：http://docs.bakery.moe/parser/#loadfile
+
+精灵sprite需要的文件路径格式：http://docs.bakery.moe/bkscr/sprite/
+
+### Librian
+
+图像：https://doc.librian.net/site/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E7%AB%8B%E7%B9%AA.html
+
+### Nova
+
+似乎没有专门提到
+
+有这个：https://github.com/Lunatic-Works/Nova/wiki/Repo-Structure
+
+还有这个：https://github.com/Lunatic-Works/Nova/wiki/Standing-Import
+
+似乎Nova全都是相对路径的（x
