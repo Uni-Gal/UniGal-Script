@@ -1,10 +1,15 @@
 # UniGal-main
 
-**TODO：需要统一下划线命名法和大驼峰命名法**
+## UniGal命名原则
 
-在您拆分原子操作的过程中,将需要大量的参考其他语言的语法文档.在此将一部分有官方文档或高度可信文档的引擎的文档贴在[UniGal-reference.md](UniGal-reference.md#各引擎维护团队联系名录)中,供后面拆原子操作的大佬参考.
+1. **TODO：需要统一下划线命名法和大驼峰命名法**
+
+2. 多个层级之间尽量不要重复，若要拆分和更精确描述一个标签，请您尽可能使其延长。
 
 ## UniGal的全部原子操作的列表
+
+在您拆分原子操作的过程中,将需要大量的参考其他语言的语法文档。
+在此将一部分有官方文档或高度可信文档的引擎的文档贴在[UniGal-reference.md](UniGal-reference.md#各引擎维护团队联系名录)中,供后面拆原子操作的大佬参考。
 
 ### 文本处理部分(text)
 
@@ -21,23 +26,50 @@ text的原子操作有
 
 code的原子操作有
 
-面向文本控制和演出效果的action函数textcontrol
+#### action函数
 
-1. newline
-2. waitclick
+面向文本控制和演出效果
 
-面向逻辑的logic函数
+1001. textcontrol
+1002. newline
+1003. waitclick
 
-1. jump
-2. switch
+此外，网络访问和文件读写等操作也应属于action范畴。但UniGal仅表示“存在此项操作”，具体该操作如何实现以及引擎是否以安慰剂实现，UniGal不从标准的角度去规定。
 
-面向资源管理和调度的resource函数
+在```<network_basic>```为```true```后可以使用```network_get```、```network_post```
 
-1. showimg
+在```<network_restful>```为```true```后可以使用```network_get```、```network_post```、```network_delete```、```network_put```
 
-面向特色功能的extension函数
+1011. network_get
+1012. network_post
+1013. network_delete
+1014. network_put
 
-1. 若干
+在```<fileIO>```为```true```后可以使用如下函数
+
+1021. fileIO_read
+1022. fileIO_create
+1023. fileIO_delete
+
+#### logic函数
+
+面向逻辑的函数
+
+2001. jump
+2002. switch
+
+#### resource函数
+
+面向资源管理和调度的函数
+
+3001. showimg
+
+#### extension函数
+
+面向特色功能的函数，如steamAPI等，但命名尚有争议。
+
+4001. steam_startgame
+4002. steam_endgame
 
 ### 静态结构部分(struct)
 
@@ -88,6 +120,8 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
             - resource_sound
             - resource_layer
             - resource_channel
+            - resource_live2d
+            - resource_spine
             - logic
                 - switch
                 - jump
@@ -263,6 +297,12 @@ X可以是```engine，characterset，language```等。（没错，野心甚至�
         <!---->
       </resource>
       <resource type="channel">
+        <!---->
+      </resource>
+      <resource type="live2d">
+        <!---->
+      </resource>
+      <resource type="spine">
         <!---->
       </resource>
       <action>
