@@ -90,7 +90,7 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
 
 **这段需要修改！这段需要修改！目前的```<layer>```已经算是```<resource>```的一种，不应单独位于```<code>```下面！**
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 <unigal-script>
   <head>
@@ -382,7 +382,7 @@ librian中载入一个图像（唔，就是malloc吧）是隐式的由引擎来�
 
 Nova的引擎较为复杂，但代码段和文本段好在还有明显的区分。
 
-一些介绍可以看这篇Docs中的介绍（UniGal内）[Docs/zh_CN/UniGal-Script-text.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-Script-text.md)
+一些介绍可以看这篇Docs中的介绍（UniGal内）[UniGal-text.md](./Docs/zh_CN/UniGal-text.md)
 
 目前暂且认为除了文本以外的其他内容都在提前代码段中，延迟代码段中有控制。而文本不在延迟代码段中直接暴露，可以和本引擎的```<text></text>```与```<code></code>```这样的粗暴的两大类分类方法相提并论一起类比。
 

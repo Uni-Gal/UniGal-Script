@@ -115,7 +115,7 @@ textsprite
 
 对于Java开发者而言，
 
-对于C#开发者而言，建议使用System.Xml用于解析UniGal脚本
+对于C#开发者而言，建议使用System.Xml用于解析UniGal脚本，或者等待UniGal.Compiler.Frontend #(滑稽)
 
 对于Node.js开发者而言（说你呢面叔
 

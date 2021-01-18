@@ -2,7 +2,7 @@
 
 ## UniGal命名原则
 
-1. **TODO：需要统一下划线命名法和大驼峰命名法**
+1. **TODO：需要统一下划线命名法(如：size_t)和大驼峰命名法(如：IntPtr)**
 
 2. 多个层级之间尽量不要重复，若要拆分和更精确描述一个标签，请您尽可能使其延长。
 
@@ -68,8 +68,8 @@ code的原子操作有
 
 面向特色功能的函数，如steamAPI等，但命名尚有争议。
 
-4001. steam_startgame
-4002. steam_endgame
+4001. steam_init
+4002. steam_shutdown
 
 ### 静态结构部分(struct)
 
@@ -114,7 +114,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
                 - switch
                 - jump
             - extension
-			- codeblock
+            - codeblock
         - struct
             - label
             - count
@@ -173,7 +173,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <underlined></underlined>
           <!--style中只允许填写bool值，即true与false-->
         </style>
-		<!--Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的-->
+        <!--Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的-->
       </character>
       <content>
         <part>
@@ -192,7 +192,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <underlined></underlined>
           <!--style中只允许填写bool值，即true与false-->
         </style>
-		<!--content是文本相关，其中part是必须有的，而color和ruby是非必须的-->
+        <!--content是文本相关，其中part是必须有的，而color和ruby是非必须的-->
       </content>
     </text>
     <code>
@@ -225,13 +225,13 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           </size>
         </image>
         <background>
-		  <!--背景-->
+          <!--背景-->
         </background>
         <cg>
-		  <!--CG-->
+          <!--CG-->
         </cg>
         <tachie>
-		  <!--立绘-->
+          <!--立绘-->
           <pose>
             <!--动作造型-->
           </pose>
@@ -242,7 +242,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
       </resource>
       <resource type="sound">
         <sound>
-		  <sound_ID>
+          <sound_ID>
             <!--声音ID-->
           </sound_ID>
           <channel_ID>
@@ -263,19 +263,19 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <!--文件基本信息-->
         </sound>
         <voice>
-		  <!--此处为bool变量-->
+          <!--此处为bool变量-->
           <comment>
             <!--人声-->
           </comment>
         </voice>
         <bgm>
-		  <!--此处为bool变量-->
+          <!--此处为bool变量-->
           <comment>
             <!--背景音乐-->
           </comment>
         </bgm>
         <effect>
-		  <!--此处为bool变量-->
+          <!--此处为bool变量-->
           <comment>
             <!--音效-->
           </comment>
@@ -338,9 +338,9 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
             <!--imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为变换矩阵，会自动进行转换。-->
           </img_region>
         </showimage>
-		<showsound>
-		  <!-- 音乐播放的部分就靠你了,包括淡入淡出之类的 -->
-		</showsound>
+        <showsound>
+          <!-- 音乐播放的部分就靠你了,包括淡入淡出之类的 -->
+        </showsound>
       </action>
       <logic>
         <jump>
@@ -376,9 +376,9 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
       <extension>
         <!--暂未设定-->
       </extension>
-	  <codeblock>
-	    <!--代码段-->
-	  </codeblock>
+      <codeblock>
+        <!--代码段-->
+      </codeblock>
     </code>
     <struct>
       <label>
@@ -435,7 +435,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
                 - switch
                 - jump
             - extension
-			- codeblock[Fa鸽、快乐的老鼠宝宝]
+            - codeblock[Fa鸽、快乐的老鼠宝宝]
         - struct
             - label[快乐的老鼠宝宝]
             - count[快乐的老鼠宝宝]

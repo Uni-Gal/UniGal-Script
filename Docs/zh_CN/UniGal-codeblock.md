@@ -33,7 +33,7 @@ code部分主要涉及内嵌代码段。如果某个语言有一整段难以被�
 
 这类情况的特点是仅有```lang```存在差异。
 
-```
+```XML
 <codeblock enginefamily="Librian" enginename="Librian" lang="CSS">
     <!-- 实际CSS代码 -->
 </codeblock>

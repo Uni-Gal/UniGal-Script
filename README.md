@@ -9,7 +9,7 @@ Offer a visuable way to switch and show the different possibility of a Galgame
 
 ~~不过，似乎本语法也不是什么好懂的东西啊（笑）~~
 
-若要直接查看语法标准，请移步[语法标准](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-text.md)
+若要直接查看语法标准，请移步[语法标准](./Docs/zh_CN/UniGal-text.md)
 
 UniGal是一个完整的项目，分为[Script](https://github.com/Uni-Gal/UniGal-Script)(脚本语法)、[Diagram](https://github.com/Uni-Gal/UniGal-Diagram)(流程图语法)、[Complier&Interpreter](https://github.com/Uni-Gal/UniGal-Complier-Interpreter)(编译器和解释器)三部分。欢迎您查看其他两部分的内容。
 
@@ -38,15 +38,15 @@ UniGal是一个完整的项目，分为[Script](https://github.com/Uni-Gal/UniGa
 
 以下是UniGal-Script的多语言文档的目录
 
-[zh_CN.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/README.md)
+[zh_CN.md](./Docs/zh_CN/README.md)
 
-[en_UK.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/en_UK/README.md)
+[en_UK.md](./Docs/en_UK/README.md)
 
 以下是UniGal-Script的多语言Readme的目录
 
-[zh_CN.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/zh_CN/README.md)
+[zh_CN.md](./Readme/zh_CN/README.md)
 
-[en_UK.md](https://github.com/Uni-Gal/UniGal-Script/blob/master/Readme/en_UK/README.md)
+[en_UK.md](./Readme/en_UK/README.md)
 
 ~~出于i18n和a11y的心态，我们可能会提供多语言文档。我们提供的语言有：简体中文、英式英文（其实可以有更多，反正是占坑）。但是，众所周知，人类的本质是鸽子，况且本项目也还远未结束~~
 
