@@ -78,7 +78,7 @@ code部分主要涉及内嵌代码段。如果某个语言有一整段难以被�
   </content>
 </text>
 ```
-那么，如下的Liber脚本
+那么，如下的Liber脚本~~原文出自[劇本寫法 - Librian中文文檔](https://doc.librian.net/site/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95.html#html)~~
 
 ```Liber
 舟舟 「<small>不是特意給你做的</small>」
