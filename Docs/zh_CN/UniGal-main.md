@@ -1,4 +1,4 @@
-# UniGal-main
+﻿# UniGal-main
 
 ## UniGal命名原则
 
@@ -167,6 +167,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <!--可以加入注音-->
         </ruby>
         <style>
+          <size></size>
           <bold></bold>
           <italic></italic>
           <deleted></deleted>
@@ -186,13 +187,14 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <!--可以加入注音-->
         </ruby>
         <style>
+          <size></size>
           <bold></bold>
           <italic></italic>
           <deleted></deleted>
           <underlined></underlined>
           <!--style中只允许填写bool值，即true与false-->
         </style>
-        <!--content是文本相关，其中part是必须有的，而color和ruby是非必须的-->
+        <!--content是文本相关，其中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的-->
       </content>
     </text>
     <code>
@@ -281,8 +283,11 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           </comment>
         </effect>
       </resource>
+      <resource type="video">
+        <!--参考image，只不过里面的img_id换成vid_id这样-->
+      </resource>
       <resource type="layer">
-        <!---->
+        <!--layer可以同时存放image和video，因为video在某一时刻就是一张图片-->
       </resource>
       <resource type="channel">
         <!---->
