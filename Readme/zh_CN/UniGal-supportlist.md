@@ -1,50 +1,59 @@
-# UniGal-supportlist
+﻿# UniGal-supportlist
 
-## UniGal�Ը������֧�����
+## UniGal对各引擎的支持详表
 
-| �����ϵ | ��������             | ������������ | ���״̬     | ����ԭ��֧��             | ˫���뵼�� | �ɴ�Unigal���� | �ɵ���ΪUnigal | ����֧�ּƻ� |
+| 引擎代系 | 引擎名称             | 引擎主流语言 | 存活状态     | 引擎原生支持             | 双向导入导出 | 可从Unigal导入 | 可导出为Unigal | 暂无支持计划 |
 | -------- | -------------------- | ------------ | ------------ | ------------------------ | ------------ | -------------- | -------------- | ------------ |
-| UniGal   | UniGal-Prototype     | C++          | ԭ��         | �̣������У�              |              |                |                |              |
-| krkr     | krkr                 | TJS          | ��ֹͣά��   |                          |              |                | �̣������У�    |              |
-| ������� | BKEngine             | bkspr        | ��ֹͣά��   |                          |              | �̣������У�    |                |              |
-| Unity    | Unity-Nova           | Lua/C#           | **��Ծ**     | ������˵�������ߣ�       | �̣������У�  | �̣������У�    | �̣������У�    |              |
-| Python   | Librian              | liber        | **��Ծ**     | ������˵�������ߣ�       | �̣������У�  | �̣������У�    | �̣������У�    |              |
-| js       | AVGPlus              | json         | **��Ծ**     | ������Ҫ��Ҫ��ϵ�����ߣ� |              |                | �̣������У�    |              |
-| js       | AVG.js               | json         | δ֪         |                          |              |                | �̣������У�    |              |
-| js       | Renjs                | javascript   | δ֪         |                          |              |                | �̣������У�    |              |
-| Python   | Renpy                | Python       | **��Ծ**     |                          |              |                | �̣������У�    |              |
-| ������� | Snowing              | C++          | ��ֹͣά��   |                          |              |                |                | ��            |
-| json     | Monogatari           | json         | **��Ծ**     |                          |              |                | �̣������У�    |              |
-| json     | GameCreator          | δ֪         | **��Ծ**     | ������Ҫ��Ҫ��ϵ�����ߣ� |              |                | �̣������У�    |              |
-| Unity    | Unity-Utage          | C#           | **��Ծ**     |                          |              |                |                | ��            |
-| Unity    | Unity-Fungus         | C#           | **��Ծ**     |                          |              |                |                | ��            |
-| Unity    | Unity-Kirino-Engine  | C#           | ��ֹͣά��   |                          |              |                |                | ��            |
-| Unity    | Unity-XiheAnimation  | C#           | δ֪         |                          |              |                |                | ��            |
-| SDL      | QGame                | C++          | **��Ծ**     | ������˵�������ߣ�       | �̣������У�  | �̣������У�    | �̣������У�    |              |
-| �ȹ�     | �ȹ�������Ϸ�������� | ���ӻ�       | **��������** |                          |              |                |                | ��            |
-| �ȹ�     | iFAction             | ���ӻ�       | ��Ծ         |                          |              |                |                | ��            |
-| �ȹ�     | EvkWorld�þ�         | ���ӻ�       | δ֪         |                          |              |                |                | ��            |
+| UniGal   | UniGal-Prototype     | C++          | 原型         | √（开发中）              |              |                |                |              |
+| Krkr     | Krkr                 | TJS          | 已停止维护   |                          |              |                | √（开发中）    |              |
+| 面包工坊 | BKEngine             | bkspr        | 已停止维护   |                          |              | √（开发中）    |                |              |
+| Unity    | Unity-Nova           | Lua/C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| Python   | Librian              | liber        | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| js       | AVGPlus              | json         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
+| js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              |
+| js       | Renjs                | javascript   | 未知         |                          |              |                | √（开发中）    |              |
+| Python   | Renpy                | Python       | **活跃**     |                          |              |                | √（开发中）    |              |
+| 弦语蝶梦 | Snowing              | C++          | 已停止维护   |                          |              |                |                | √            |
+| json     | Monogatari           | json         | **活跃**     |                          |              |                | √（开发中）    |              |
+| json     | GameCreator          | 未知         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
+| Unity    | Unity-Utage          | C#           | **活跃**     |                          |              |                |                | √            |
+| Unity    | Unity-Fungus         | C#           | **活跃**     |                          |              |                |                | √            |
+| Unity    | Unity-Kirino-Engine  | C#           | 已停止维护   |                          |              |                |                | √            |
+| Unity    | Unity-XiheAnimation  | C#           | 未知         |                          |              |                |                | √            |
+| SDL      | QGame                | C++          | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| 橙光     | 橙光文字游戏制作工具 | 可视化       | **生不如死** |                          |              |                |                | √            |
+| 橙光     | iFAction             | 可视化       | 活跃         |                          |              |                |                | √            |
+| 橙光     | EvkWorld幻境         | 可视化       | 未知         |                          |              |                |                | √            |
 
-## ����֧���б��Ĳ���˵��
+## 关于支持列表的补充说明
 
-### ���ῼ��֧�ֵ������ԭ��
+### 不会考虑支持的引擎和原因
 
-�ȹ�������Ϸ�������ߣ�**ҵ�綾��**������ƽ̨���������ߵ������Լ�һ������
+橙光文字游戏制作工具：**业界毒瘤**，捆绑平台，逼迫作者吊死在自家一颗树上
 
-iFAction������ҵ���沢�л����˺��ƶ���֤�ļ��ܹ��ܣ���Ʒ�Ĵ���Ҫ����������������������ṩ�������߼��뿪���ߵ�ӯ�����û��زİ�ȫΥ�����ֲ����ϱ���Ŀ���ŵĳ��ԡ�
+iFAction：是商业引擎并有基于账号云端验证的加密功能，作品的打开需要掌握在引擎制作方的手里，提供导出工具既与开发者的盈利和用户素材安全违背，又不符合本项目开放的初衷。
 
-EvkWorld��������Ⱥ�ʼ�����ʽ������ʹ���������ٷ��Ĵ򿨿γ̡����Ҹ����沢��רע��AVG����������ʽ�ĵĶ๦�����棬���ָ߶�����ģ�壬��AVG�Ŀ���չ�ռ䲻һ���㹻��
+EvkWorld：曾经以群邮件的形式大量向使用者推销官方的打卡课程。并且该引擎并非专注于AVG，而是杂糅式的的多功能引擎，但又高度依赖模板，在AVG的可扩展空间不一定足够大。
 
-### ����֧�ּƻ�
+### 更多支持计划
 
-�������棬���Լ�visual-novel-engine��[Github Topic](https://github.com/topics/visual-novel-engine)�������Ѿ���һЩ�������ڱ�֧�������С�
+更多引擎，可以见visual-novel-engine的[Github Topic](https://github.com/topics/visual-novel-engine)。其中已经有一些引擎已在本支持名单中。
 
-����ѡ��֧��һ�������������Ҫ�ǿ������¼������أ�
+我们选择支持一个引擎的理由主要是考虑以下几个因素：
 
-+ ���û�����������
-+ ����ɳ̶�
-+ ��Կ����ߵ��Ѻó̶�
-+ ��ʹ�õĿ�ԴЭ���Ƿ��㹻����
-+ ���Ƿ����㹻�����������û��Ŀ����ĵ�
-+ ���Ƿ��кܺõ�i18n֧�֡�a11y֧�ֺͿ�ƽ̨֧��
-+ ���Ƿ������õ��û���Ⱥ��
++ 其用户基础和体量
++ 其完成程度
++ 其对开发者的友好程度
++ 其使用的开源协议是否足够开放
++ 其是否有足够的面向中文用户的开发文档
++ 其是否有很好的i18n支持、a11y支持和跨平台支持
++ 其是否有良好的用户社群。
+
+## 注意事项
+
+1. 大小写严格，如果有拼写错误是会报错的。
+
+2. 此外，不正确的缩写和习惯名称也会报错。
+
+我们不是不想做更丰富的支持，更人性化的支持。只是我们实在不能相信前端的输入和用户的输入，为了尽可能减少错误的可能，我们采用了严格的UEP来对异常进行管理。错误的引擎名称将可能导致UEP-E-0006错误。
+

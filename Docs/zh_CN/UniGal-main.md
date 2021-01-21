@@ -9,6 +9,7 @@
 ## UniGal的全部原子操作的列表
 
 在您拆分原子操作的过程中,将需要大量的参考其他语言的语法文档。
+
 在此将一部分有官方文档或高度可信文档的引擎的文档贴在[UniGal-reference.md](UniGal-reference.md#各引擎维护团队联系名录)中,供后面拆原子操作的大佬参考。
 
 ### 文本处理部分(text)
@@ -107,6 +108,12 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
             - resource_image
             - resource_sound
             - resource_layer
+                - layer_ID
+                - layer_name
+                - layer_opacity
+                - layer_transparent
+                - layer_Image
+                    - img_ID
             - resource_channel
             - resource_live2d
             - resource_spine
@@ -288,9 +295,14 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
       </resource>
       <resource type="layer">
         <!--layer可以同时存放image和video，因为video在某一时刻就是一张图片-->
+        <!-- layer的内容太长写不下了，可以自己去看UniGal-layer.md -->
+        <!-- 但是上面的树依然是正常的写出来了 -->
       </resource>
       <resource type="channel">
         <!---->
+      </resource>
+      <resource type="index">
+        <!--index用于存放layerlist和channellist-->
       </resource>
       <resource type="live2d">
         <!---->

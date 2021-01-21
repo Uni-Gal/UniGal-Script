@@ -39,11 +39,6 @@ contexts:
       with_prototype:
         - match: (?=</head>)
           pop: true
-    - match: <comment>
-      push:comment
-      with_prototype:
-        - match: (?=</comment>)
-          pop:true
 
   head:
     - match: <src>
@@ -52,4 +47,5 @@ contexts:
       scope: text.xml
 
   comment:
+    - match: //
     - meta_scope: comment.line.unigal

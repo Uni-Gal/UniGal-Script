@@ -57,20 +57,20 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
 对Analyse中这一行代码，可以用如下的代码来表示
 
 ```xml
-      <resource type="image">
-        <image>
-          <img_ID>
-		    0
-          </img_ID>
-          <file>
-            image/bg/BG25a_1280
-          </file>
-          <load>
-            yes
-          </load>
-          //更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。
-        </image>
-      </resource>
+<resource type="image">
+  <image>
+    <img_ID>
+      0
+    </img_ID>
+    <file>
+      image/bg/BG25a_1280
+    </file>
+    <load>
+      yes
+    </load>
+    <!--更多的文件属性的信息还没有设计好标签，暂定为文件格式，图像的尺寸等。-->
+  </image>
+</resource>
 ```
 如果是BKE这种有图层概念的，并且有一些默认的0图层啊1图层啊这样的定义
 那么我们在BKE脚本转换为UniGal-Script的时候，我们需要在每次生成的body的开头就预先init一个layerlist
@@ -88,8 +88,6 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
 ## Translation
 首先提醒，我们可能未来将不会按照逐句翻译的形式进行转换，第一行和第二行，sprite的声明和addto存在相同之处的地方，可能会考虑合并，本次依然按照逐句转换实现
 
-**这段需要修改！这段需要修改！目前的```<layer>```已经算是```<resource>```的一种，不应单独位于```<code>```下面！**
-
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <unigal-script>
@@ -100,8 +98,8 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
   </head>
   <body>
     <code>
-      首先定义一个基本图层0层
-      <layer>
+      <!--首先定义一个基本图层0层-->
+      <resource type="layer">
         <layer_ID>
           0
         </layer_ID>
@@ -111,11 +109,13 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
         <layer_opacity>
           255
         </layer_opacity>
-      </layer>
-      //接下来刷新一个有0层的layerlist
-      <layerlist>
-        <layer_ID>0</layer_ID>
-      </layerlist>
+      </resource>
+      <!--//接下来刷新一个有0层的layerlist-->
+      <resource type="index">
+        <layerlist>
+          <layer_ID>0</layer_ID>
+        </layerlist>
+      </resource>
     </code>
     <struct>
       <count>
@@ -123,7 +123,7 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
       </count>
     </struct>
     <code>
-      //接下来是声明sprite（即创建resource元素）
+      <!--//接下来是声明sprite（即创建resource元素）-->
       <resource type="image">
         <image>
           <img_ID>
@@ -136,7 +136,7 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
             yes
           </load>
           <image_opacity>
-            255//默认在BKE中只要声明图片精灵都是255，把它添加到图层中才是图层中的图名都
+            255<!--//默认在BKE中只要声明图片精灵都是255，把它添加到图层中才是图层中的图名都-->
           </image_opacity>
           <size>
             <x></x>
@@ -151,16 +151,16 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
       </count>
     </struct>
     <code>
-      //addto是一个函数？
-      //这一行分为两部分，一个是将图片插入layer，另一个是展示他。
-      //zorder是什么我还么想好
-      //第一步，插入图片
-      <layer>
+      <!--//addto是一个函数？-->
+      <!--//这一行分为两部分，一个是将图片插入layer，另一个是展示他。-->
+      <!--//zorder是什么我还么想好-->
+      <!--//第一步，插入图片-->
+      <resource type="layer">
         <layer_ID>
           0
         </layer_ID>
         <layer_name>
-          basic_layer //本打算叫BKengine_default
+          basic_layer <!--//本打算叫BKengine_default-->
         </layer_name>
         <layer_opacity>
           255
@@ -170,17 +170,17 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
             0
           </img_ID>
         </layer_image>
-      </layer>
-      //第二步，改透明度
-      //无状态确实麻烦，每次都得重新声明一次内存状态
-      //建议对于这种需要频繁更迭状态的东西，所有字段都是非强制好了，这样可以想改啥改啥？（那这不就是有状态了吗，但起码load和file可以省（不是第一次的时候）
+      </resource>
+      <!--//第二步，改透明度-->
+      <!--//无状态确实麻烦，每次都得重新声明一次内存状态-->
+      <!--//建议对于这种需要频繁更迭状态的东西，所有字段都是非强制好了，这样可以想改啥改啥？（那这不就是有状态了吗，但起码load和file可以省（不是第一次的时候）-->
       <resource type="image">
         <image>
           <img_ID>
             0
           </img_ID>
           <image_opacity>
-            255//默认在BKE中只要声明图片精灵都是255，把它添加到图层中才是图层中的图名都
+            255<!--//默认在BKE中只要声明图片精灵都是255，把它添加到图层中才是图层中的图名都-->
           </image_opacity>
           <size>
             <x></x>
@@ -188,7 +188,7 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
           </size>
         </image>
       </resource>
-      //第三步，展示
+      <!--//第三步，展示-->
       <action>
         <showimage>
           <imgname>
@@ -199,7 +199,7 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
             </type>
             <DoublePoint>
               <Point1>
-                //左上点
+                <!--//左上点-->
                 <pos1>
                   0
                 </pos1>
@@ -208,7 +208,7 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
                 </pos2>
               </Point1>
               <Point2>
-                //右下点
+                <!--//右下点-->
                 <pos1>
                   image.x
                 </pos1>
@@ -227,9 +227,11 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
       </count>
     </struct>
     <code>
-      //新建图层
-      //但我认为layer的w和h可以不用写，我们的layer都是全屏的（然后这个w和h直接用于修建layer的所有image，在unigal到bke的时候，需要检测一下是否所有图像都是一个大小，一样就把它还原回去
-      <layer>
+      <!--//新建图层-->
+      <!--//但我认为layer的w和h可以不用写-->
+      <!--我们的layer都是全屏的（然后这个w和h直接用于修建layer的所有image-->
+      <!--在unigal到bke的时候，需要检测一下是否所有图像都是一个大小，一样就把它还原回去-->
+      <resource type="layer">
         <layer_ID>
           10
         </layer_ID>
@@ -239,12 +241,14 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
         <layer_opacity>
           255
         </layer_opacity>
-      </layer>
-      //此时layerlist发生变化，重新声明
-      <layerlist>
-        <layer_ID>10</layer_ID>
-        <layer_ID>0</layer_ID>
-      </layerlist>
+      </resource>
+      <!--//此时layerlist发生变化，重新声明-->
+      <resource type="index">
+        <layerlist>
+          <layer_ID>10</layer_ID>
+          <layer_ID>0</layer_ID>
+        </layerlist>
+      </resource>
     </code>
     <struct>
       <count>
@@ -252,12 +256,12 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
       </count>
     </struct>
     <code>
-      //准备向旧图层添加一个ID为10的图像
-      //但是这个图像什么时候定义的？故这个操作应该报错了吧？
-      //还没写第四句对应的代码
+      <!--//准备向旧图层添加一个ID为10的图像-->
+      <!--//但是这个图像什么时候定义的？故这个操作应该报错了吧？-->
+      <!--//还没写第四句对应的代码-->
     </code>
   </body>
-
+</unigal-script>
 ```
 
 # Librian
@@ -304,12 +308,32 @@ BG {文件名} {淡入時間=1} {位置="0% 0%"} {漸變方法='_淡出'}
     </src_engine>
   </head>
   <body>
+    <resource type="layer">
+      <layer_ID>
+        01
+      </layer_ID>
+      <layer_name>
+        Librian_default
+      </layer_name>
+      <layer_opacity>
+        255
+      </layer_opacity>
+      <layer_transparent>
+        100
+      </layer_transparent>
+    </resource>
+    <resource type="index">
+      <layerlist>
+        <layer_ID>01</layer_ID>
+      </layerlist>
+    </resource>
+    <!-- Librian暂无需要预处理的内容，因此直接定义句数就可以 -->
+    <!-- 不过只要涉及到图像和音频，就有必要提前预定义layer和channel -->
     <struct>
       <count>
         1
       </count>
     </struct>
-    <!-- Librian暂无需要预处理的内容，因此直接定义句数就可以 -->
     <code>
       <resource type="sound">
         <sound>
@@ -346,6 +370,7 @@ BG {文件名} {淡入時間=1} {位置="0% 0%"} {漸變方法='_淡出'}
   </body>
 </unigal-script>
 ```
+**不过似乎把layer和channel搞混了，明天完善一下channel和example2一块好了**
 
 ```
 ## Examples-2

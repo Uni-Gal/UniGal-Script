@@ -1,4 +1,4 @@
-# UniGal-中文文档
+﻿# UniGal-中文文档
 
 ## **【一定要看】**[UniGal-guideline.md](UniGal-guideline.md)
 
@@ -46,6 +46,10 @@
 + [iFAction](UniGal-text.md#iFAction)
 
 此外，没有特殊规定的话，本名称均遵守首字母大写，在```<head></head>```中的引擎名称应保持与这里一致，作为本框架对大家的官方称呼。
+
+## [UniGal-exceptionproposal.md](UniGal-exceptionproposal.md)
+UniGal的异常处理提案。用于解决不同引擎间转换不完美的问题和处理错误。
+若要详细了解建议移步[Uni-Gal/UniGal-ExceptionProposal](https://github.com/Uni-Gal/UniGal-ExceptionProposal)。
 
 ## [UniGal-layer.md](UniGal-layer.md)
 想看图层的实验性选项，看layer。目前尚不够完善，欢迎您来开荒式的定义。
