@@ -1,4 +1,4 @@
-# UniGal-codeblock
+﻿# UniGal-codeblock
 
 code部分主要涉及内嵌代码段。如果某个语言有一整段难以被翻译且较为整体的内容，我们允许暂时不进行转换，整段保留。
 
@@ -37,7 +37,6 @@ code部分主要涉及内嵌代码段。如果某个语言有一整段难以被�
 
 关于具体引擎您可以参考具体引擎的规范来实现。[Librian的实现](https://doc.librian.net/site/%E9%80%B2%E9%9A%8E/%E5%B5%8C%E5%85%A5%E4%BB%A3%E7%A2%BC.html)
 
-```
 ```XML
 <codeblock enginefamily="Librian" enginename="Librian" lang="CSS">
     <!-- 实际CSS代码 -->
@@ -45,4 +44,93 @@ code部分主要涉及内嵌代码段。如果某个语言有一整段难以被�
 <codeblock enginefamily="Librian" enginename="Librian" lang="Python">
     <!-- 实际Python代码 -->
 </codeblock>
+```
+
+## Simple3
+
+但是并非所有的代码段都是不需要转换的
+
+例如这种纯粹控制基础的文字属性且在UniGal中有定义的，完全可以通过UniGal的文本控制来实现
+
+例如UniGal中提供了如下的功能
+
+```XML
+<text>
+  <content>
+    <part>
+      <!--内容-->
+    </part>
+    <color>
+      <!--文本颜色-->
+    </color>
+    <ruby>
+      <!--可以加入注音-->
+    </ruby>
+    <style>
+      <size></size>
+      <bold></bold>
+      <italic></italic>
+      <deleted></deleted>
+      <underlined></underlined>
+      <!--style中只允许填写bool值，即true与false-->
+    </style>
+    <!--content是文本相关，其中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的-->
+  </content>
+</text>
+```
+那么，如下的Liber脚本
+
+```Liber
+舟舟 「<small>不是特意給你做的</small>」
+```
+
+我们就没有必要使用这样的代码转换
+
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+<unigal-script>
+  <body>
+    <text>
+      <character>
+        <name>
+          舟舟
+        </name>
+      </character>
+      <content>
+        <part>
+           
+        </part>
+      </content>
+    </text>
+    <code>
+      <codeblock enginefamily="Librian" enginename="Librian" lang="HTML">
+        <small>不是特意給你做的</small>
+      </codeblock>
+    </code>
+  </body>
+</unigal-script>
+```
+而可以这样
+
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+<unigal-script>
+  <body>
+    <text>
+      <character>
+        <name>
+          舟舟
+        </name>
+      </character>
+      <content>
+        <part>
+          不是特意給你做的
+        </part>
+        <style>
+          <size>small</size>
+        </style>
+      </content>
+    </text>
+  </body>
+</unigal-script>
 ```
