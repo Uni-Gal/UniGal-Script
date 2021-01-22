@@ -241,6 +241,9 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
         </cg>
         <tachie>
           <!--立绘-->
+          <cloth>
+            <!--服装-->
+          </cloth>
           <pose>
             <!--动作造型-->
           </pose>
