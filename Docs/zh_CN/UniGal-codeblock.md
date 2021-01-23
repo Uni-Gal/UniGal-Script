@@ -134,3 +134,16 @@ code部分主要涉及内嵌代码段。如果某个语言有一整段难以被�
   </body>
 </unigal-script>
 ```
+
+## Simple4
+
+
+AVGPlus中的周期定时器可能是要整段保留为嵌入的js了，大概只能导出给同样支持插入js的Librian了吧？
+
+而且，AVGPlus的这个js并不是原生的标准js，是需要做一定的翻译的。
+
+但是仅仅是AVG的js和原生js之间的翻译其实还是很好做的吧？这样Librian中如果遇到原生的js的定时器也是可以翻译过来的？
+
+~~建议两家喜结百年好合（划去）~~
+
+https://docs.avg-engine.com/handbook/api/flow/#_3
