@@ -12,6 +12,8 @@ Layer是UniGal推出的图层(layer)和图层组(layerlist)系统
 
 如下是Layer在main中的定义
 
+Layer是一种resource
+
 ```xml
 <resource type="layer">
   <layer_ID>
@@ -49,7 +51,7 @@ Layer是UniGal推出的图层(layer)和图层组(layerlist)系统
 
 1. image在layer中的上下顺序完全由img_order决定，数字越小的位于越上方。
 
-
+2. 每次图层中Layer_Image变化的时候，应重新声明一次此时的Layer中的图像，需要且仅需要展示layer_Image这一个节点就可以了（带上layerID）。
 
 
 ## Layerlist
@@ -58,12 +60,23 @@ Layer是UniGal推出的图层(layer)和图层组(layerlist)系统
 
 如下是Layerlist在main中的定义
 
+Layerlist是一种index。index是一种resourece
+
 ```xml
 <resource type="index">
   <layerlist>
-    <layer_ID>1</layer_ID>
-    <layer_ID>2</layer_ID>
-    <layer_ID>3</layer_ID>
+    <layer>
+      <layer_ID>19</layer_ID>
+      <layer_order>1</layer_order>
+    </layer>
+    <layer>
+      <layer_ID>198</layer_ID>
+      <layer_order>3</layer_order>
+    </layer>
+    <layer>
+      <layer_ID>10</layer_ID>
+      <layer_order>2</layer_order>
+    </layer>
   </layerlist>
 </resource>
 ```
@@ -77,28 +90,12 @@ Layer是UniGal推出的图层(layer)和图层组(layerlist)系统
 
 4. 在layer_ID之外引入layer_Order的属性，来负责维护排序
 
+5. Layerlist每次发生变化的时候都需要重新声明一次当前的状态
+
 ## Layer和Layerlist关系
 
-这里的图层也是希望能够尽可能引入目前各种引擎中的图层概念
-比如图层ID，图层透明度，图层属性，图层属于的资源组，等
-我们希望创造一个足够丰富的图层类来完成这一些
+UniGal的图层是希望能够尽可能引入目前各种引擎中的图层概念，比如图层ID，图层透明度，图层属性，图层属于的资源组等。我们希望创造一个足够丰富的图层类来完成这一些工作。
 
+图层的概念，就是一个游戏中有一个（祖传的）```<layerlist>```，然后这一个```<layerlist>```里面有若干个```<layer>```，每个```<layer>```中有若干个```<image>```
 
-
-
-
-问：有无必要维护一套layerlist的表吗？只在每个剧本的开头或者结尾手动存储一次layerlist？还是每次发生图层增减的时候都需要重新声明一次？
-
-同时，每次图层中imglist变化的时候，是否也应重新声明一次？还是强制加上下层次的序号？
-
-
-
-图层中有必要引入图像列表（存储一个图层可能存在的多个图像）
-
-(在跳转前后，后一个剧本文件将继承上一个文件的layerlist中的所有图层信息，若有与后序剧本文件的初始状态冲突的，则按后序剧本文件的来)（这句挺难理解的）
-
-这样，图层的概念就变成了一个游戏中有一个（祖传的）```<layerlist>```，然后这一个```<layerlist>```里面有若干个```<layer>```，每个```<layer>```中有若干个```<image>```
-
-此外，layer是一种resource，layerlist是一种index资产，但是index是一种resource
-
-resource喜提结构体和对象的作用，成为最大工具人。
+需要注意的是，在跳转前后，后一个剧本文件将继承上一个文件的layerlist中的所有图层信息，若有与后序剧本文件的初始状态冲突的，则按后序剧本文件的来。（这句挺难理解的）

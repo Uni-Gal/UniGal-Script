@@ -411,8 +411,210 @@ librian中载入一个图像（唔，就是malloc吧）是隐式的由引擎来�
 
 
 ## Translation-2
-```
-
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<unigal-script>
+  <head>
+    <src_engine>
+      Librian
+    </src_engine>
+  </head>
+  <body>
+    <resource type="layer">
+      <layer_ID>
+        01
+      </layer_ID>
+      <layer_name>
+        Librian_background
+      </layer_name>
+      <layer_opacity>
+        255
+      </layer_opacity>
+      <layer_transparent>
+        100
+      </layer_transparent>
+    </resource>
+    <resource type="layer">
+      <layer_ID>
+        02
+      </layer_ID>
+      <layer_name>
+        Librian_tachie
+      </layer_name>
+      <layer_opacity>
+        255
+      </layer_opacity>
+      <layer_transparent>
+        100
+      </layer_transparent>
+    </resource>
+    <resource type="index">
+      <layerlist>
+        <layer>
+          <layer_ID>02</layer_ID>
+          <layer_order>1</layer_order>
+        </layer>
+        <layer>
+          <layer_ID>01</layer_ID>
+          <layer_order>2</layer_order><!--更靠下-->
+        </layer>
+      </layerlist>
+    </resource>
+    <!-- Librian暂无需要预处理的内容，因此直接定义句数就可以 -->
+    <!-- 不过只要涉及到图像和音频，就有必要提前预定义layer和channel -->
+    <!--【1】-->
+    <struct>
+      <count>
+        1
+      </count>
+    </struct>
+    <code>
+      <resource type="image">
+        <image>
+          <img_ID>
+            001
+          </img_ID>
+          <layer_ID>
+            02
+          </layer_ID>
+          <file>
+            (['裸體']@{'潘大爺.psd'})
+          </file>
+        </image>
+        <tachie>
+          <cloth>
+            裸體
+          </cloth>
+        </tachie>
+      </resource>
+      <resource type="layer">
+        <layer_ID>
+          02
+        </layer_ID>
+        <layer_Image>
+          <image>
+            <img_ID>001</img_ID>
+            <img_order>1</img_order>
+          </image>
+        </layer_Image>
+      </resource>
+    </code>
+    <action>
+      <showimage>
+        <!--意思意思-->
+      </showimage>
+    </action>
+    <!--【2】-->
+    <struct>
+      <count>
+        2
+      </count>
+    </struct>
+    <code>
+      <resource type="image">
+        <image>
+          <img_ID>
+            002
+          </img_ID>
+          <layer_ID>
+            02
+          </layer_ID>
+          <file>
+            (['默認表情']@{'潘大爺.psd'})
+          </file>
+        </image>
+        <tachie>
+          <expression>
+            默認表情
+          </expression>
+        </tachie>
+      </resource>
+      <resource type="layer">
+        <layer_ID>
+          02
+        </layer_ID>
+        <layer_Image>
+          <image>
+            <img_ID>002</img_ID>
+            <img_order>1</img_order>
+            <img_ID>001</img_ID>
+            <img_order>2</img_order>
+          </image>
+        </layer_Image>
+      </resource>
+    </code>
+    <action>
+      <showimage>
+        <!--意思意思-->
+      </showimage>
+    </action>
+    <!--暂定为先画图，后写字-->
+    <text>
+      <character>
+        <name>
+          潘大爺
+        </name>
+      </character>
+      <content>
+        <part>
+          我看看……
+        </part>
+      </content>
+    </text>
+    <!--【3】-->
+    <struct>
+      <count>
+        3
+      </count>
+    </struct>
+    <code>
+      <resource type="image">
+        <image>
+          <img_ID>
+            003
+          </img_ID>
+          <layer_ID>
+            02
+          </layer_ID>
+          <file>
+            (['大笑']@{'潘大爺.psd'})
+          </file>
+        </image>
+        <tachie>
+          <expression>
+            大笑
+          </expression>
+        </tachie>
+      </resource>
+      <resource type="layer">
+        <layer_ID>
+          02
+        </layer_ID>
+        <layer_Image>
+          <image>
+            <img_ID>003</img_ID>
+            <img_order>1</img_order>
+            <img_ID>001</img_ID>
+            <img_order>2</img_order>
+          </image>
+        </layer_Image>
+      </resource>
+    </code>
+    <!--暂定为先画图，后写字-->
+    <text>
+      <character>
+        <name>
+          潘大爺
+        </name>
+      </character>
+      <content>
+        <part>
+          哈哈哈，你是豬嗎？
+        </part>
+      </content>
+    </text>
+  </body>
+</unigal-script>
 ```
 
 
