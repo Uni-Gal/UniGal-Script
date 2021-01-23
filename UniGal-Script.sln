@@ -15,6 +15,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{7CD083C1-0D63-4CBC-8FF0-1C86FB71231F}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\zh_CN\README.md = Docs\zh_CN\README.md
+		Docs\zh_CN\UniGal-animation.md = Docs\zh_CN\UniGal-animation.md
 		Docs\zh_CN\UniGal-codeblock.md = Docs\zh_CN\UniGal-codeblock.md
 		Docs\zh_CN\UniGal-environment.md = Docs\zh_CN\UniGal-environment.md
 		Docs\zh_CN\UniGal-exceptionproposal.md = Docs\zh_CN\UniGal-exceptionproposal.md

@@ -129,7 +129,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
 
 ## 全部功能的代码示范（原型Prototype）
 
-```XML
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <unigal-script>
   <head>
