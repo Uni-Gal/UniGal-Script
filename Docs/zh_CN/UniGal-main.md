@@ -21,36 +21,17 @@ text的原子操作有
 
 ### 函数控制部分(code)
 
-函数包括资源管理（resource）、演出（action）、逻辑控制（logic）、扩展（extension）功能等一系列都成为函数。**一切皆函数~~（大雾）~~**
+函数包括资源管理（resource）、演出（action）、逻辑控制（logic）、扩展（extension）功能等一系列都成为函数。
+
+**一切皆函数~~（大雾）~~**
+
+> 
+> 所有的函数之间平等，平等的享有命名空间和编号。但action的函数比其他的函数更平等。
+> ——窝，自己说的
 
 其中一些引擎相关的特有API按照extension来书写，确保引擎的feature不会影响到大部分的内容。比如librian的支持CSS样式和嵌入任何一种语言。比如BKE的支持live2D(如果有其他家也支持的很好，可能会挪动到resource)，比如krkr的一些允许内置浏览器的代码，比如橙光的鲜花（虽然不会支持它的）（文件读写，调取第三方api等也属于extension）
 
 code的原子操作有
-
-#### action函数
-
-面向文本控制和演出效果
-
-1001. textcontrol
-1002. newline
-1003. waitclick
-
-此外，网络访问和文件读写等操作也应属于action范畴。但UniGal仅表示“存在此项操作”，具体该操作如何实现以及引擎是否以安慰剂实现，UniGal不从标准的角度去规定。
-
-在```<network_basic>```为```true```后可以使用```network_get```、```network_post```
-
-在```<network_restful>```为```true```后可以使用```network_get```、```network_post```、```network_delete```、```network_put```
-
-1011. network_get
-1012. network_post
-1013. network_delete
-1014. network_put
-
-在```<fileIO>```为```true```后可以使用如下函数
-
-1021. fileIO_read
-1022. fileIO_create
-1023. fileIO_delete
 
 #### logic函数
 
