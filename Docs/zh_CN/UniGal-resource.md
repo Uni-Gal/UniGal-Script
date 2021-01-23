@@ -44,8 +44,8 @@ BKE中的图像资源是被称作sprite的，即所说的精灵。不仅图片�
 ```
 [sprite index=0 file="image/bg/BG25a_1280"]
 ```
-这样的声明，类似创建一个对象<resource>
-之后的属于<action>的调用
+这样的声明，类似创建一个对象```<resource>```
+之后的属于```<action>```的调用
 
 sprite类比load
 

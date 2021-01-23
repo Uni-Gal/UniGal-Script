@@ -1,4 +1,4 @@
-# UniGal-reference
+﻿# UniGal-reference
 
 本文档主要讲述了各个语言中的很多细节特征，算是一定程度上的参考大全了。
 
@@ -111,9 +111,9 @@ textsprite
 
 对于C语言开发者而言，可以考虑使用lib2xml或？？？（若您使用C++，亦可使用XXX）
 
-对于python开发者而言，可以考虑使用？？？（说你呢rimo酱
+对于python开发者而言，可以考虑使用？？？（总之只是简单的把Librian中的纯文本部分导出成unigal其实没难度？@rimochan 
 
-对于Java开发者而言，
+对于Java开发者而言，（@hokaso 
 
 对于C#开发者而言，建议使用System.Xml用于解析UniGal脚本，或者等待UniGal.Compiler.Frontend #(滑稽)
 
