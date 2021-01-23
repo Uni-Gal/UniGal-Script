@@ -31,6 +31,7 @@
 + [BKEngine](UniGal-resource.md#BKEngine)
 + [Librian](UniGal-resource.md#Librian)
 + [Nova](UniGal-resource.md#Nova)
++ [AVGPlus](UniGal-resource.md#AVGPlus)
 
 ## [UniGal-text.md](UniGal-text.md)
 

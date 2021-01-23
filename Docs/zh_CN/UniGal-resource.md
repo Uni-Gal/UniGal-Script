@@ -686,9 +686,73 @@ Nova的label函数不仅仅是一个标记，而是一个标记对象，这个�
 
 ## Translation
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<unigal-script>
+  <head>
+    <src_engine>
+      Unity-Nova
+    </src_engine>
+  </head>
+  <body>
+    <!--提前代码块开始-->
+    <struct>
+      <label>
+        <label_name>
+          第一章
+        </label_name>
+        <label_ID>
+          ch1
+        </label_ID>
+      </label>
+    </struct>
+    <!--is_default_start()不知道怎么翻译-->
+    <!--提前代码块结束-->
+
+    <!--延迟代码块开始-->
+    <!--延迟代码块结束-->
+    
+    <text>
+      <character>
+        <name>
+          王二宫
+        </name>
+      </character>
+      <content>
+        <part>
+          真没想到，我们竟然会被暴雨困在了教学楼里。
+        </part>
+      </content>
+    </text>
+
+    <!--延迟代码块开始-->
+    <!--anim:trans_fade(cam, function()-->
+    <!--show(ergong, 'normal', pos_c)-->
+    <!--show(bg, 'room')-->
+    <!--end, 2)-->
+    <!--play(bgs, 'rain')-->
+    <!--anim:volume(bgs, 0.2, 3)-->
+    <!--box_hide_show(2)-->
+    <!--auto_voice_on('王二宫', 1)-->
+    <!--auto_voice_on('陈高天', 1)-->
+    <!--set_auto_voice_delay(2)-->
+    <!--延迟代码块结束-->
+
+    <code>
+      <logic>
+        <jump>
+          <jump_dst>
+            ch2
+          </jump_dst>
+        </jump>
+      </logic>
+    </code>
+  </body>
+</unigal-script>
 ```
-还没翻译
-```
+
+**尚未完全翻译完毕，尚有诸多不恰当之处**
+
 # AVGPlus
 
 ## 官网教程摘要——有特色的地方
@@ -740,6 +804,27 @@ character.show("char1", "girl-smile.png", {
   },
 });
 ```
+
+### 隐藏立绘
+
+```javascript
+// 我们先显示一个 name 为 'space' 的立绘
+character.show("space", "space-normal.png", {
+  renderer: {
+    position: "(center, 90%)",
+  }
+});
+
+text.show("「没什么事我先走了。」", {
+  name: "空格"
+});
+
+text.hide();
+
+// 隐藏 name 为 'space' 的立绘
+character.hide("space");
+```
+
 ### 其他
 动画和滤镜效果此处不表
 
