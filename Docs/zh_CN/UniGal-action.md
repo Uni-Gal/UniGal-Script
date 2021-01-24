@@ -10,19 +10,19 @@
 
 ### 已整理的
 
-1001. textcontrol
+11001. textcontrol
 
 对应BKE的[]，对应AVG的【】
 
-1002. newline
+11002. newline
 
-对应BKE的[]，对应AVG的【】
+对应BKE的[r]，对应AVG的【】
 
-1003. waitclick
+11003. waitclick
 
-对应BKE的[]，对应AVG的【】
+对应BKE的[l]，对应AVG的【】
 
-1004.clearmassagelayertext
+11004.clearmassagelayertext
 
 仅对应BKE的[er]
 
@@ -34,8 +34,8 @@
 
 |关键字|内容|备注|
 | ---- | ------ |---|
-|storefont|如果多次storefont，只会保存最后一次的结果。用restorefont命令可以将字体设为最后一次storefont时的状态。|暂存字体信息|
-|restorefont||复原字体信息|
+|storefont|如果多次storefont，只会保存最后一次的结果。|暂存字体信息|
+|restorefont|用restorefont命令可以将字体设为最后一次storefont时的状态。|复原字体信息|
 
 文本状态可能会抽为一个resource
 
@@ -71,29 +71,39 @@
 
 ### 图像image
 
-xxxx.showimage
+21001.showimage
 
 ### 声音sound
 
-xxxx.playsound
+22001.playsound
 
 ### 索引index
 
-xxxx.refresh_layerlist
+23001.refresh_layerlist
 
-xxxx.refresh_channellist
+23002.refresh_channellist
+
+23003.refresh_framelist
 
 ## 面向动画控制的函数
 
 ### 基本
 
-xxxx.animation_start
+31001.animation_start
 
-xxxx.animation_stop
+参数：```animation_id```
 
-xxxx.animation_pause
+31002.animation_stop
 
-xxxx.animation_continue
+参数：```animation_id```
+
+31003.animation_pause
+
+参数：```animation_id```
+
+31004.animation_continue
+
+参数：```animation_id```
 
 ### 特效
 
@@ -101,15 +111,17 @@ xxxx.animation_continue
 
 ### 其他
 
-xxxx.animation_jumptoframe
+33001.animation_jumptoframe
 
-该函数是跳转到指定帧(如果需要跳转并继续播放应该再call一个恢复播放的取消暂停的cintinue)
+参数：```animation_id```\ ```frame_id```
 
-需要一个帧的定位参数，可以是int可以是pointer
+该函数是跳转到指定帧(如果需要跳转并继续播放应该再call一个恢复播放的取消暂停的cintinue),因此额外需要一个帧的定位参数，可以是int可以是pointer
 
 xxxx.animation_playdirection
 
-控制倒放和正放，需要一个参数
+参数：```animation_id```\ ```direction```
+
+控制倒放和正放，因此额外需要一个方向参数
 
 ## 面向网络和文件IO的函数
 

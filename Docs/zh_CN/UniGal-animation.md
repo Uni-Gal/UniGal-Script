@@ -13,6 +13,9 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
 ```xml
 <code>
   <animation>
+    <animation_id>
+      <!--全局唯一标识符-->
+    </animation_id>
     <animation_type>
       <!--填KeyFrame或者ContinuousFrame-->
       <!--然后如果调用了类型不匹配的frame资源，就应当给出一个报错-->
