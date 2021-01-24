@@ -70,14 +70,18 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     <code>
       <action>
         <textcontrol>
-          waitclick
+          <waitclick>
+            true
+          </waitclick>
         </textcontrol>
       </action>
     </code>
     <code>
       <action>
         <textcontrol>
-          newline
+          <newline>
+            true
+          </newline>
         </textcontrol>
       </action>
     </code>
@@ -392,6 +396,55 @@ rpy有一个比较恶心的地方是
 
 此外，其他同样以JSON存储的引擎还有 GameCreator monogatari
 
+但是，AVGPlus和BKEngine一样有着一些存放在下标中的文本控制标识符，详情见[AVGPlus文档](https://docs.avg-engine.com/handbook/api/text/#3)
+
+现摘录于此方便查照
+
+>
+>| 控制符类型 | 说明    | 语法   |
+>| ------ | ------ | --------- |
+>| 粗体       | 字体加粗显示                                                 | [b]粗体[/b]                                 |
+>| 斜体       | 字体斜体                                                     | [i]斜体[/i]                                 |
+>| 文本颜色   | 更改文本颜色， | [c=#FF0000]文本颜色[/c]                     |
+>| 文本大小   | 更改文本字号                                                 | [s=30]文本大小[/s]                          |
+>| 删除线     | 文本删除线样式                                               | [del]删除线[/del]                           |
+>| 嵌入图片   | 在文本中插入一个图片，支持 `.jpg`, `.png`, `.gif` 等主流图片文件格式。默认目录位于 `graphics/iamges` 下 | [emoji=pic.jpg]                             |
+>| 注音       | 在文本上面标注注音                                           | [rt= *Dark Flame Master*]漆黑烈焰使[/rt]    |
+>| 语气停顿   | 文本遇到 `[wait]` 时，需要接收键鼠输入之后才会显示剩余文本。 | [wait]下次点击时继续 [wait=3000] 3 秒后继续 |
+>
+
+其中
+
+文本颜色和注音可以使用```<text><color></color></text>```和```<text><ruby></ruby></text>```来控制。
+
+粗体/斜体/文本大小可以使用```<text><style></style></text>```来控制。
+
+可以用 `[wait=time]` 的形式控制超时时间。time 为毫秒，如`[wait=3000]`则表示 3 秒后文本继续。
+
+###### 表情包问题
+
+在文本中插入一个图片，其实就是插入一个emoji，目前还没有比较合适的解决方案，考虑的是定义一种新的resource叫做emoji或者specialcharacter，然后断开前后的文本，因为没有遇到action的newline，这个是依然会继续执行的。
+
+不建议采用定义宏的形式处理，因为unigal是不赞成这种形式的。
+
+###### 颜色问题
+
+可使用如 `#FF0000` 这样的十六进制值或者 `red` 这类 CSS 颜色预设值。详见：[CSS Colors](https://www.w3schools.com/cssref/css_colors.asp)
+
+unigal中的颜色格式没有固定的要求。
+
+###### 倒计时问题
+
+关于倒计时的问题，目前有三种设想
+
+1.倒计时作为一种新的logic，不同于switch_timer，他是一种新的逻辑
+
+2.倒计时作为一种action（倾向于此）（不过实际上在解释器里面是需要用子线程方法来实现的）
+
+3.倒计时作为一种新的resource，名为subthread，同时引入多线程优化思想。（倾向于此）
+
+并且，怎么表示哪个文本或者哪个图片出发的timer，在unigal翻译回去的时候能保证关联关系不变也是问题。可能需要引入“音乐图片文字计时器”这样的控制路线
+
 ### Simple-1
 
 >```
@@ -559,6 +612,21 @@ rpy有一个比较恶心的地方是
     </text>
   </body>
 </unigal-script>
+```
+
+## 文本变量
+
+暂时没想好怎么处理
+
+```
+const name = "李狗蛋";
+text.show(`我的名字是…… [c=red]${name}[/c]。`);
+text.hide();
+
+// 当然，直接进行字符串拼接也是可以的啦~
+const number = 3;
+text.show("老实交代，你是不是把我的" + number + "个雪糕偷吃了！！！");
+text.hide();
 ```
 
 # Monogatari

@@ -144,7 +144,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
       zh_CN
     </dst_language>
     <comment>
-      <!----> 
+      <!---->
     </comment>
   </head>
   <body>
@@ -305,53 +305,72 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
         <!---->
       </resource>
       <action>
+        <!--正在考虑把函数的定义挪动到单独的文件夹中-->
+        <!--为了保证一致性，对textcontrol的层次进行了变动。-->
         <textcontrol>
-          waitclick<!--重载+1-->
+          <waitclick>
+            true
+          </waitclick>
         </textcontrol>
         <textcontrol>
-          newline<!--重载+1-->
+          <newline>
+            true
+          </newline>
         </textcontrol>
-        <showimage>
-          <!--暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer-->
-          <imgname>
-          </imgname>
-          <!-- 提供三种储存图像范围的方法，两点标记，LURD标记以及仿射矩阵 -->
-          <img_region>
-            <DoublePoint>
-              <Point1>
-                <!--左上点-->
-                <pos1>
-                  <!--row-->
-                </pos1>
-                <pos2>
-                  <!--col-->
-                </pos2>
-              </Point1>
-              <Point2>
-                <!--右下点-->
-                <pos1>
-                  <!--row-->
-                </pos1>
-                <pos2>
-                  <!--col-->
-                </pos2>
-              </Point2>
-            </DoublePoint>
-            <LURD>
-              <L>1</L>
-              <U>2</U>
-              <R>3</R>
-              <D>4</D>
-            </LURD>
-            <TransformMatirx>
-              左上,右上,左下,右下,x坐标,y坐标
-            </TransformMatirx>
-            <!--imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为变换矩阵，会自动进行转换。-->
-          </img_region>
-        </showimage>
-        <showsound>
-          <!-- 音乐播放的部分就靠你了,包括淡入淡出之类的 -->
-        </showsound>
+        <imagecontrol>
+          <showimage>
+            <!--暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer-->
+            <imgname>
+            </imgname>
+            <!-- 提供三种储存图像范围的方法，两点标记，LURD标记以及仿射矩阵 -->
+            <img_region>
+              <DoublePoint>
+                <Point1>
+                  <!--左上点-->
+                  <pos1>
+                    <!--row-->
+                  </pos1>
+                  <pos2>
+                    <!--col-->
+                  </pos2>
+                </Point1>
+                <Point2>
+                  <!--右下点-->
+                  <pos1>
+                    <!--row-->
+                  </pos1>
+                  <pos2>
+                    <!--col-->
+                  </pos2>
+                </Point2>
+              </DoublePoint>
+              <LURD>
+                <L>1</L>
+                <U>2</U>
+                <R>3</R>
+                <D>4</D>
+              </LURD>
+              <TransformMatirx>
+                左上,右上,左下,右下,x坐标,y坐标
+              </TransformMatirx>
+              <!--imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为变换矩阵，会自动进行转换。-->
+            </img_region>
+          </showimage>
+        </imagecontrol>
+        <soundcontrol>
+          <showsound>
+            <!-- 音乐播放的部分就靠你了,包括淡入淡出之类的 -->
+          </showsound>
+        </soundcontrol>
+        <indexcontrol>
+          <!--索引包括layerlist、channellist、framelist等多种类型-->
+        </indexcontrol>
+        <animationcontrol>
+          <!--动画控制函数-->
+        </animationcontrol>
+        <otherscontrol>
+          <!--其他控制，如IO和网路-->
+        </otherscontrol>
       </action>
       <animation>
       </animation>
@@ -365,26 +384,24 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           </jump_addtional>
         </jump>
         <switch>
-          <choise>
+          <switch_choise>
             <choise_name>
               <!--选择支显示名称-->
             </choise_name>
             <choise_label>
               <!--选择支跳转目标-->
             </choise_label>
-          </choise>
-          <timer>
+          </switch_choise>
+          <switch_timer>
             <timer_num>
               <!--允许您写一个以毫秒为单位的倒计时-->
             </timer_num>
             <timer_default>
               <!--倒计时结束后需要自动选择的选择支的名称-->
             </timer_default>
-          </timer>
+          </switch_timer>
         </switch>
-        <comment>
-          <!--您只能选择switch或jump中的一种logic-->
-        </comment>
+        <!--您只能选择switch或jump中的一种logic-->
       </logic>
       <extension>
         <!--暂未设定-->
@@ -410,6 +427,17 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
       <conut>
         <!--第X句台词的编号-->
       </conut>
+      <block>
+        <block_name>
+        </block_name>
+        <block_type>
+        </block_type>
+        <block_body>
+        </block_body>
+        <!--部分游戏还在脚本文件和脚本行两个层次之间，有块的等级，因此在src_engine标记为这些语言的时候，解释器就需要深入block来探测。-->
+        <!--别看，就是给Nova加的-->
+        <!--如果硬要说其他游戏也有块，那么其他游戏整个脚本包一个block就好了，没必要这么费事-->
+      </block>
     </struct>
   </body>
 </unigal-script>
@@ -436,8 +464,11 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
         - code
             - action[快乐的老鼠宝宝]
                 - textcontrol
-                - showimage
-                - showsound
+                - imagecontrol
+                - soundcontrol
+                - animationcontrol
+                - indexcontrol
+                - otherscontrol
             - resource_image[Fa鸽、快乐的老鼠宝宝]
             - resource_sound[快乐的老鼠宝宝]
             - resource_layer[快乐的老鼠宝宝]

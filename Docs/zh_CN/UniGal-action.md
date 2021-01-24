@@ -4,25 +4,21 @@
 
 这里只介绍各类action函数，不介绍其他函数
 
-## 面向文本控制和演出效果的函数
+## 面向文本控制和演出效果的函数 **textcontrol**
 
 这块从bke吸收进来了不少。
 
 ### 已整理的
 
-11001. textcontrol
+11001. newline
 
-对应BKE的[]，对应AVG的【】
+对应BKE的[r]
 
-11002. newline
+11002. waitclick
 
-对应BKE的[r]，对应AVG的【】
+对应BKE的[l]，对应AVGPlus的[wait]。但是AVGPlus的[wait=time]的形式如何处理未定。
 
-11003. waitclick
-
-对应BKE的[l]，对应AVG的【】
-
-11004.clearmassagelayertext
+11003.clearmassagelayertext
 
 仅对应BKE的[er]
 
@@ -67,17 +63,17 @@
 
 暂无
 
-## 面向资源调度的函数
+## 面向资源调度的函数 **分拆分类**
 
-### 图像image
+### 图像 **imagecontrol**
 
 21001.showimage
 
-### 声音sound
+### 声音 **soundcontrol**
 
 22001.playsound
 
-### 索引index
+### 索引 **indexcontrol**
 
 23001.refresh_layerlist
 
@@ -85,7 +81,7 @@
 
 23003.refresh_framelist
 
-## 面向动画控制的函数
+## 面向动画控制的函数 **animationcontrol**
 
 ### 基本
 
@@ -123,7 +119,7 @@ xxxx.animation_playdirection
 
 控制倒放和正放，因此额外需要一个方向参数
 
-## 面向网络和文件IO的函数
+## 面向网络和文件IO的函数  **otherscontrol**
 
 此外，网络访问和文件读写等操作也应属于action范畴。但UniGal仅表示“存在此项操作”，具体该操作如何实现以及引擎是否以安慰剂实现，UniGal不从标准的角度去规定。
 
