@@ -45,15 +45,15 @@
 
 这类效果应由解释器和编译器中间设置缓存变量，不应表现在最终的unigal代码中（但是可以加注释）
 
-text
-textcursor
-textwindow
-textoff
-texton
-textspeed
-textstyle
-texttag
-textsprite
++ text
++ textcursor
++ textwindow
++ textoff
++ texton
++ textspeed
++ textstyle
++ texttag
++ textsprite
 
 总之，这些BKE残留的状态量（BKE是有状态的，我确信），最终在转化成unigal的时候，给一个选项吧，如果是允许保留状态就给个resource，如果是不允许保留状态，那么他就会在unigal中被消失处理，同时给一个UEP-W。而在unigal到其他语言的这个过程中，unigal已经损失了信息了，到有状态语言需要压栈，到bke的话就直接每句话都硬声明就可以。
 
@@ -71,13 +71,45 @@ textsprite
 
 ### 图像image
 
+xxxx.showimage
+
 ### 声音sound
+
+xxxx.playsound
 
 ### 索引index
 
 xxxx.refresh_layerlist
 
 xxxx.refresh_channellist
+
+## 面向动画控制的函数
+
+### 基本
+
+xxxx.animation_start
+
+xxxx.animation_stop
+
+xxxx.animation_pause
+
+xxxx.animation_continue
+
+### 特效
+
+暂无
+
+### 其他
+
+xxxx.animation_jumptoframe
+
+该函数是跳转到指定帧(如果需要跳转并继续播放应该再call一个恢复播放的取消暂停的cintinue)
+
+需要一个帧的定位参数，可以是int可以是pointer
+
+xxxx.animation_playdirection
+
+控制倒放和正放，需要一个参数
 
 ## 面向网络和文件IO的函数
 
@@ -87,13 +119,13 @@ xxxx.refresh_channellist
 
 在```<network_restful>```为```true```后可以使用```network_get```、```network_post```、```network_delete```、```network_put```
 
-1011. network_get
-1012. network_post
-1013. network_delete
-1014. network_put
++ 1011. network_get
++ 1012. network_post
++ 1013. network_delete
++ 1014. network_put
 
 在```<fileIO>```为```true```后可以使用如下函数
 
-1021. fileIO_read
-1022. fileIO_create
-1023. fileIO_delete
++ 1021. fileIO_read
++ 1022. fileIO_create
++ 1023. fileIO_delete

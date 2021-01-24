@@ -2,26 +2,70 @@
 
 UniGal提供一定的基本动画功能
 
-## 动画模式
+## UniGal中的基本定义
 
-### 关键帧模式
+animation定义了两种结构，分别是```<animation>```和```<resource type="frame">```
 
-### 连续帧序列播放模式
+同时引入了一种新的索引类型，为```<resource type="index">```中的```<framelist>```
 
-## 播放位置
+### animation
 
-？
+```xml
+<code>
+  <animation>
+    <animation_type>
+      <!--填KeyFrame或者ContinuousFrame-->
+      <!--然后如果调用了类型不匹配的frame资源，就应当给出一个报错-->
+      <!--关键帧调用了连续帧的，起码可以转换，只是关键帧的“求差”的思维就没用了-->
+      <!--如果是连续帧调用了关键帧，再给一个无法转换的错误，因为连续帧思维是无状态的,不会根据差量去计算，必须全量给出-->
+    </animation_type>
+    <!--Shared（vital and optional）-->
+    <size>
+      <x></x>
+      <y></y>
+    </size>
+    <position>
+      <x></x>
+      <y></y>
+    </position>
+    <framerate>
+      <!--帧率-->
+    </framerate>
+    <framenum>
+      <!--帧数-->
+    </framenum>
+    <!--Only-KeyFrame-->
+    <!--Only-ContinuousFrame-->
+  </animation>
+</code>
+```
 
-## ？
+### resource type="frame"
 
-不知道怎么定义了
-准备抄文档
+```xml
+<code>
+  <resource type="frame">
+    <frame_type>
+      <!--填KeyFrame或者ContinuousFrame-->
+    </frame_type>
+  </resource>
+</code>
+```
+
+### framelist
+
+```xml
+ovo
+```
+
+**以上都尚未完整的定义，还需要不断改进**
+
 
 ## 在各引擎中出现的动画文档
 
 ### Librian
 
-**Librian的动画是基于什么的我也搞不清了**，猜就猜和当年flash一样有点像，是关键帧吧
+**Librian的动画是基于关键帧的**
 
 重点鞭尸对象，不用进阶的编程技巧做不出简单的动画来
 
@@ -32,6 +76,8 @@ UniGal提供一定的基本动画功能
 仅仅是让已有元素动起来的话，可以使用css来写特效
 
 总之由于Librian的这个动画写起来实在是太奇葩（但这也是它的特色），我们暂且较难支持。
+
+如果想仔细研究，不如看看[CSS3的animation相关文档](https://www.w3school.com.cn/cssref/pr_animation.asp)。
 
 ### BKEngine
 
@@ -157,3 +203,7 @@ character.show("char1", "girl-smile.png", {
 动画的间隔时间和帧率。
 
 对于关键帧而言，使用的什么插值方法。
+
+关键帧的每一帧的参数可以定义为一个resource（对象化思想），然后关键帧一样可以有一个帧序列。
+
+只不过关键帧的每一帧的持续时间是duration，而连续帧的持续时间是锁死由帧率和帧数决定的。

@@ -18,6 +18,8 @@
 
 **接下来的工作重点将在codeblock和resource上**
 
+此外，没有特殊规定的话，引擎名称均遵守首字母大写，在```<head></head>```中的引擎名称应保持与这里一致，作为本框架对大家的官方称呼。
+
 ## [UniGal-main.md](UniGal-main.md)
 
 如果要整体了解所有各类已经有的原子操作，相当于以下resource、text、layer、code的总大纲。
@@ -46,8 +48,6 @@
 + [GameCreator](UniGal-text.md#GameCreator)
 + [iFAction](UniGal-text.md#iFAction)
 
-此外，没有特殊规定的话，本名称均遵守首字母大写，在```<head></head>```中的引擎名称应保持与这里一致，作为本框架对大家的官方称呼。
-
 ## [UniGal-exceptionproposal.md](UniGal-exceptionproposal.md)
 UniGal的异常处理提案。用于解决不同引擎间转换不完美的问题和处理错误。
 若要详细了解建议移步[Uni-Gal/UniGal-ExceptionProposal](https://github.com/Uni-Gal/UniGal-ExceptionProposal)。
@@ -60,3 +60,11 @@ UniGal的异常处理提案。用于解决不同引擎间转换不完美的问�
 
 ## [UniGal-reference.md](UniGal-reference.md)
 啥都不想看只看还有什么需要拆分操作，看reference
+
+animation.md
+
+action.md
+
+environment.md
+
+顺序有待调整，是按照字母顺序还是按照重要性，有待研究。但如果按照重要性，resource要放在text之后了？

@@ -86,6 +86,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
                 - textcontrol
                 - showimage
                 - showsound
+            - animation
             - resource_image
             - resource_sound
             - resource_layer
@@ -96,6 +97,10 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
                 - layer_Image
                     - img_ID
             - resource_channel
+            - resource_index
+                - layerlist
+                - channellist
+                - framelist
             - resource_live2d
             - resource_spine
             - logic
@@ -286,7 +291,12 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
         <!---->
       </resource>
       <resource type="index">
-        <!--index用于存放layerlist和channellist-->
+        <layerlist>
+        </layerlist>
+        <channellist>
+        </channellist>
+        <framelist>
+        </framelist>
       </resource>
       <resource type="live2d">
         <!---->
@@ -343,6 +353,8 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <!-- 音乐播放的部分就靠你了,包括淡入淡出之类的 -->
         </showsound>
       </action>
+      <animation>
+      </animation>
       <logic>
         <jump>
           <jump_dst>
