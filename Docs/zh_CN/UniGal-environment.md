@@ -18,23 +18,20 @@
 <unigal-script>
   <environment>
     <display>
-      <resolution>
-        <x></x>
-        <y></y>
-      </resolution>
+      <resolution>1440x900</resolution>
       <fullscreen>
         true
       </fullscreen>
     </display>
     <!--我怀疑其实只有display才是公共的其他的都是没必要的，甚至environment到底有没有必要我都很怀疑-->
-    <redistribute>
-      <DirectX>
-        true
-      </DirectX>
-      <VCredist15>
-        true
-      </VCredist15>
-    </redistribute>
+    <!--Fa鸽：那可不好说-->
+    <redists>
+      <DirectX version="9"/>
+      <DirectX version="11"/>
+      <VCRuntime version="142"/>
+      <UniversalCRT/>
+      <!--甚至可能有libstdc++-->
+    </redists>
   </environment>
 </unigal-script>
 ```
