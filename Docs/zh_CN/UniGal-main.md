@@ -206,7 +206,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
             <!--载入内存-->
           </load>
           <free>
-            <!--从内存释放-->
+            <!--从内存释放。若目标实现的图像由GC管理，则无效果。-->
           </free>
           <image_opacity>
             <!--私以为一个图层如果允许多个图像并存（图层成为图像文件夹的概念了的话）-->
@@ -243,9 +243,13 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <sound_ID>
             <!--声音ID-->
           </sound_ID>
-          <channel_ID>
-            <!--channel等待后续定义即可-->
-          </channel_ID>
+          <channel_id>
+            <!--
+              内置BGM、Voice、Ambient、Other
+              其它频道由实现定义
+              若使用了目标实现不支持的频道，该声音将移动到Other播放
+            -->
+          </channel_id>
           <file>
             <!--文件路径，为文件的完整路径或相对路径，但必须保留扩展名-->
           </file>
@@ -253,31 +257,13 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
             <!--载入内存-->
           </load>
           <free>
-            <!--从内存释放-->
+            <!--从内存释放。若目标实现的声音由GC管理，则无效果。-->
           </free>
           <sound_volume>
             <!--在允许channel成组调节音量的基础上，可以单个文件的调节音量-->
           </sound_volume>
           <!--文件基本信息-->
         </sound>
-        <voice>
-          <!--此处为bool变量-->
-          <comment>
-            <!--人声-->
-          </comment>
-        </voice>
-        <bgm>
-          <!--此处为bool变量-->
-          <comment>
-            <!--背景音乐-->
-          </comment>
-        </bgm>
-        <effect>
-          <!--此处为bool变量-->
-          <comment>
-            <!--音效-->
-          </comment>
-        </effect>
       </resource>
       <resource type="video">
         <!--参考image，只不过里面的img_id换成vid_id这样-->
@@ -353,7 +339,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
               <TransformMatirx>
                 左上,右上,左下,右下,x坐标,y坐标
               </TransformMatirx>
-              <!--imgRegion提供多种的表示图像区域的方法，互相等价，在内部默认存储为变换矩阵，会自动进行转换。-->
+              <!--imgRegion提供多种的表示图像区域的方法，互相等价，内部储存方式由实现定义，会自动进行转换。-->
             </img_region>
           </showimage>
         </imagecontrol>
@@ -469,12 +455,12 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
                 - animationcontrol
                 - indexcontrol
                 - otherscontrol
-            - resource_image[Fa鸽、快乐的老鼠宝宝]
-            - resource_sound[快乐的老鼠宝宝]
-            - resource_layer[快乐的老鼠宝宝]
-            - resource_channel[快乐的老鼠宝宝]
-            - resource_live2d[快乐的老鼠宝宝]
-            - resource_spine[快乐的老鼠宝宝]
+            - resource.image[Fa鸽、快乐的老鼠宝宝]
+            - resource.sound[快乐的老鼠宝宝]
+            - resource.layer[快乐的老鼠宝宝]
+            - resource.channel[快乐的老鼠宝宝]
+            - resource.live2d[快乐的老鼠宝宝]
+            - resource.spine[快乐的老鼠宝宝]
             - logic[快乐的老鼠宝宝]
                 - switch
                 - jump
