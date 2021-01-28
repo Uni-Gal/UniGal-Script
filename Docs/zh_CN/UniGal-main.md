@@ -212,20 +212,29 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
             <!--私以为一个图层如果允许多个图像并存（图层成为图像文件夹的概念了的话）-->
             <!--那么每个图像的透明度也是非常有必要引入的,因此这一点上看，对称的，单个音频也应该可以单独调节音量-->
           </image_opacity>
-          <!--英国人如果看到opacity会不会震怒？-->
-          <!--是否应该加入transparent和opacity的重载？（想啥呢傻了？）-->
           <size>
             <x></x>
             <y></y>
           </size>
         </image>
-        <background>
+          <image_type>
+            <!--
+              内置background、cg、tachie、Other
+              若使用了目标实现不支持的图像类型，该图像就是Other
+            -->
+          </image_type>
+        <background_info>
           <!--背景-->
-        </background>
-        <cg>
+          <weather>
+          </weather>
+          <time>
+          </time>
+        </background_info>
+        <cg_info>
           <!--CG-->
-        </cg>
-        <tachie>
+          <!--可能会引入serial之类的东西，因为感觉CG还是有一些可提取的特征的-->
+        </cg_info>
+        <tachie_info>
           <!--立绘-->
           <cloth>
             <!--服装-->
@@ -236,7 +245,7 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <expression>
             <!--表情-->
           </expression>
-        </tachie>
+        </tachie_info>
       </resource>
       <resource type="sound">
         <sound>
@@ -245,11 +254,16 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           </sound_ID>
           <channel_id>
             <!--
-              内置BGM、Voice、Ambient、Other
-              其它频道由实现定义
-              若使用了目标实现不支持的频道，该声音将移动到Other播放
+              channel_id填channel的编号
             -->
           </channel_id>
+          <sound_type>
+            <!--
+              内置BGM、Voice、Ambient/Effect（总之就是音效~，叮啊铛啊的~）、Other
+              其它类型由实现定义
+              若使用了目标实现不支持的声音类型，该声音就是Other
+            -->
+          </sound_type>
           <file>
             <!--文件路径，为文件的完整路径或相对路径，但必须保留扩展名-->
           </file>
