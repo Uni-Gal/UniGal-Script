@@ -13,7 +13,7 @@
 | js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              |
 | js       | Renjs                | javascript   | 未知         |                          |              |                | √（开发中）    |              |
 | Python   | Renpy                | Python       | **活跃**     |                          |              |                | √（开发中）    |              |
-| 弦语蝶梦 | Snowing              | C++          | 已停止维护   |                          |              |                |                | √            |
+| Strrationalism | Snowing              | C++          | 缓慢，对开源不积极   |                          |              |                |  √（艰难开发中）              |           |
 | json     | Monogatari           | json         | **活跃**     |                          |              |                | √（开发中）    |              |
 | json     | GameCreator          | 未知         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
 | Unity    | Unity-Utage          | C#           | **活跃**     |                          |              |                |                | √            |
@@ -26,6 +26,14 @@
 | 橙光     | EvkWorld幻境         | 可视化       | 未知         |                          |              |                |                | √            |
 
 ## 关于支持列表的补充说明
+
+### 遇到的困难
+
+1. Strrationalism的Snowing引擎，暂无公开的文档，也没有面向大众统一开放使用的计划。因此对于该引擎的支持将基本依赖大量读代码，而且结构非常繁杂，代码量众多。
+
+有兴趣可以去看看他的Parser，或许可以找到一点思路。（总之感觉需要重点看Yukimi文件夹）https://github.com/Strrationalism/Snowing/blob/master/Yukimi/ScriptParser.cpp
+
+2. Unity系的不少商业框架，文档不便。
 
 ### 不会考虑支持的引擎和原因
 

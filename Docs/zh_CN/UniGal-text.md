@@ -676,3 +676,16 @@ https://www.gamecreator.com.cn/gc/document/?file=003-GC%E6%9C%AC%E4%BD%93%E6%96%
 
 # iFAction
 不会有的，纯商业引擎，一般不考虑导出，而且这个iF是有加密素材的，我们也不可能读取出来，读取它等于和制作方过不去。
+
+# Snowing
+
+Snowing虽然是没有任何官方文档，但是从弦语蝶梦制作组开放出来的代码来看，还是可以琢磨出一些基本的文字特征来的。
+
+（若贵方明确不希望任何转换和支持，请按照首页README的联系方式与我们书面联系，保证给予橙光级待遇）
+
+推测可能存在的和Text相关的函数有
+
+[bool Yukimi::AVGPlayer::doElement(const Yukimi::Script::Element& e)](https://github.com/Strrationalism/Snowing/blob/master/Yukimi/AVGPlayer.cpp#L9)
+
+[void Yukimi::AVGPlayer::runScriptContinuation()](https://github.com/Strrationalism/Snowing/blob/master/Yukimi/AVGPlayer.cpp#L53)
+
