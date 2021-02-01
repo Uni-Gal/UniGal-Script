@@ -689,3 +689,28 @@ Snowing虽然是没有任何官方文档，但是从弦语蝶梦制作组开放�
 
 [void Yukimi::AVGPlayer::runScriptContinuation()](https://github.com/Strrationalism/Snowing/blob/master/Yukimi/AVGPlayer.cpp#L53)
 
+由第一个函数可知有如下五种数据类型
+
++ TextElement
++ FontStyleElement
++ FontStylePopElement
++ CommandElement
++ CharacterNameElement
+
+这五种数据类型应该都是用来显示的。根据类型名来看，除CommandElement需要在code段内进行定义外，其他的均可在text段中借助unigal已有的tag来标记。
+
+对于Snowing中Command的细节暂未知晓。
+
+由第二个函数可知有如下几个关键词
+
++ SpeakLine
++ nextLine
++ waitingForCommand
++ currentLine 
++ fontStyleStack
+
+其中，fontStyleStack应为字体特性相关的堆栈，或许snowing的字体特效做的不错，首先还是要保有一定期待的。
+
+nextLine应该是一个类似指针一样的东西，或者是一个flag标记。如果是指针，那么XML顺序读取即可。如果是标记，则可以认为是action中的textcontrol函数。currentLine、SpeakLine同理。
+
+waitingForCommand应该是一个函数，可以认为是一个action，并且这个action会调用unigal中timer相关内容。该部分正在加紧定义。
