@@ -714,3 +714,4 @@ Snowing虽然是没有任何官方文档，但是从弦语蝶梦制作组开放�
 nextLine应该是一个类似指针一样的东西，或者是一个flag标记。如果是指针，那么XML顺序读取即可。如果是标记，则可以认为是action中的textcontrol函数。currentLine、SpeakLine同理。
 
 waitingForCommand应该是一个函数，可以认为是一个action，并且这个action会调用unigal中timer相关内容。该部分正在加紧定义。
+

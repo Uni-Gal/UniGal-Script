@@ -37,6 +37,9 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
     <framenum>
       <!--帧数-->
     </framenum>
+    <framelist_id>
+      <!--这个动画使用的各个帧组成的帧序列，不管是关键帧还是连续帧都需要有一个帧序列-->
+    </framelist_id>
     <!--Only-KeyFrame-->
     <!--Only-ContinuousFrame-->
   </animation>
@@ -51,15 +54,48 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
     <frame_type>
       <!--填KeyFrame或者ContinuousFrame-->
     </frame_type>
+    <frame_id>
+      <!--ID，不含层级-->
+    </frame_id>
+    <frame_number>
+      <!--为1代表这个不是多帧拼接的图片-->
+      <!--如果是多帧，那么多帧中的每一帧将具有一个ID，直接引用这一个帧的frameid就对应这一组的第一帧-->
+    </frame_number>
+    <frame_combinetype>
+      <!--horizontal、vertical-->
+    </frame_combinetype>
+    <frame_file>
+      <!--定位该帧的文件，确定是有且仅有一个文件-->
+    </frame_file>
   </resource>
 </code>
 ```
 
-### framelist
+### resource type="index"/framelist
 
 ```xml
-ovo
+<code>
+  <resource type="index">
+    <framelist>
+      <framelist_id>
+      </framelist_id>
+      <framelist_number>
+        <!--list有多少个帧-->
+      </framelist_number>
+      <frame>
+        <frame_id><!--这个ID是可以填带层次ID的--></frame_id>
+        <frame_order></frame_order>
+      </frame>
+    </framelist>
+  </resource>
+</code>
 ```
+
+### 帧ID命名规则
+
+若一个帧是单独给出，单独在一个文件，那么这个frame的id就是它的id
+
+若多个帧拼合成一个图片，存放在同一个文件，分别划分为不同区域，（在不考虑具体分区方式的情况下，先假设每个分区都能索引），这个frame的id为aaa的情况下，单个帧的id就是aaa-1，aaa-2，……，aaa-n
 
 **以上都尚未完整的定义，还需要不断改进**
 
@@ -140,7 +176,9 @@ BKEngine提供了丰富帧动画模式，同时提供简单的控制选项，他
 
 这里，我觉得horizontal、vertical是描述的一个图像集的属性，描述了图像集是单文件还是多文件的、描述了单文件的图像集里面的数据结构。我们决定新建一种resource来存放。（如果有对象概念，它就是继承的image这种资源）
 
-而multifiles、start、stop是一种控制命令，是一个动作，我们决定把它放进```<action>```中。
+而multifiles则代表的是一个framelist，我们也认为是一个resource。如果我们理解有误的话，那它就是一个action。具体是什么后续补充，欢迎懂BKE的大佬来打脸。
+
+而start、stop是一种控制命令，是一个动作，我们决定把它放进```<action>```中。
 
 ### AVGPlus
 
