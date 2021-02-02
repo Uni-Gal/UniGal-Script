@@ -51,22 +51,29 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
 ```xml
 <code>
   <resource type="frame">
-    <frame_type>
-      <!--填KeyFrame或者ContinuousFrame-->
-    </frame_type>
     <frame_id>
       <!--ID，不含层级-->
     </frame_id>
+    <frame_type>
+      <!--填KeyFrame或者ContinuousFrame-->
+    </frame_type>
+    <!--Shared（vital and optional）-->
+    <frame_file>
+      <!--定位该帧的文件，确定是有且仅有一个文件-->
+    </frame_file>
+    <!--Only-KeyFrame-->
+    <duration>
+      <!--如果是连续帧，这个就是const，不用填直接生成-->
+    </duration>
+    <!--Only-ContinuousFrame-->
     <frame_number>
       <!--为1代表这个不是多帧拼接的图片-->
       <!--如果是多帧，那么多帧中的每一帧将具有一个ID，直接引用这一个帧的frameid就对应这一组的第一帧-->
+      <!--如果是关键帧，这东西必然是1，根本不用写-->
     </frame_number>
     <frame_combinetype>
       <!--horizontal、vertical-->
     </frame_combinetype>
-    <frame_file>
-      <!--定位该帧的文件，确定是有且仅有一个文件-->
-    </frame_file>
   </resource>
 </code>
 ```
