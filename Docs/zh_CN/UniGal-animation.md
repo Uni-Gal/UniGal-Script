@@ -8,6 +8,8 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
 
 同时引入了一种新的索引类型，为```<resource type="index">```中的```<framelist>```
 
+这套animation甚至可以用在RPG上或者flash动画上（希望吧）
+
 ### animation
 
 ```xml
@@ -16,12 +18,15 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
     <animation_id>
       <!--全局唯一标识符-->
     </animation_id>
-    <animation_type>
+    <animation_type_frame>
       <!--填KeyFrame或者ContinuousFrame-->
       <!--然后如果调用了类型不匹配的frame资源，就应当给出一个报错-->
       <!--关键帧调用了连续帧的，起码可以转换，只是关键帧的“求差”的思维就没用了-->
       <!--如果是连续帧调用了关键帧，再给一个无法转换的错误，因为连续帧思维是无状态的,不会根据差量去计算，必须全量给出-->
-    </animation_type>
+    </animation_type_frame>
+    <animation_type_play>
+      <!--是循环(loop)播放还是一次性(sequential)播放，一次性播放就是完成后务必跟上一个stop的action-->
+    </animation_type_play>
     <!--Shared（vital and optional）-->
     <size>
       <x></x>

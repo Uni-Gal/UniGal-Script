@@ -89,6 +89,8 @@
 
 参数：```animation_id```
 
+虽然这个函数是从BKEngine里面抽提出来的，BKE里面是需要传入单个frame的id，但是UniGal中认为frame是animation的基类，它被animation所继承，应从animation中调用。
+
 31002.animation_stop
 
 参数：```animation_id```
