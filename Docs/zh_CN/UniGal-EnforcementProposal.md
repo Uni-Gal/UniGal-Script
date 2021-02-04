@@ -8,4 +8,4 @@ UEP将错误分为两个等级，Warning（警告）和Error（错误）。
 
 编号系统中对应的格式分别为```UEWXXXX```和```UEEXXXX```，其中```XXXX```为数字
 
-要查看完整的UEP文档，请移步[Uni-Gal/UniGal-ExceptionProposal](https://github.com/Uni-Gal/UniGal-ExceptionProposal)
+要查看完整的UEP文档，请移步[Uni-Gal/UniGal-EnforcementProposal](https://github.com/Uni-Gal/UniGal-EnforcementProposal)

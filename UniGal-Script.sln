@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1300
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30914.41
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B43F9744-BF8F-4BE8-B133-087134F2BCD4}"
 EndProject
@@ -18,8 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{7CD083C1
 		Docs\zh_CN\UniGal-action.md = Docs\zh_CN\UniGal-action.md
 		Docs\zh_CN\UniGal-animation.md = Docs\zh_CN\UniGal-animation.md
 		Docs\zh_CN\UniGal-codeblock.md = Docs\zh_CN\UniGal-codeblock.md
+		Docs\zh_CN\UniGal-EnforcementProposal.md = Docs\zh_CN\UniGal-EnforcementProposal.md
 		Docs\zh_CN\UniGal-environment.md = Docs\zh_CN\UniGal-environment.md
-		Docs\zh_CN\UniGal-exceptionproposal.md = Docs\zh_CN\UniGal-exceptionproposal.md
 		Docs\zh_CN\UniGal-filesystem.md = Docs\zh_CN\UniGal-filesystem.md
 		Docs\zh_CN\UniGal-layer.md = Docs\zh_CN\UniGal-layer.md
 		Docs\zh_CN\UniGal-main.md = Docs\zh_CN\UniGal-main.md

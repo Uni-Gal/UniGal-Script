@@ -48,9 +48,9 @@
 + [GameCreator](UniGal-text.md#GameCreator)
 + [iFAction](UniGal-text.md#iFAction)
 
-## [UniGal-exceptionproposal.md](UniGal-exceptionproposal.md)
+## [UniGal-EnforcementProposal.md](UniGal-EnforcementProposal.md)
 UniGal的异常处理提案。用于解决不同引擎间转换不完美的问题和处理错误。
-若要详细了解建议移步[Uni-Gal/UniGal-ExceptionProposal](https://github.com/Uni-Gal/UniGal-ExceptionProposal)。
+若要详细了解建议移步[Uni-Gal/UniGal-EnforcementProposal](https://github.com/Uni-Gal/UniGal-EnforcementProposal/)。
 
 ## [UniGal-layer.md](UniGal-layer.md)
 想看图层的实验性选项，看layer。目前尚不够完善，欢迎您来开荒式的定义。
