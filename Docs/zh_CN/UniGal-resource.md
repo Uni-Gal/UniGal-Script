@@ -274,6 +274,22 @@ pos没问题，files没问题，opacity建议在图层中引入。图层定义�
 
 背景 https://doc.librian.net/site/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%91%BD%E4%BB%A4.html#bg
 
+~~~~~~
+
+~~~~~~
+
+Librian同时提供了一个官方的parser，可以用于分析Librian的脚本。该Parser是基于Python的。要实现Complier的前端语法分析，可以使用这个Parser实现，然后接上Python对XML的实现，就可以生成unigal的中间体了。
+
+链接：https://github.com/librian-center/liber-language
+
+未来可能也许会用其他语言重写这个parser，也说不定不会。
+
+同时，早晚有一天会直接给那玩意交一个pr过去以支持引擎直读的（挠头
+
+~~~~~~
+
+~~~~~~
+
 以上两个是图像相关的
 
 Librian中的图像调用的语法写的非常简洁，直接说明就可以，而且是从PSD里面调取。需要按照[UniGal-filesystem.md](UniGal-filesystem.md)中的规范来处理。
