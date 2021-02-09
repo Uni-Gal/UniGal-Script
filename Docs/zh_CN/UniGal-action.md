@@ -123,7 +123,8 @@ xxxx.animation_playdirection
 
 ## 面向网络和文件IO的函数  **otherscontrol**
 
-此外，网络访问和文件读写等操作也应属于action范畴。但UniGal仅表示“存在此项操作”，具体该操作如何实现以及引擎是否以安慰剂实现，UniGal不从标准的角度去规定。
+此外，网络访问和文件读写等操作也应属于action范畴。但UniGal仅表示“存在此项操作”，具体该操作如何实现以及引擎是否以安慰剂实现，UniGal不从标准的角度去规定。  
+（Fa:这种东西真的用得上吗？存档功能建议往下看）
 
 在```<network_basic>```为```true```后可以使用```network_get```、```network_post```
 
@@ -139,3 +140,25 @@ xxxx.animation_playdirection
 + 1021. fileIO_read
 + 1022. fileIO_create
 + 1023. fileIO_delete
+
+
+## 存档读档 **save**
+Galgame没有存档那就莫得灵魂，这里规定一些存档action。  
+标准保证：自动存档`save_auto`和按槽位存档`save_at`可用且有效，如果无效建议换个引擎，毕竟这年头没有存档的gal十有八九是整活（当然你非要整这种阴间活当我没说）。  
+当`save_hascloud`为true时，`save_*cloud`可用
+
++ 1001. save_auto
++ 1002. save_at，示例`<save_at page="autosave" slot="1" />`
++ 1003. save_pushcloud，示例`<save_pushcloud timeout="2000ms" />`
++ 1004. save_pullcloud，示例`<save_pullcloud timeout="2000ms" />`
+
+### 备注
+#### save_auto
+进行一次自动存档
+#### save_at
+`save_at`的page参数按字符串处理，当值为`"autosave"`时，这个存档是自动存档，和`save_auto`存的自动存档处在同一页。
+
+#### save_*cloud
+云存档操作，可以没有。  
+目标引擎不支持，但你又恰好用了这些功能时会发出警告。  
+`save_pushcloud`推送时将覆盖云存档，同理`save_pullcloud`拉取时覆盖本地存档。  
