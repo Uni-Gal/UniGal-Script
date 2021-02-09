@@ -22,13 +22,14 @@ Layer是一种resource
   <layer_name>
     <!--这个图层的名字-->
   </layer_name>
-  <layer_opacity>
-    255
-  </layer_opacity>
-  <layer_transparent>
-    100
-  </layer_transparent>
   <!--设计为transparent为一百等级的透明度写法，而opacity为255级的透明度写法？试着中和一下英美矛盾？那么0-1的float呢？-->
+  <!--
+      FA: 直接掐死，只允许unsigned int8 (0-255)，唯一指定像素格式R8G8A8B8
+      因为画师手里的图片一半是R8G8B8A8
+      另一大半是B8G8R8A8
+      可大胆推定不会有用浮点表示色彩的原图
+  -->
+  <alpha>255</alpha>
   <!--那么如果都写怎么办？取中值？设置优先考虑某一个钦点？还是直接报错？我们认为高是全透明还是低是全透明？-->
   <!--不如这样，opacity设置为高透明，transparent设置为低透明。-->
   <layer_Image>
