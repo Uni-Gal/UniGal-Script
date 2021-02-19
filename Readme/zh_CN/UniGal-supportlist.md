@@ -6,21 +6,21 @@
 | -------- | -------------------- | ------------ | ------------ | ------------------------ | ------------ | -------------- | -------------- | ------------ |
 | UniGal   | UniGal-Prototype     | C++          | 原型         | √（开发中）              |              |                |                |              |
 | Krkr     | Krkr                 | TJS          | 已停止维护   |                          |              |                | √（开发中）    |              |
-| 面包工坊 | BKEngine             | bkspr        | 已停止维护   |                          |              | √（开发中）    |                |              |
-| Unity    | Unity-Nova           | Lua/C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
-| Python   | Librian              | liber        | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
-| js       | AVGPlus              | json         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
+| 面包工坊 | [BKEngine](https://bke.bakery.moe/index.html) | bkspr        | 已停止维护   |                          |              | √（开发中）    |                |              |
+| Unity    | [Unity-Nova](https://github.com/Lunatic-Works/Nova) | Lua/C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| Python   | [Librian](http://librian.net/) | liber        | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| js       | [AVGPlus](https://avg-engine.com/) | json         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
 | js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              |
 | js       | Renjs                | javascript   | 未知         |                          |              |                | √（开发中）    |              |
-| Python   | Renpy                | Python       | **活跃**     |                          |              |                | √（开发中）    |              |
-| Strrationalism | Snowing              | C++          | 缓慢，对开源不积极   |                          |              |                |  √（艰难开发中）              |           |
-| json     | Monogatari           | json         | **活跃**     |                          |              |                | √（开发中）    |              |
+| Python   | [Renpy](https://www.renpy.org/) | Python       | **活跃**     |                          |              |                | √（开发中）    |              |
+| Strrationalism | Snowing              | C++          | 缓慢，**对开源不积极**，出于基于开放来源的设想考虑移除 |                          |              |                |  √（艰难开发中）              |           |
+| json     | [Monogatari](https://monogatari.io) | json         | **活跃**     |                          |              |                | √（开发中）    |              |
 | json     | GameCreator          | 未知         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
 | Unity    | Unity-Utage          | C#           | **活跃**     |                          |              |                |                | √            |
 | Unity    | Unity-Fungus         | C#           | **活跃**     |                          |              |                |                | √            |
 | Unity    | Unity-Kirino-Engine  | C#           | 已停止维护   |                          |              |                |                | √            |
 | Unity    | Unity-XiheAnimation  | C#           | 未知         |                          |              |                |                | √            |
-| SDL      | QGame                | C++          | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| SDL      | VoidMatrix系列        | C++          | **活跃**     | （正在与开发者合作，已经提供XML读取支持了） | √（开发中）  | √（开发中）    | √（开发中）    |              |
 | 橙光     | 橙光文字游戏制作工具 | 可视化       | **生不如死** |                          |              |                |                | √            |
 | 橙光     | iFAction             | 可视化       | 活跃         |                          |              |                |                | √            |
 | 橙光     | EvkWorld幻境         | 可视化       | 未知         |                          |              |                |                | √            |
