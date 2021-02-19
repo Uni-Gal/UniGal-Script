@@ -78,6 +78,10 @@ environment.md
 + Opacity/Transparent
 + Effect/Ambient
 
+此外，有同行提到的关于unigal中的关键词问题，unigal中如果说是描绘一个功能的关键词，您可以看main这个文档和resource、layer、text
+
+但是如果是说保留字关键词的话，我想unigal不存在保留字的问题，因为它的内容一定是被xml的令牌封装起来的。
+
 ## UniGal不会涉及的
 
 UniGal不会涉及DRM加密方面的内容，也不会涉及已编译完成的游戏解包并转换格式的内容。
