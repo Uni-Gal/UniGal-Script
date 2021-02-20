@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<unigal>
+  <meta>
+    <!--......-->
+  </meta>
+  <body>
+    <text>
+      <character>顾伟</character>
+      <pages>
+        <page>
+          <para>唉。</para>
+        </page>
+        <page>
+          <para>一声叹息，那天的事件对我和半夏的影响颇大。</para>
+        </page>
+        <page>
+          <para>一向学霸的她竟错了几道大题就是明证，</para>
+          <para>我虽然每天都用信息给她打气，其实心中也是忐忑的。</para>
+        </page>
+      </pages>
+    </text>
+  </body>
+</unigal>
