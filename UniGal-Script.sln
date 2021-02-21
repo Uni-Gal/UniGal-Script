@@ -39,7 +39,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{F1EB54D0-1936-4215-A186-9BA6C1A1BBB1}"
 	ProjectSection(SolutionItems) = preProject
 		Code\Simple.unigal = Code\Simple.unigal
-		text-sample.unigal = text-sample.unigal
+		Code\unigal.sublime-syntax = Code\unigal.sublime-syntax
 		Code\XMLFILE.xml = Code\XMLFILE.xml
 	EndProjectSection
 EndProject
