@@ -2,8 +2,6 @@
 
 text宏里面只封装纯粹与文本和剧本执行相关的内容
 
-
-
 # BKEngine
 
 参见http://docs.bakery.moe/new/quickstart/#_3
@@ -33,7 +31,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 >```
 
 ## Translate
-```unigal
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <unigal-script>
   <head>
@@ -42,66 +40,13 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
     </src>
   </head>
   <body>
-    <struct>
-      <label>
-        <label_name>
-          main
-        </label_name>
-      </label>
-    </struct>
     <text>
-      <character>
-        <name>
-          NULL
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
-          你好，
-        </part>
-        <comment>
-          //文本内容
-        </comment>
-      </content>
-    </text>
-    <code>
-      <action>
-        <textcontrol>
-          <waitclick>
-            true
-          </waitclick>
-        </textcontrol>
-      </action>
-    </code>
-    <code>
-      <action>
-        <textcontrol>
-          <newline>
-            true
-          </newline>
-        </textcontrol>
-      </action>
-    </code>
-    <text>
-      <character>
-        <name>
-          NULL
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
-          世界！
-        </part>
-        <comment>
-          //文本内容
-        </comment>
-      </content>
+      <pages>
+        <page label="main">
+          <para>你好，</para>
+          <para>世界！</para>
+        </page>
+      </pages>
     </text>
   </body>
 </unigal-script>
@@ -213,6 +158,10 @@ librian中的一个文本是直接结束的
 >```liber
 >潘大爺 「舟舟！來得正是時候！」
 >```
+
+-----------------------
+**以下废了，等待重写**  
+-----------------------
 
 ### Translation
 
