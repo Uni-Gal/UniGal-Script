@@ -11,9 +11,13 @@ Offer a visuable way to switch and show the different possibility of a Galgame
 
 若要直接查看语法标准，请移步[语法标准](./Docs/zh_CN/UniGal-text.md)
 
-UniGal是一个完整的项目，分为[Script](https://github.com/Uni-Gal/UniGal-Script)(脚本语法)、[Diagram](https://github.com/Uni-Gal/UniGal-Diagram)(流程图语法)、[Complier&Interpreter](https://github.com/Uni-Gal/UniGal-Complier-Interpreter)(编译器和解释器)三部分。欢迎您查看其他两部分的内容。
+UniGal是一个完整的项目，分为标准，实现，提案三部分。
 
-此外，UniGal也有自己的异常处理提案UEP，若要进一步了解请移步[ExceptionProposal(UEP)](https://github.com/Uni-Gal/UniGal-ExceptionProposal)。
+标准分为[Script](https://github.com/Uni-Gal/UniGal-Script)(脚本语法)、[Diagram](https://github.com/Uni-Gal/UniGal-Diagram)(流程图语法)、PolyDB(针对作品的管理系统)
+
+实现分为编译器、解释器、渲染器三部分。其中，目前维护的有两个编译器分支，未来可能为其赋予代号以便区分。
+
+UniGal有自己的异常处理提案[EnforcementProposal(UEP)](https://github.com/Uni-Gal/UniGal-EnforcementProposal)。
 
 ## UniGal-Script特性
 
