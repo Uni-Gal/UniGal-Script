@@ -2,6 +2,9 @@
 
 text宏里面只封装纯粹与文本和剧本执行相关的内容
 
+# 注意：本文档仅存放原子意味上的text
+# 关于实验性的多层次结构的text请参考根目录下code部分
+
 # BKEngine
 
 参见http://docs.bakery.moe/new/quickstart/#_3
@@ -23,34 +26,14 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 
 此外，加粗/倾斜/删除线/下划线 四个状态已通过/text/character/style或/text/content/style加入到```<text></text>```中
 
-## Simple
+### Simple
 
 >```bkscr
 >*main
 >你好，[l][r]世界！[p]
 >```
 
-## Translate
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<unigal-script>
-  <head>
-    <src>
-      BKE
-    </src>
-  </head>
-  <body>
-    <text>
-      <pages>
-        <page label="main">
-          <para>你好，</para>
-          <para>世界！</para>
-        </page>
-      </pages>
-    </text>
-  </body>
-</unigal-script>
-```
+
 
 # nova
 
@@ -74,7 +57,7 @@ Nova的脚本格式可以参见本文档[Nova--Script](https://github.com/Lunati
 
 而且我很好奇，何为提前，何为延迟?
 
-## Guess
+### Guess
 
 下面是对一个Nova的节点（Node）的结构的猜想，若有不妥还请指出
 
@@ -109,7 +92,7 @@ UniGal::请多多指教
 ```
 
 
-## Simple
+### Simple
 
 >```lua
 >@<|
@@ -158,10 +141,6 @@ librian中的一个文本是直接结束的
 >```liber
 >潘大爺 「舟舟！來得正是時候！」
 >```
-
------------------------
-**以下废了，等待重写**  
------------------------
 
 ### Translation
 
