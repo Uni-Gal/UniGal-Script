@@ -29,4 +29,4 @@ Text呈现游戏的台本
 </unigal-script>
 ```
 显示出来是这样
-![textv2-sample.svg](PENDING)
+![textv2-sample.svg](./text-sample.svg)
