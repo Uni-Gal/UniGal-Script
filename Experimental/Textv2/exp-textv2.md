@@ -17,8 +17,8 @@ Text呈现游戏的台本
   </head>
   <body>
     <text>
-      <character>Fa鸽</character>
       <pages>
+        <character>Fa鸽</character>
         <page label="main">
           <para>你好，</para>
           <para>世界！</para>
