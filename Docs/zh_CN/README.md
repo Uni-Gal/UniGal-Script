@@ -73,12 +73,19 @@ environment.md
 
 可以是因为英式美式英文差异造成的近义词，也可以是因为主观感受造成的近义词
 
-总之，它们可以被互换（在编译器里的后果就是需要多加一层if了）
+总之，它们可以被互换（在编译器里的后果就是需要多加一层if了）。如果同时出现，需要按照优先级解析。根据计算机行业的事实规范，虽然不愿承认，但应以en_US的写法优先。
 
-+ Opacity/Transparent
-+ Effect/Ambient
-+ Color/Colour
-+ Center/Centre
+即：均空则空，一空则另，均有则美式优先。
+
+|词汇|en_US|en_UK|
+|--|--|--|
+|透明度|Opacity|Transparent|
+|颜色|Color|Colour|
+|中心|Center|Centre|
+
+对于因主观感受造成的近义词，我们采用在大部分引擎文档中出现次数多少来规定。
+
++ Effect/Ambient （其中Effect优先）
 
 此外，有同行提到的关于unigal中的关键词问题，unigal中如果说是描绘一个功能的关键词，您可以看main这个文档和resource、layer、text
 
