@@ -6,7 +6,7 @@ Text呈现游戏的台本
 *main
 你好，[l][r]世界！[p]
 ```
-翻译过来是这样
+翻译过来，并添加说话角色“Fa鸽”是这样
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <unigal-script>
