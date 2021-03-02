@@ -77,6 +77,8 @@ environment.md
 
 + Opacity/Transparent
 + Effect/Ambient
++ Color/Colour
++ Center/Centre
 
 此外，有同行提到的关于unigal中的关键词问题，unigal中如果说是描绘一个功能的关键词，您可以看main这个文档和resource、layer、text
 
