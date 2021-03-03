@@ -29,4 +29,24 @@ Text呈现游戏的台本
 </unigal-script>
 ```
 显示出来是这样
-![textv2-sample.svg](./text-sample.svg)
+![textv2-sample.svg](./text-sample.svg)  
+
+我们再来演示点别的活
+```xml
+<unigal-script>
+  <body>
+    <text>
+      <pages>
+        <character></character>
+        <page>
+          <para><sized size="large">大号字</sized>演示</para>
+          <para><bold>加粗</bold>演示</para>
+          <para><underlined>加下划线</underlined>演示</para>
+          <para><shadow color="#FFFF0000">黄色不透明文字阴影</shadow>演示</para>
+          <para><glow color="#0033FF00">蓝色外发光</glow>演示</para>
+        </page>
+      </pages>
+    </text>
+  </body>
+</unigal-script>
+```
