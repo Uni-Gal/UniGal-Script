@@ -121,43 +121,23 @@ xxxx.animation_playdirection
 
 控制倒放和正放，因此额外需要一个方向参数
 
-## 面向网络和文件IO的函数  **otherscontrol**
+## 存档读档 **save**
+Galgame没有存档那就莫得灵魂，这里规定一些存档action，用来取代原来的io和net。    
+标准保证：自动存档`save_auto`和按槽位存档`save_at`可用且有效，如果无效建议换个引擎，毕竟这年头没有存档的gal十有八九是整活（当然你非要整这种阴间活当我没说）。    
+当`save_hascloud`为true时，`save_*cloud`可用  
 
-此外，网络访问和文件读写等操作也应属于action范畴。但UniGal仅表示“存在此项操作”，具体该操作如何实现以及引擎是否以安慰剂实现，UniGal不从标准的角度去规定。
++ 1001. save_auto  
++ 1002. save_at，示例`<save_at page="autosave" slot="1" />`  
++ 1003. save_pushcloud，示例`<save_pushcloud timeout="2000ms" />`  
++ 1004. save_pullcloud，示例`<save_pullcloud timeout="2000ms" />`  
 
-在```<network_basic>```为```true```后可以使用```network_get```、```network_post```
+### 备注
+#### save_auto
+进行一次自动存档
+#### save_at
+`save_at`的page参数按字符串处理，当值为`"autosave"`时，这个存档是自动存档，和`save_auto`存的自动存档处在同一页。
 
-在```<network_restful>```为```true```后可以使用```network_get```、```network_post```、```network_delete```、```network_put```
-
-+ 1011. network_get
-+ 1012. network_post
-+ 1013. network_delete
-+ 1014. network_put
-
-在```<fileIO>```为```true```后可以使用如下函数
-
-+ 1021. fileIO_read
-+ 1022. fileIO_create
-+ 1023. fileIO_delete
-
-此外，对于存档相关的内容，我们也采用文件IO的方式来处理
-
-存档并非一个脚本的必需品，存档的具体结构是依赖引擎的实现的。UniGal的对于存档的描述，仅限于存档是位于一个剧本中所必备的内容的时候。
-
-例如像DDLC、君彼女这样的meta游戏，存档可以是剧情的一部分，那么它就应当会出现在描述剧情的描述文件之中。
-
-我们不具体描述一次存档的实现方式，但是会提供描述一次存档的方法。
-
-例如，我们需要根据剧情需要安排存档一个```monika.chr```的文件的时候，可以使用文件IO函数。
-而我们需要删除用户的所有存档的时候（Nier：Automata行为）可以逐个调用archive_delete
-
-存档相关的函数有
-
-+ 1031. archive_permission
-+ 1032. archive_forbidden
-+ 1033. archive_save
-+ 1034. archive_delete
-
-其中，存读的函数，可以包含文件名、图像、字符串等一系列作为参数。快速存读也可以作为参数。希望这可以帮助对一些特定的引擎和特定的游戏的精准描述有帮助。
-
-但是，不是所有引擎都支持如此高度自定义的存读行为，因此向某些引擎翻译的时候，将可能出现数据损失或不存在实现方法的问题。需要根据实际情况给予UEE0005或者UEW-ProposalDistEngineLoss
+#### save_*cloud
+云存档操作，可以没有。  
+目标引擎不支持，但你又恰好用了这些功能时会发出警告。  
+`save_pushcloud`推送时将覆盖云存档，同理`save_pullcloud`拉取时覆盖本地存档。  
