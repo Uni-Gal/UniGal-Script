@@ -1,4 +1,4 @@
-﻿# UniGal-action
+# UniGal-action
 
 想了想，希望能把UniGal中的函数单独拿出来算一个章节去讲一讲。
 
@@ -139,5 +139,5 @@ Galgame没有存档那就莫得灵魂，这里规定一些存档action，用来�
 
 #### save_*cloud
 云存档操作，可以没有。  
-目标引擎不支持，但你又恰好用了这些功能时会发出警告。  
+目标引擎不支持，但你又恰好用了这些功能时会发出警告UEE0005。  
 `save_pushcloud`推送时将覆盖云存档，同理`save_pullcloud`拉取时覆盖本地存档。  
