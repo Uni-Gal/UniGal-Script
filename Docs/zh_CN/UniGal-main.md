@@ -191,10 +191,10 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
           <italic></italic>
           <deleted></deleted>
           <underlined></underlined>
-            <shadow></shadow>
-            <shadowcolor></shadowcolor>
-            <glow></glow>
-            <glowcolor></glow>
+          <shadow></shadow>
+          <shadowcolor></shadowcolor>
+          <glow></glow>
+          <glowcolor></glow>
           <!--style中只允许填写bool值，即true与false,除shadowcolor和glowcolo,至于颜色用什么格式，回头再定，反正都是RGB系统不会出CMYK和YUV之类变态-->
         </style>
         <!--content是文本相关，其中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的-->

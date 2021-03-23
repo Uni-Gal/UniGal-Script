@@ -1,10 +1,10 @@
-﻿# 若要了解有关 .editorconfig 的详细信息，请参阅 https://aka.ms/editorconfigdocs
+# 若要了解有关 .editorconfig 的详细信息，请参阅 https://aka.ms/editorconfigdocs
 root = true
 # All files
 [*]
 indent_style = space
 end_of_line = crlf
-charset = utf-8-bom
+charset = utf-8
 
 # Xml files
 [*.{xml,unigal}]
