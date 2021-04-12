@@ -122,9 +122,19 @@ xxxx.animation_playdirection
 控制倒放和正放，因此额外需要一个方向参数
 
 ## 存档读档 **save**
-Galgame没有存档那就莫得灵魂，这里规定一些存档action，用来取代原来的io和net。    
+Galgame没有存档那就莫得灵魂，这里规定一些存档action，用来取代原来的io和net。  面向网络和文件IO的函数是危险的，因此您不应在此处寻找，而是参考https://github.com/Uni-Gal/UniGal-Script/pull/8/files  
 标准保证：自动存档`save_auto`和按槽位存档`save_at`可用且有效，如果无效建议换个引擎，毕竟这年头没有存档的gal十有八九是整活（当然你非要整这种阴间活当我没说）。    
-当`save_hascloud`为true时，`save_*cloud`可用  
+当`save_existcloud`为true时，`save_*cloud`可用  
+
+对于存档相关的内容，我们并不采用文件IO的方式来处理
+
+存档并非一个脚本的必需品，存档的具体结构是依赖引擎的实现的。UniGal的对于存档的描述，仅限于存档是位于一个剧本中所必备的内容的时候。
+
+我们不具体描述一次存档的实现方式，但是会提供描述一次存档的方法
+
+存读的函数，可以包含文件名、图像、字符串等一系列作为参数。快速存读也可以作为参数。希望这可以帮助对一些特定的引擎和特定的游戏的精准描述有帮助。
+
+但是，不是所有引擎都支持如此高度自定义的存读行为，因此向某些引擎翻译的时候，将可能出现数据损失或不存在实现方法的问题。需要根据实际情况给予UEE0005或者UEW-ProposalDistEngineLoss
 
 + 1001. save_auto  
 + 1002. save_at，示例`<save_at page="autosave" slot="1" />`  
