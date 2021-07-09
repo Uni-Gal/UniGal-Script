@@ -1,6 +1,38 @@
-﻿# UniGal-Script
+# UniGal-Script
 
 Offer a visuable way to switch and show the different possibility of a Galgame
+
+-----
+
+关于一些新的可能存在的进化演变方向的探讨
+
+我们可能将不仅面向Galgame的剧本，更试着引入一些支持从通用编剧领域进入的作者。按照饱受诟病的“上位艺术”理论的原则，Galgame在文学和戏曲领域分别都有一个“上位艺术”，即**小说**和**戏剧（话剧&影视剧）**。随着Galgame编剧能力的壮大，这两个相关领域的编剧试水Galgame编剧，也是存在可能的。
+那么，如何适应这带给我们的剧本风格和形式结构上的变化，是有必要的。
+
+对于小说来说，更多的在于长句和段落化，以及如果要做到好的演出效果，可能需要的丰富美术素材，但这不涉及技术问题。小说家常使用```Notepad(.txt)```或者```Word(.doc/.docx)```来撰写他们的剧本，极少标注演出效果的符号，即使有也是在括号内添加。Galgame从业人员直接逐字逐句切分为剧本格式就可以了。
+对于戏剧来说，目前，不论是各大院校内才有的学院派，还是好莱坞和横店才有的影视工业，编剧导演们，一般不采用单纯的文本或富文本编辑器，而是使用专门的编剧工具。在一些其他的非Galgame的游戏中，有时候涉及到剧情的时候，也有不少Unity系的开发者自己创造了一套剧情撰写工具。
+
+我们查找Github后，找到了这些可能会有帮助的项目：
+```plaintext
+https://github.com/Kozea/pygal
+https://github.com/LittleLittleStory/TinyDialogueEditor
+https://github.com/zhongcaojieji/TimelineScript
+https://github.com/xdedzl/StoryKit
+https://github.com/Tangoyzx/WordEditor
+```
+
+而对于纯编剧软件的话，通过查阅资料了解，我们也逐渐了解到编剧领域是有非常复杂且封闭的编剧软件的。或许有一天会有人以UniGal-Script开发剧情编辑器吗？谁知道呢？不过我们会考虑引入一些对剧情编辑软件的支持的。比如Fountain编剧语言是基于markdown这门标记语言而特化的标记语言，我们有信心在年内给出基于正则的parser以及编译为UniGal-Script这份IR的Complier
+
+相应的，您可以参考这些文章：
+```plaintext
+https://www.zhihu.com/question/43343445/answer/137042561
+http://fountain.io/
+https://sspai.com/post/40467
+```
+
+很庆幸，之前做的UniGal-Diagram的工作，是一套偏向数学和理论意义上的抽象工作，而非实际工程。因为Galgame的剧情流程比很多常见的影视剧更为复杂，因此我们觉得它是能服务于多种人群的，也包括编剧行业。当然，人物关系图，我们暂没有添加进Diagram的想法，是因为它属于编剧的辅助工具，不服务于抽象的剧情结构，而是剧情的附属物。欢迎各位提出自己的实现，百花齐放。
+
+-----
 
 ## UniGal-Script介绍
 首先感谢各位开发者对本项目的支持，在各种地方提及这个尚未成熟，仅仅写出了一个最基本最简单的编译器的小项目，之后还将进一步完善。
