@@ -25,6 +25,7 @@
     </display>
     <!--我怀疑其实只有display才是公共的其他的都是没必要的，甚至environment到底有没有必要我都很怀疑-->
     <!--Fa鸽：那可不好说-->
+    <!--Fa鸽：redists不允许comment节点，万一有个库叫comment呢-->
     <redists>
       <DirectX version="9"/>
       <DirectX version="11"/>
