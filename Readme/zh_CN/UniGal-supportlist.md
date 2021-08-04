@@ -13,7 +13,7 @@
 | js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              |
 | js       | Renjs                | javascript   | 未知         |                          |              |                | √（开发中）    |              |
 | Python   | [Renpy](https://www.renpy.org/) | Python       | **活跃**     |                          |              |                | √（开发中）    |              |
-| Strrationalism | Snowing              | C++          | 缓慢，**对开源不积极**，出于基于开放来源的设想考虑移除 |                          |              |                |  √（艰难开发中）              |           |
+| Strrationalism | [YukimiScript](https://github.com/Strrationalism/YukimiScript)              | C++          | 不能理解它到底有多少是属于非Galgame的，处于观察中 |                          |              |                |  √（艰难开发中）              |           |
 | json     | [Monogatari](https://monogatari.io) | json         | **活跃**     |                          |              |                | √（开发中）    |              |
 | json     | GameCreator          | 未知         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
 | Unity    | Unity-Utage          | C#           | **活跃**     |                          |              |                |                | √            |
