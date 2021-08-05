@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30914.41
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1525
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B43F9744-BF8F-4BE8-B133-087134F2BCD4}"
 EndProject
@@ -38,7 +38,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{F1EB54D0-1936-4215-A186-9BA6C1A1BBB1}"
 	ProjectSection(SolutionItems) = preProject
-		Code\Simple.unigal = Code\Simple.unigal
 		Code\unigal.sublime-syntax = Code\unigal.sublime-syntax
 		Code\XMLFILE.xml = Code\XMLFILE.xml
 	EndProjectSection
@@ -54,6 +53,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{E86C4C31
 		Readme\zh_CN\UniGal-supportlist.md = Readme\zh_CN\UniGal-supportlist.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Manual", "Manual", "{892E7738-1C5A-42CC-96AE-4706A09A6F5D}"
+	ProjectSection(SolutionItems) = preProject
+		Manual\README.md = Manual\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en_US", "en_US", "{693CF638-734C-4421-9048-B8640B23596A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{14108DEC-437C-4A0F-8965-E82BEC06891E}"
+	ProjectSection(SolutionItems) = preProject
+		Manual\zh_CN\UniGal-resource-AVGPlus.md = Manual\zh_CN\UniGal-resource-AVGPlus.md
+		Manual\zh_CN\UniGal-resource-BKEngine.md = Manual\zh_CN\UniGal-resource-BKEngine.md
+		Manual\zh_CN\UniGal-resource-Librian.md = Manual\zh_CN\UniGal-resource-Librian.md
+		Manual\zh_CN\UniGal-resource-Nova.md = Manual\zh_CN\UniGal-resource-Nova.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +77,8 @@ Global
 		{7CD083C1-0D63-4CBC-8FF0-1C86FB71231F} = {B43F9744-BF8F-4BE8-B133-087134F2BCD4}
 		{A31B00CA-C65D-4F59-9F9E-0A3EECC7342D} = {2ED8A240-0321-4B7B-975A-26A1E2806888}
 		{E86C4C31-E517-433B-8113-E0B9A7E7A3AC} = {2ED8A240-0321-4B7B-975A-26A1E2806888}
+		{693CF638-734C-4421-9048-B8640B23596A} = {892E7738-1C5A-42CC-96AE-4706A09A6F5D}
+		{14108DEC-437C-4A0F-8965-E82BEC06891E} = {892E7738-1C5A-42CC-96AE-4706A09A6F5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3FF480D-C7C6-4724-9CD5-BE787D9B34E0}
