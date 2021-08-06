@@ -90,30 +90,30 @@
     </comment>
   </head>
   <body>
-      <text>
+    <text>
       <!-- 这部分请参见UniGal-text.md -->
-      </text>
+    </text>
     <code>
       <resource>
-        <!-- 这部分请参见UniGal-resource.md -->
+        <!-- 这部分请参见UniGal-code-resource.md -->
       </resource>
       <struct>
-        <!-- 这部分请参见UniGal-struct.md -->
+        <!-- 这部分请参见UniGal-code-struct.md -->
       </struct>
       <action>
-              <!-- 这部分请参见UniGal-action.md -->
+        <!-- 这部分请参见UniGal-code-action.md -->
       </action>
       <animation>
-                    <!-- 这部分请参见UniGal-animation.md -->
+        <!-- 这部分请参见UniGal-code-animation.md -->
       </animation>
       <logic>
-              <!-- 这部分请参见UniGal-logic.md -->
+        <!-- 这部分请参见UniGal-code-logic.md -->
       </logic>
       <extension>
         <!--暂未设定-->
       </extension>
       <codeblock>
-        <!--代码段-->
+        <!-- 这部分请参见UniGal-code-codeblock.md -->
       </codeblock>
     </code>
   </body>

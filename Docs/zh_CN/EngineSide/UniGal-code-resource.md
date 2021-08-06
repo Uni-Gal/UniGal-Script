@@ -20,8 +20,8 @@ Resource是关于资源的组织和安排的一个功能
 
 ```xml
 <unigal-script>
-    <body>
-        <code>
+  <body>
+    <code>
       <resource type="image">
         <image>
           <img_ID>
@@ -48,12 +48,12 @@ Resource是关于资源的组织和安排的一个功能
             <y></y>
           </size>
         </image>
-          <image_type>
-            <!--
+        <image_type>
+          <!--
               内置background、cg、tachie、Other
               若使用了目标实现不支持的图像类型，该图像就是Other
             -->
-          </image_type>
+        </image_type>
         <background_info>
           <!--背景-->
           <weather>
@@ -135,8 +135,8 @@ Resource是关于资源的组织和安排的一个功能
       <resource type="spine">
         <!---->
       </resource>
-        </code>
-    </body>
+    </code>
+  </body>
 </unigal-script>
 ```
 

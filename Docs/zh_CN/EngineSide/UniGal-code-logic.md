@@ -4,8 +4,8 @@
 
 ```xml
 <unigal-script>
-    <body>
-        <code>
+  <body>
+    <code>
       <logic>
         <jump>
           <jump_dst>
@@ -35,7 +35,7 @@
         </switch>
         <!--您只能选择switch或jump中的一种logic-->
       </logic>
-         </code>
-    </body>
+    </code>
+  </body>
 </unigal-script>
 ```

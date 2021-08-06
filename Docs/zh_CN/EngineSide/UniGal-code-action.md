@@ -4,8 +4,8 @@
 
 ```xml
 <unigal-script>
-<body>
-<code>
+  <body>
+    <code>
       <action>
         <!--正在考虑把函数的定义挪动到单独的文件夹中-->
         <!--为了保证一致性，对textcontrol的层次进行了变动。-->
@@ -74,8 +74,8 @@
           <!--其他控制，如IO和网路-->
         </otherscontrol>
       </action>
-</code>
-</body>
+    </code>
+  </body>
 </unigal-script>
 ```
 
