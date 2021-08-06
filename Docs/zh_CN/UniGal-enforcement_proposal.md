@@ -1,6 +1,6 @@
-﻿# UniGal-exceptionproposal
+# UniGal-enforcemenproposal
 
-UniGal-ExceptionProposal，简称UEP，是UniGal的警告和错误汇总形成文档的提案。
+UniGal-EnforcementProposal，简称UEP，是UniGal的警告和错误汇总形成文档的提案。
 
 由于不同的引擎之间或多或少存在一定的不能完美导出的问题，作为一个标准，应当给出成熟的异常反馈系统。UEP就是为此设计的。
 

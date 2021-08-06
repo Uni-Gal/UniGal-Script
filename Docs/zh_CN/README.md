@@ -1,4 +1,4 @@
-﻿# UniGal-中文文档
+# UniGal-中文文档
 
 ## **【一定要看】**[UniGal-guideline.md](UniGal-guideline.md)
 
@@ -48,7 +48,7 @@
 + [GameCreator](UniGal-text.md#GameCreator)
 + [iFAction](UniGal-text.md#iFAction)
 
-## [UniGal-EnforcementProposal.md](UniGal-EnforcementProposal.md)
+## [UniGal-enforcement_proposal.md](UniGal-enforcement_proposal.md)
 UniGal的异常处理提案。用于解决不同引擎间转换不完美的问题和处理错误。
 若要详细了解建议移步[Uni-Gal/UniGal-EnforcementProposal](https://github.com/Uni-Gal/UniGal-EnforcementProposal/)。
 
