@@ -185,25 +185,25 @@
 
 参数：```animation_id```
 
-### 特效
-
-32001.
-
-平移，对于有对应函数的引擎采用转换的方式，没有的采用重设参数（可能伴删掉旧animation结构）的方式实现
-
-32002.
-
-缩放，对于有对应函数的引擎采用转换的方式，没有的采用重设参数（可能伴删掉旧animation结构）的方式实现
-
-32003.
+32005.animation_changespeed
 
 调节animation的播放帧率速率
 
-32004.
+32006.animation_lastingtime
 
 调节frame的持续时间
 
-32005.
+### 特效
+
+32001.animation_move
+
+平移，对于有对应函数的引擎采用转换的方式，没有的采用重设参数（可能伴删掉旧animation结构）的方式实现
+
+32002.animation_resize
+
+缩放(可不按比例，只看传入参数)，对于有对应函数的引擎采用转换的方式，没有的采用重设参数（可能伴删掉旧animation结构）的方式实现
+
+32005.animation_changetransparency
 
 调节animation的透明度（未来到底是调animation的还是frame的待议）
 
