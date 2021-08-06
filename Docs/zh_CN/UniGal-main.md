@@ -1,10 +1,6 @@
 # UniGal-main
 
-## UniGal命名原则
 
-1. **TODO：需要统一下划线命名法(如：size_t)和大驼峰命名法(如：IntPtr)**
-
-2. 多个层级之间尽量不要重复，若要拆分和更精确描述一个标签，请您尽可能使其延长。
 
 ## UniGal的全部原子操作的列表
 
@@ -161,103 +157,13 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
         <!-- 这部分请参见UniGal-struct.md -->
       </struct>
       <action>
-        <!--正在考虑把函数的定义挪动到单独的文件夹中-->
-        <!--为了保证一致性，对textcontrol的层次进行了变动。-->
-        <textcontrol>
-          <waitclick>
-            true
-          </waitclick>
-        </textcontrol>
-        <textcontrol>
-          <newline>
-            true
-          </newline>
-        </textcontrol>
-        <imagecontrol>
-          <showimage>
-            <!--暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer-->
-            <imgname>
-            </imgname>
-            <!-- 提供三种储存图像范围的方法，两点标记，LURD标记以及仿射矩阵 -->
-            <img_region>
-              <DoublePoint>
-                <Point1>
-                  <!--左上点-->
-                  <pos1>
-                    <!--row-->
-                  </pos1>
-                  <pos2>
-                    <!--col-->
-                  </pos2>
-                </Point1>
-                <Point2>
-                  <!--右下点-->
-                  <pos1>
-                    <!--row-->
-                  </pos1>
-                  <pos2>
-                    <!--col-->
-                  </pos2>
-                </Point2>
-              </DoublePoint>
-              <LURD>
-                <L>1</L>
-                <U>2</U>
-                <R>3</R>
-                <D>4</D>
-              </LURD>
-              <TransformMatirx>
-                左上,右上,左下,右下,x坐标,y坐标
-              </TransformMatirx>
-              <!--imgRegion提供多种的表示图像区域的方法，互相等价，内部储存方式由实现定义，会自动进行转换。-->
-            </img_region>
-          </showimage>
-        </imagecontrol>
-        <soundcontrol>
-          <showsound>
-            <!-- 音乐播放的部分就靠你了,包括淡入淡出之类的 -->
-          </showsound>
-        </soundcontrol>
-        <indexcontrol>
-          <!--索引包括layerlist、channellist、framelist等多种类型-->
-        </indexcontrol>
-        <animationcontrol>
-          <!--动画控制函数-->
-        </animationcontrol>
-        <otherscontrol>
-          <!--其他控制，如IO和网路-->
-        </otherscontrol>
+              <!-- 这部分请参见UniGal-action.md -->
       </action>
       <animation>
+                    <!-- 这部分请参见UniGal-animation.md -->
       </animation>
       <logic>
-        <jump>
-          <jump_dst>
-            <!--目的地标签-->
-          </jump_dst>
-          <jump_addtional>
-            <!--附加内容-->
-          </jump_addtional>
-        </jump>
-        <switch>
-          <switch_choise>
-            <choise_name>
-              <!--选择支显示名称-->
-            </choise_name>
-            <choise_label>
-              <!--选择支跳转目标-->
-            </choise_label>
-          </switch_choise>
-          <switch_timer>
-            <timer_num>
-              <!--允许您写一个以毫秒为单位的倒计时-->
-            </timer_num>
-            <timer_default>
-              <!--倒计时结束后需要自动选择的选择支的名称-->
-            </timer_default>
-          </switch_timer>
-        </switch>
-        <!--您只能选择switch或jump中的一种logic-->
+              <!-- 这部分请参见UniGal-logic.md -->
       </logic>
       <extension>
         <!--暂未设定-->

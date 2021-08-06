@@ -1,5 +1,87 @@
 # UniGal-action
 
+## action定义
+
+```xml
+<unigal-script>
+<body>
+<code>
+      <action>
+        <!--正在考虑把函数的定义挪动到单独的文件夹中-->
+        <!--为了保证一致性，对textcontrol的层次进行了变动。-->
+        <textcontrol>
+          <waitclick>
+            true
+          </waitclick>
+        </textcontrol>
+        <textcontrol>
+          <newline>
+            true
+          </newline>
+        </textcontrol>
+        <imagecontrol>
+          <showimage>
+            <!--暂时没有设置图层概念因此没有设计目标图层,否则可以加一个dstLayer-->
+            <imgname>
+            </imgname>
+            <!-- 提供三种储存图像范围的方法，两点标记，LURD标记以及仿射矩阵 -->
+            <img_region>
+              <DoublePoint>
+                <Point1>
+                  <!--左上点-->
+                  <pos1>
+                    <!--row-->
+                  </pos1>
+                  <pos2>
+                    <!--col-->
+                  </pos2>
+                </Point1>
+                <Point2>
+                  <!--右下点-->
+                  <pos1>
+                    <!--row-->
+                  </pos1>
+                  <pos2>
+                    <!--col-->
+                  </pos2>
+                </Point2>
+              </DoublePoint>
+              <LURD>
+                <L>1</L>
+                <U>2</U>
+                <R>3</R>
+                <D>4</D>
+              </LURD>
+              <TransformMatirx>
+                左上,右上,左下,右下,x坐标,y坐标
+              </TransformMatirx>
+              <!--imgRegion提供多种的表示图像区域的方法，互相等价，内部储存方式由实现定义，会自动进行转换。-->
+            </img_region>
+          </showimage>
+        </imagecontrol>
+        <soundcontrol>
+          <showsound>
+            <!-- 音乐播放的部分就靠你了,包括淡入淡出之类的 -->
+          </showsound>
+        </soundcontrol>
+        <indexcontrol>
+          <!--索引包括layerlist、channellist、framelist等多种类型-->
+        </indexcontrol>
+        <animationcontrol>
+          <!--动画控制函数-->
+        </animationcontrol>
+        <otherscontrol>
+          <!--其他控制，如IO和网路-->
+        </otherscontrol>
+      </action>
+</code>
+</body>
+</unigal-script>
+```
+
+## actionlist
+
+
 想了想，希望能把UniGal中的函数单独拿出来算一个章节去讲一讲。
 
 这里只介绍各类action函数，不介绍其他函数
