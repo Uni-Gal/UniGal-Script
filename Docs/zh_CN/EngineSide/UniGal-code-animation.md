@@ -1,4 +1,4 @@
-﻿# UniGal-animation
+# UniGal-animation
 
 UniGal提供一定的基本动画功能
 
@@ -32,6 +32,9 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
       <x></x>
       <y></y>
     </size>
+    <transparency>
+      <!--透明度-->
+    </transparency>
     <position>
       <x></x>
       <y></y>
@@ -42,6 +45,9 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
     <framenum>
       <!--帧数-->
     </framenum>
+    <animation_speed>
+      <!--默认播放速度，不指定就是1.00倍-->
+    </animation_speed>
     <framelist_id>
       <!--这个动画使用的各个帧组成的帧序列，不管是关键帧还是连续帧都需要有一个帧序列-->
     </framelist_id>
@@ -76,6 +82,9 @@ animation定义了两种结构，分别是```<animation>```和```<resource type=
       <!--如果是多帧，那么多帧中的每一帧将具有一个ID，直接引用这一个帧的frameid就对应这一组的第一帧-->
       <!--如果是关键帧，这东西必然是1，根本不用写-->
     </frame_number>
+    <frame_lastingtime>
+      <!--单帧持续时间-->
+    </frame_lastingtime>
     <frame_combinetype>
       <!--horizontal、vertical-->
     </frame_combinetype>
