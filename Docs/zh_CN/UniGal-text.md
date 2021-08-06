@@ -6,10 +6,66 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
 # 关于实验性的多层次结构的text请参考根目录下code部分
 
 ## text的定义
-
+```xml
+<unigal-script>
+    <body>
+    <text>
+      <character>
+        <name>
+          NULL
+        </name>
+        <color>
+          <!--文本颜色-->
+        </color>
+        <ruby>
+          <!--可以加入注音-->
+        </ruby>
+        <style>
+          <size></size>
+          <bold></bold>
+          <italic></italic>
+          <deleted></deleted>
+          <underlined></underlined>
+            <shadow></shadow>
+            <shadowcolor></shadowcolor>
+            <glow></glow>
+            <glowcolor></glow>
+          <!--style中只允许填写bool值，即true与false,除shadowcolor和glowcolor-->
+        </style>
+        <!--Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的-->
+      </character>
+      <content>
+        <part>
+          <!--内容-->
+        </part>
+        <color>
+          <!--文本颜色-->
+        </color>
+        <ruby>
+          <!--可以加入注音-->
+        </ruby>
+        <style>
+          <size></size>
+          <bold></bold>
+          <italic></italic>
+          <deleted></deleted>
+          <underlined></underlined>
+          <shadow></shadow>
+          <shadowcolor></shadowcolor>
+          <glow></glow>
+          <glowcolor></glow>
+          <!--style中只允许填写bool值，即true与false,除shadowcolor和glowcolo,至于颜色用什么格式，回头再定，反正都是RGB系统不会出CMYK和YUV之类变态-->
+          <!--shadow和glow若没指定对应的颜色，则shadowcolor默认纯黑，glowcolor默认纯白-->
+        </style>
+        <!--content是文本相关，其中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的-->
+      </content>
+    </text>
+    </body>
+    </unigal-script>
+```
 ## text的指南
 
-# Renpy
+### Renpy
 
 参见https://www.renpy.cn/doc/quickstart.html#a-simple-game
 
@@ -29,7 +85,7 @@ rpy有一个比较恶心的地方是
 
 **【注意！文本和姓名的颜色目前尚未正式引入概念，下面的```<color></color>```仅仅作为实验性功能，是可选的而非必须的】**
 
-### Simple
+#### Simple
 
 >```python
 >define s = Character('希尔维亚', color="#c8ffc8")
@@ -47,7 +103,7 @@ rpy有一个比较恶心的地方是
 >
 >```
 
-### Translation
+#### Translation
 
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
@@ -152,7 +208,7 @@ rpy有一个比较恶心的地方是
 
 
 
-# AVGPlus
+### AVGPlus
 
 参见https://docs.avg-engine.com/handbook/api/text/
 
@@ -207,7 +263,7 @@ unigal中的颜色格式没有固定的要求。
 
 并且，怎么表示哪个文本或者哪个图片出发的timer，在unigal翻译回去的时候能保证关联关系不变也是问题。可能需要引入“音乐图片文字计时器”这样的控制路线
 
-### Simple-1
+#### Simple-1
 
 >```
 >// 单次对话
@@ -216,7 +272,7 @@ unigal中的颜色格式没有固定的要求。
 >);
 >```
 
-### Translation-1
+#### Translation-1
 
 ```unigal
 <?xml version="1.0" encoding="utf-8"?>
@@ -249,7 +305,7 @@ unigal中的颜色格式没有固定的要求。
 </unigal-script>
 ```
 
-### Simple-2
+#### Simple-2
 
 >```
 >// 使用数组可以在同一次调用里显示多次连续对话
@@ -270,7 +326,7 @@ unigal中的颜色格式没有固定的要求。
 
 /*这数组，难对付啊*/
 
-### Translation-2
+#### Translation-2
 
 
 ```unigal
@@ -376,7 +432,7 @@ unigal中的颜色格式没有固定的要求。
 </unigal-script>
 ```
 
-## 文本变量
+#### 文本变量
 
 暂时没想好怎么处理
 
@@ -395,7 +451,7 @@ text.hide();
 
 另一个是引入{{moustache}}的处理形式，允许加载moustache——但是其他引擎支持吗？目标引擎不支持这个是要塌缩的吧
 
-# Monogatari
+### Monogatari
 
 教程文档https://developers.monogatari.io/documentation/building-blocks/script-and-labels
 
@@ -407,7 +463,7 @@ const person = {
     'age': 24
 };
 ```
-## Simple-2
+#### Simple-2
 
 ```
 monogatari.script ({
@@ -427,19 +483,19 @@ monogatari.script ({
 注意label是属于struct的而不是属于logic的了哦
 logic现在是属于code的树下面的一种函数了哦
 
-## Translation
+#### Translation
 没啥可翻译的，建议直接看AVGPlus的Translation就好了
 
-# GameCreator
+### GameCreator
 
 制作中(其实是开发者偶尔看到了日日夜夜的补丁后发现了剧本格式是JSON，现在还没找到GC的官方教程因此不可能把拆包的内容拿出来作为Simple的)
 教程和iFAction一样，都是只有偏重RPG的教程，AVG的文档都没有，怀疑AVG都是拿这个用js改出来的。
 https://www.gamecreator.com.cn/gc/document/?file=003-GC%E6%9C%AC%E4%BD%93%E6%96%87%E6%A1%A3/0001-%E5%85%B3%E4%BA%8EGC
 
-# iFAction
+### iFAction
 不会有的，纯商业引擎，一般不考虑导出，而且这个iF是有加密素材的，我们也不可能读取出来，读取它等于和制作方过不去。
 
-# Snowing
+### Snowing
 
 Snowing虽然是没有任何官方文档，但是从弦语蝶梦制作组开放出来的代码来看，还是可以琢磨出一些基本的文字特征来的。
 

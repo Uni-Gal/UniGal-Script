@@ -25,6 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{7CD083C1
 		Docs\zh_CN\UniGal-main.md = Docs\zh_CN\UniGal-main.md
 		Docs\zh_CN\UniGal-reference.md = Docs\zh_CN\UniGal-reference.md
 		Docs\zh_CN\UniGal-resource.md = Docs\zh_CN\UniGal-resource.md
+		Docs\zh_CN\UniGal-struct.md = Docs\zh_CN\UniGal-struct.md
 		Docs\zh_CN\UniGal-text.md = Docs\zh_CN\UniGal-text.md
 	EndProjectSection
 EndProject
@@ -68,6 +69,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh_CN", "zh_CN", "{14108DEC
 		Manual\zh_CN\UniGal-resource-BKEngine.md = Manual\zh_CN\UniGal-resource-BKEngine.md
 		Manual\zh_CN\UniGal-resource-Librian.md = Manual\zh_CN\UniGal-resource-Librian.md
 		Manual\zh_CN\UniGal-resource-Nova.md = Manual\zh_CN\UniGal-resource-Nova.md
+		Manual\zh_CN\UniGal-text-BKEngine.md = Manual\zh_CN\UniGal-text-BKEngine.md
+		Manual\zh_CN\UniGal-text-Librian.md = Manual\zh_CN\UniGal-text-Librian.md
+		Manual\zh_CN\UniGal-text-Nova.md = Manual\zh_CN\UniGal-text-Nova.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Experimental", "Experimental", "{04AD316E-B016-4CB4-909D-66BDCD045583}"
