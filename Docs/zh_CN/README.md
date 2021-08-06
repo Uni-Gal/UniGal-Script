@@ -1,20 +1,17 @@
 # UniGal-中文文档
 
 
-## 先看这个[UniGal-main.md](UniGal-main.md)
+<!-- 顺序有待调整，是按照字母顺序还是按照重要性，有待研究。但如果按照重要性，resource要放在text之后了？ -->
+
+## 先看这个
+
+### [UniGal-main.md](UniGal-main.md)
 
 如果要整体了解所有各类已经有的原子操作，相当于以下resource、text、layer、code的总大纲。
 
-## [UniGal-code-resource.md](UniGal-code-resource.md)
+## 引擎相关
 
-想看资源调度和素材管理相关的部分，可以参考本文档。
-
-+ [BKEngine](../../Manual/zh_CN/UniGal-code-resource-BKEngine.md)
-+ [Librian](../../Manual/zh_CN/UniGal-code-resource-Librian.md)
-+ [Nova](../../Manual/zh_CN/UniGal-code-resource-Nova.md)
-+ [AVGPlus](../../Manual/zh_CN/UniGal-code-resource-AVGPlus.md)
-
-## [UniGal-text.md](UniGal-text.md)
+### [UniGal-text.md](UniGal-text.md)
 
 本文档重点强调了各个引擎中的文本控制方式，也是Galgame的核心——文字。
 
@@ -27,34 +24,47 @@
 + [GameCreator](UniGal-text.md#GameCreator)
 + [iFAction](UniGal-text.md#iFAction)
 
-## [UniGal-enforcement_proposal.md](UniGal-enforcement_proposal.md)
+### [UniGal-code-resource.md](UniGal-code-resource.md)
+
+想看资源调度和素材管理相关的部分，可以参考本文档。
+
++ [BKEngine](../../Manual/zh_CN/UniGal-code-resource-BKEngine.md)
++ [Librian](../../Manual/zh_CN/UniGal-code-resource-Librian.md)
++ [Nova](../../Manual/zh_CN/UniGal-code-resource-Nova.md)
++ [AVGPlus](../../Manual/zh_CN/UniGal-code-resource-AVGPlus.md)
+
+### [UniGal-code-animation.md]()
+
+### [UniGal-code-action.md]()
+
+### [UniGal-code-codeblock.md](UniGal-code-codeblock.md)
+想看内嵌代码段，看codeblock。目前尚不够完善，欢迎您来开荒式的定义。
+
+### [UniGal-layer.md](UniGal-layer.md)
+想看图层的实验性选项，看layer。目前尚不够完善，欢迎您来开荒式的定义。
+
+## 引擎无关
+
+### [UniGal-enforcement_proposal.md](StandardSide/UniGal-enforcement_proposal.md)
 UniGal的异常处理提案。用于解决不同引擎间转换不完美的问题和处理错误。
 若要详细了解建议移步[Uni-Gal/UniGal-EnforcementProposal](https://github.com/Uni-Gal/UniGal-EnforcementProposal/)。
 
-## [UniGal-layer.md](UniGal-layer.md)
-想看图层的实验性选项，看layer。目前尚不够完善，欢迎您来开荒式的定义。
+### [UniGal-reference.md](StandardSide/UniGal-reference.md)
+啥都不想看只看还有什么需要拆分操作，看
 
-## [UniGal-code-codeblock.md](UniGal-code-codeblock.md)
-想看内嵌代码段，看codeblock。目前尚不够完善，欢迎您来开荒式的定义。
-
-## [UniGal-reference.md](UniGal-reference.md)
+### [UniGal-filesystem.md](StandardSide/UniGal-filesystem.md)
 啥都不想看只看还有什么需要拆分操作，看reference
 
-animation.md
+### [UniGal-environment.md]()
 
-action.md
-
-environment.md
-
-顺序有待调整，是按照字母顺序还是按照重要性，有待研究。但如果按照重要性，resource要放在text之后了？
-
-## [UniGal-keyword.md]
+### [UniGal-keyword.md]()
 
 关于UniGal中的可互换关键词
 
 此外，有同行提到的关于unigal中的关键词问题，unigal中如果说是描绘一个功能的关键词，您可以看main这个文档和resource、layer、text
 
 但是如果是说保留字关键词的话，我想unigal不存在保留字的问题，因为它的内容一定是被xml的令牌封装起来的。
+
 
 ## UniGal不会涉及的
 
