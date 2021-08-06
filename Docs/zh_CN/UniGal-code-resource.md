@@ -144,7 +144,7 @@ Resource是关于资源的组织和安排的一个功能
 
 要从其他引擎迁移到UniGal，以下是为这些引擎的语法转换指南
 
-+ [AVGPlus](../../Manual/zh_CN/UniGal-resource-AVGPlus.md)
-+ [BKEngine](../../Manual/zh_CN/UniGal-resource-BKEngine.md)
-+ [Librian](../../Manual/zh_CN/UniGal-resource-Librian.md)
-+ [Nova](../../Manual/zh_CN/UniGal-resource-Nova.md)
++ [AVGPlus](../../Manual/zh_CN/UniGal-code-resource-AVGPlus.md)
++ [BKEngine](../../Manual/zh_CN/UniGal-code-resource-BKEngine.md)
++ [Librian](../../Manual/zh_CN/UniGal-code-resource-Librian.md)
++ [Nova](../../Manual/zh_CN/UniGal-code-resource-Nova.md)

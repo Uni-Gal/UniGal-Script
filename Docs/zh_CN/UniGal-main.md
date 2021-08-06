@@ -1,6 +1,124 @@
 # UniGal-main
 
+## 全部功能的树及该部分的草案贡献者
 
+> 因篇幅限制和便于展开，部分细节仅展示至第4层次，未继续展开
+> 部分可点击直接跳转到对应的实现细节
+
+```yaml
+- unigal-script
+    - head [Fa鸽、快乐的老鼠宝宝]
+        - src_engine
+        - dst_engine
+        - src_characterset
+        - dst_characterset
+        - src_language
+        - dst_language
+    - body
+        - text
+            - character [快乐的老鼠宝宝]
+                - name
+                - color
+                - style
+            - content [快乐的老鼠宝宝]
+                - name
+                - color
+                - style
+        - code
+            - action [快乐的老鼠宝宝]
+                - textcontrol
+                - imagecontrol
+                - soundcontrol
+                - animationcontrol
+                - indexcontrol
+                - otherscontrol
+            - animation
+            - resource_image [Fa鸽、快乐的老鼠宝宝]
+            - resource_sound [快乐的老鼠宝宝]
+            - resource_video [快乐的老鼠宝宝]
+            - resource_layer [快乐的老鼠宝宝]
+                - layer_ID
+                - layer_name
+                - layer_opacity
+                - layer_transparent
+                - layer_Image
+                    - img_ID
+            - resource_channel [快乐的老鼠宝宝]
+            - resource_index [快乐的老鼠宝宝]
+                - layerlist
+                - channellist
+                - framelist
+            - resource_live2d [快乐的老鼠宝宝]
+            - resource_spine [快乐的老鼠宝宝]
+            - logic [快乐的老鼠宝宝]
+                - switch
+                - jump
+            - extension [Fa鸽、快乐的老鼠宝宝]
+            - codeblock [Fa鸽、快乐的老鼠宝宝]
+        - struct
+            - label [快乐的老鼠宝宝]
+            - count [快乐的老鼠宝宝]
+```
+
+## 全部功能的代码示范（原型Prototype）
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<unigal-script>
+  <head>
+    <src_engine>
+      krkr/BKE/nova/librian
+      <!--当我们需要从Fountain之类的剧本格式导入的时候，src_engine直接写Fountain之类，dstengine必须是unigal-->
+    </src_engine>
+    <dst_engine>
+      nova/others
+    </dst_engine>
+    <src_characterset>
+      UTF-8
+    </src_characterset>
+    <dst_characterset>
+      UTF-8
+    </dst_characterset>
+    <src_language>
+      zh_CN
+    </src_language>
+    <dst_language>
+      zh_CN
+    </dst_language>
+    <comment>
+      <!---->
+    </comment>
+  </head>
+  <body>
+      <text>
+      <!-- 这部分请参见UniGal-text.md -->
+      </text>
+    <code>
+      <resource>
+        <!-- 这部分请参见UniGal-resource.md -->
+      </resource>
+      <struct>
+        <!-- 这部分请参见UniGal-struct.md -->
+      </struct>
+      <action>
+              <!-- 这部分请参见UniGal-action.md -->
+      </action>
+      <animation>
+                    <!-- 这部分请参见UniGal-animation.md -->
+      </animation>
+      <logic>
+              <!-- 这部分请参见UniGal-logic.md -->
+      </logic>
+      <extension>
+        <!--暂未设定-->
+      </extension>
+      <codeblock>
+        <!--代码段-->
+      </codeblock>
+    </code>
+  </body>
+</unigal-script>
+```
 
 ## UniGal的全部原子操作的列表
 
@@ -62,158 +180,3 @@ jump和switch等跳转逻辑属于函数，归为code的logic所有
 （当然简单的单线的应该也不用吧？没必要把人引入到自己的生态圈中，那样强行不好）
 
 但我们可以保证把每个label都拆分为一个独立的脚本文件，因此一个文件只能在开头有label就好了)))
-
-## 全部功能的树
-(为了人好看所以用了这个玩意，但是突然发现这可能将引导本项目最终全部转投这种格式并且允许人看懂，然后下一步怕不是就开始转投py写解释器了（）)
-```yaml
-- unigal-script
-    - head
-        - src\dst 等 一堆metadata
-    - body
-        - text
-            - character
-                - name
-                - color
-                - style
-            - content
-                - name
-                - color
-                - style
-        - code
-            - action
-                - textcontrol
-                - showimage
-                - showsound
-            - animation
-            - resource_image
-            - resource_sound
-            - resource_layer
-                - layer_ID
-                - layer_name
-                - layer_opacity
-                - layer_transparent
-                - layer_Image
-                    - img_ID
-            - resource_channel
-            - resource_index
-                - layerlist
-                - channellist
-                - framelist
-            - resource_live2d
-            - resource_spine
-            - logic
-                - switch
-                - jump
-            - extension
-            - codeblock
-        - struct
-            - label
-            - count
-```
-
-## 全部功能的代码示范（原型Prototype）
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<unigal-script>
-  <head>
-    <src>
-      krkr/BKE/nova/librian
-    </src>
-    <dst>
-      nova/others
-    </dst>
-    <src_engine>
-      krkr/BKE/nova/librian
-    </src_engine>
-    <dst_engine>
-      nova/others
-    </dst_engine>
-    <src_characterset>
-      UTF-8
-    </src_characterset>
-    <dst_characterset>
-      UTF-8
-    </dst_characterset>
-    <src_language>
-      zh_CN
-    </src_language>
-    <dst_language>
-      zh_CN
-    </dst_language>
-    <comment>
-      <!---->
-    </comment>
-  </head>
-  <body>
-      <text>
-      <!-- 这部分请参见UniGal-text.md -->
-      </text>
-    <code>
-      <resource>
-        <!-- 这部分请参见UniGal-resource.md -->
-      </resource>
-      <struct>
-        <!-- 这部分请参见UniGal-struct.md -->
-      </struct>
-      <action>
-              <!-- 这部分请参见UniGal-action.md -->
-      </action>
-      <animation>
-                    <!-- 这部分请参见UniGal-animation.md -->
-      </animation>
-      <logic>
-              <!-- 这部分请参见UniGal-logic.md -->
-      </logic>
-      <extension>
-        <!--暂未设定-->
-      </extension>
-      <codeblock>
-        <!--代码段-->
-      </codeblock>
-    </code>
-  </body>
-</unigal-script>
-```
-
-## 草案提出者
-
-仅在第4级节点上展示该节点及其各层次子节点的草案提出者
-
-```yaml
-- unigal-script
-    - head
-        - src\dst 等 一堆metadata
-    - body
-        - text
-            - character[快乐的老鼠宝宝]
-                - name
-                - color
-                - style
-            - content[快乐的老鼠宝宝]
-                - name
-                - color
-                - style
-        - code
-            - action[快乐的老鼠宝宝]
-                - textcontrol
-                - imagecontrol
-                - soundcontrol
-                - animationcontrol
-                - indexcontrol
-                - otherscontrol
-            - resource.image[Fa鸽、快乐的老鼠宝宝]
-            - resource.sound[快乐的老鼠宝宝]
-            - resource.layer[快乐的老鼠宝宝]
-            - resource.channel[快乐的老鼠宝宝]
-            - resource.live2d[快乐的老鼠宝宝]
-            - resource.spine[快乐的老鼠宝宝]
-            - logic[快乐的老鼠宝宝]
-                - switch
-                - jump
-            - extension
-            - codeblock[Fa鸽、快乐的老鼠宝宝]
-        - struct
-            - label[快乐的老鼠宝宝]
-            - count[快乐的老鼠宝宝]
-```
