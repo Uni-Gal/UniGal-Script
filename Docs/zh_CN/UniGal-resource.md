@@ -139,3 +139,12 @@ Resource是关于资源的组织和安排的一个功能
     </body>
 </unigal-script>
 ```
+
+## resource指南
+
+要从其他引擎迁移到UniGal，以下是为这些引擎的语法转换指南
+
++ [AVGPlus](../../Manual/zh_CN/UniGal-resource-AVGPlus.md)
++ [BKEngine](../../Manual/zh_CN/UniGal-resource-BKEngine.md)
++ [Librian](../../Manual/zh_CN/UniGal-resource-Librian.md)
++ [Nova](../../Manual/zh_CN/UniGal-resource-Nova.md)
