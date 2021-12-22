@@ -4,6 +4,10 @@ Offer a visuable way to switch and show the different possibility of a Galgame
 
 -----
 
+再次补充，Naninovel真的很棒，Uni-Gal将考虑适配
+
+-----
+
 关于一些新的可能存在的进化演变方向的探讨
 
 我们可能将不仅面向Galgame的剧本，更试着引入一些支持从通用编剧领域进入的作者。按照饱受诟病的“上位艺术”理论的原则，Galgame在文学和戏曲领域分别都有一个“上位艺术”，即**小说**和**戏剧（话剧&影视剧）**。随着Galgame编剧能力的壮大，这两个相关领域的编剧试水Galgame编剧，也是存在可能的。
