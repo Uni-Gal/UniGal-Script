@@ -476,39 +476,4 @@ https://www.gamecreator.com.cn/gc/document/?file=003-GC%E6%9C%AC%E4%BD%93%E6%96%
 
 ### Snowing
 
-Snowing虽然是没有任何官方文档，但是从弦语蝶梦制作组开放出来的代码来看，还是可以琢磨出一些基本的文字特征来的。
-
-（若贵方明确不希望任何转换和支持，请按照首页README的联系方式与我们书面联系，保证给予橙光级待遇）
-
-推测可能存在的和Text相关的函数有
-
-[bool Yukimi::AVGPlayer::doElement(const Yukimi::Script::Element& e)](https://github.com/Strrationalism/Snowing/blob/master/Yukimi/AVGPlayer.cpp#L9)
-
-[void Yukimi::AVGPlayer::runScriptContinuation()](https://github.com/Strrationalism/Snowing/blob/master/Yukimi/AVGPlayer.cpp#L53)
-
-由第一个函数可知有如下五种数据类型
-
-+ TextElement
-+ FontStyleElement
-+ FontStylePopElement
-+ CommandElement
-+ CharacterNameElement
-
-这五种数据类型应该都是用来显示的。根据类型名来看，除CommandElement需要在code段内进行定义外，其他的均可在text段中借助unigal已有的tag来标记。
-
-对于Snowing中Command的细节暂未知晓。
-
-由第二个函数可知有如下几个关键词
-
-+ SpeakLine
-+ nextLine
-+ waitingForCommand
-+ currentLine 
-+ fontStyleStack
-
-其中，fontStyleStack应为字体特性相关的堆栈，或许snowing的字体特效做的不错，首先还是要保有一定期待的。
-
-nextLine应该是一个类似指针一样的东西，或者是一个flag标记。如果是指针，那么XML顺序读取即可。如果是标记，则可以认为是action中的textcontrol函数。currentLine、SpeakLine同理。
-
-waitingForCommand应该是一个函数，可以认为是一个action，并且这个action会调用unigal中timer相关内容。该部分正在加紧定义。
-
+弦语蝶梦系引擎造的太快，暂不考虑，有事请联系[@Seng-Jik](https://gist.github.com/Seng-Jik)老师
