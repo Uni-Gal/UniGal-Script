@@ -37,12 +37,14 @@ librian中的一个文本是直接结束的
         </comment>
       </character>
       <content>
-        <part>
+      <page>
+        <para>
           舟舟！來得正是時候！
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
+        </page>
       </content>
     </text>
   </body>

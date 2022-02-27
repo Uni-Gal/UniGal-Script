@@ -58,7 +58,7 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
           <!--style中只允许填写bool值，即true与false,除shadowcolor和glowcolo,至于颜色用什么格式，回头再定，反正都是RGB系统不会出CMYK和YUV之类变态-->
           <!--shadow和glow若没指定对应的颜色，则shadowcolor默认纯黑，glowcolor默认纯白-->
         </style>
-        <!--content是文本相关,可以叠若干个page。每个page中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的。content允许多个page连写以压缩空间和方便后期处理。-->
+        <!--content是文本相关,可以叠若干个page。每个page中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的。content允许多个page连写以压缩空间和方便后期处理。(仅当character完全相同的时候)-->
         </page>
         <page></page>
         <page></page>
@@ -362,86 +362,51 @@ unigal中的颜色格式没有固定的要求。
         </comment>
       </character>
       <content>
-        <part>
+      <page>
+        <para>
           为什么会变成这样呢……第一次有了喜欢的人。有了能做一辈子朋友的人。
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
-      </content>
-    </text>
-    <text>
-      <character>
-	<name>
-          愤怒的泡面
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
+        </page>
+      <page>
         <part>
           两件快乐事情重合在一起。而这两份快乐，又给我带来更多的快乐。
         </part>
         <comment>
           //文本内容
         </comment>
-      </content>
-    </text>
-    <text>
-      <character>
-	<name>
-          愤怒的泡面
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
+      </page>
+<page>
+        <para>
           得到的，本该是像梦境一般幸福的时间……但是，为什么，会变成这样呢……~
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
-      </content>
-    </text>
-    <text>
-      <character>
-	<name>
-          愤怒的泡面
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
+      </page>
+<page>
+        <para>
           只要给 options 对象定义 name 字段，就会在对话中显示名字了。
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
-      </content>
-    </text>
-    <text>
-      <character>
-	<name>
-          愤怒的泡面
-        </name>
-        <comment>
-          //姓名
-        </comment>
-      </character>
-      <content>
-        <part>
+      </page>
+<page>
+        <para>
           多次连续对话会使用同一个名字。
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
+      </page>
       </content>
+      
     </text>
+
+   
   </body>
 </unigal-script>
 ```
