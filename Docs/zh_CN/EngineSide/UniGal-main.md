@@ -21,9 +21,10 @@
                 - color
                 - style
             - content [快乐的老鼠宝宝]
-                - name
-                - color
-                - style
+                - page [Fa鸽]
+                  - para [Fa鸽]
+                  - color
+                  - style
         - code
             - action [快乐的老鼠宝宝]
                 - textcontrol
