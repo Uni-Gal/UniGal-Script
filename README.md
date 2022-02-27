@@ -2,9 +2,7 @@
 
 Offer a visuable way to switch and show the different possibility of a Galgame
 
------
-
-再次补充，Naninovel真的很棒，Uni-Gal将考虑适配
+Note: UniGal may change to a BDFL language design mode. (Read in [中文](https://zh.wikipedia.org/wiki/%E7%BB%88%E8%BA%AB%E4%BB%81%E6%85%88%E7%8B%AC%E8%A3%81%E8%80%85) or [English](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life))
 
 -----
 
