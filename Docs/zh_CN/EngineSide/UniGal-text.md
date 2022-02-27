@@ -35,9 +35,10 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
         <!--Character是姓名相关，其中name是必须有的，而color和ruby是非必须的。此外，bold/italic/deleted/underlined也是非必须的-->
       </character>
       <content>
-        <part>
+       <page>
+        <para>
           <!--内容-->
-        </part>
+        </para>
         <color>
           <!--文本颜色-->
         </color>
@@ -57,7 +58,10 @@ text宏里面只封装纯粹与文本和剧本执行相关的内容
           <!--style中只允许填写bool值，即true与false,除shadowcolor和glowcolo,至于颜色用什么格式，回头再定，反正都是RGB系统不会出CMYK和YUV之类变态-->
           <!--shadow和glow若没指定对应的颜色，则shadowcolor默认纯黑，glowcolor默认纯白-->
         </style>
-        <!--content是文本相关，其中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的-->
+        <!--content是文本相关,可以叠若干个page。每个page中part是必须有的（当然也可以没有，但是需要留一个全角空格，半角的不行，parser不当字），而color和ruby是非必须的。content允许多个page连写以压缩空间和方便后期处理。-->
+        </page>
+        <page></page>
+        <page></page>
       </content>
     </text>
     </body>
