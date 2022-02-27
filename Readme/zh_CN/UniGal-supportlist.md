@@ -8,6 +8,7 @@
 | Krkr     | Krkr                 | TJS          | 已停止维护   |                          |              |                | √（开发中）    |              |
 | 面包工坊 | [BKEngine](https://bke.bakery.moe/index.html) | bkspr        | 已停止维护   |                          |              | √（开发中）    |                |              |
 | Unity    | [Unity-Nova](https://github.com/Lunatic-Works/Nova) | Lua/C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| Unity    | [Unity-Naninovel](https://naninovel.com/) | JS          | **活跃**     | 做梦       | 做梦  | 做梦    | √（开发中）    |              |
 | Python   | [Librian](http://librian.net/) | liber        | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
 | js       | [AVGPlus](https://avg-engine.com/) | json         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
 | js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              |
