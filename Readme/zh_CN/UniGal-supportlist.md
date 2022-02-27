@@ -29,17 +29,15 @@
 
 ## 目前各类语言的编辑器内着色器详表
 
-BKE  
+| 引擎 | 着色器网站 | 支持引擎 | 仓库 |
+|-|-|-|-|
+| BKEngine | [BKE官方教程](http://docs.bakery.moe/faq) | Sublime | [AllanZyne/BKS4Sublime](https://github.com/AllanZyne/BKS4Sublime) |
+| BKEngine | - | VSCode | [BKEngine/vscode-bkscr](https://github.com/BKEngine/vscode-bkscr) |
+| Librian | - | Sublime | [RimoChan/Librian](https://github.com/RimoChan/Librian/tree/master/librian/librian%E6%9C%AC%E9%AB%94/%E5%9C%9F%E7%89%B9%E7%94%A2) |
+| Unity-Nova | - | VSCode | [zhouhaoyu/vscode-nova-script](https://github.com/zhouhaoyu/vscode-nova-script) |
+| Naninovel | [Guide](https://naninovel.com/guide/ide-extension) | VSCode | [Naninovel/VSCode](https://github.com/Naninovel/VSCode) |
 
-在[官方教程](http://docs.bakery.moe/faq)中提及，在[Github](https://github.com/AllanZyne/BKS4Sublime)上有公开   由AllenZyne开发，无人维护
-
-librian 
-
-在github上有[librian着色器](https://github.com/RimoChan/Librian/tree/master/librian/librian%E6%9C%AC%E9%AB%94/%E5%9C%9F%E7%89%B9%E7%94%A2) ，由Rimochan开发，由chenmaster05维护
-
-Nova 
-
-官方提供了[Nova基于VSCode的着色插件](https://github.com/zhouhaoyu/vscode-nova-script)，并据开发者称，其语法与lua有相似之处，在着色方案上可以参考。Nova开发团队较活跃，维护较为积极。
+注意，以上部分语法着色器开发者维护较缓慢，可能不适合非开发者使用。
 
 ## 关于请求各位引擎开发者能够提供的帮助的说明
 
