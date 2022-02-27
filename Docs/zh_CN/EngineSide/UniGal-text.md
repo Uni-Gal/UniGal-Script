@@ -138,12 +138,14 @@ rpy有一个比较恶心的地方是
         </comment>
       </character>
       <content>
-        <part>
+      <page>
+        <para>
           不久之后，我们就抵达了牧场，也是我们俩人出生的地方
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
+        </page>
       </content>
     </text>
     <text>
@@ -156,12 +158,14 @@ rpy有一个比较恶心的地方是
         </comment>
       </character>
       <content>
-        <part>
+      <page>
+        <para>
           我就是在这样的风景环绕之中成长起来的。这里的秋天格外秀美。
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
+        </page>
       </content>
     </text>
     <text>
@@ -177,12 +181,14 @@ rpy有一个比较恶心的地方是
         </comment>
       </character>
       <content>
-        <part>
+      <page>
+        <para>
           童年时，我们经常在牧场里玩耍，所以这里满满充斥着回忆。
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
+        </page>
       </content>
     </text>
     <text>
@@ -198,12 +204,14 @@ rpy有一个比较恶心的地方是
         </comment>
       </character>
       <content>
-        <part>
+      <page>
+        <para>
           嗨……唔……
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
+        </page>
       </content>
     </text>
   </body>
@@ -297,12 +305,14 @@ unigal中的颜色格式没有固定的要求。
         </comment>
       </character>
       <content>
-        <part>
+      <page>
+        <para>
           是我，是我先，明明都是我先来的……接吻也好，拥抱也好，还是喜欢上那家伙也好……
-        </part>
+        </para>
         <comment>
           //文本内容
         </comment>
+        <page>
       </content>
     </text>
   </body>
