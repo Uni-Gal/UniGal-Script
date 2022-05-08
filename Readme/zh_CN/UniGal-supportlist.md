@@ -1,10 +1,14 @@
 # UniGal-supportlist
 
+## 目前的通用脚本语言
+
+* [UniGal系](https://github.com/Uni-Gal/)
+* [PrepPipe系](https://github.com/PrepPipe/)
+
 ## UniGal对各引擎的支持详表
 
 | 引擎代系 | 引擎名称             | 引擎主流语言 | 存活状态     | 引擎原生支持             | 双向导入导出 | 可从Unigal导入 | 可导出为Unigal | 暂无支持计划 |
 | -------- | -------------------- | ------------ | ------------ | ------------------------ | ------------ | -------------- | -------------- | ------------ |
-| UniGal   | UniGal-Prototype     | C++          | 原型         | √（开发中）              |              |                |                |              |
 | Krkr     | Krkr                 | TJS          | 已停止维护   |                          |              |                | √（开发中）    |              |
 | 面包工坊 | [BKEngine](https://bke.bakery.moe/index.html) | bkspr        | 已停止维护   |                          |              | √（开发中）    |                |              |
 | Unity    | [Unity-Nova](https://github.com/Lunatic-Works/Nova) | Lua/C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
@@ -12,6 +16,7 @@
 | Python   | [Librian](http://librian.net/) | liber        | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
 | js       | [AVGPlus](https://avg-engine.com/) | json         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              |
 | js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              |
+| js       | [WebGal](https://github.com/MakinoharaShoko/WebGAL)       | 未知         | 未知         |                          |              |                | √（开发中）    |              |
 | js       | Renjs                | javascript   | 未知         |                          |              |                | √（开发中）    |              |
 | Python   | [Renpy](https://www.renpy.org/) | Python       | **活跃**     |                          |              |                | √（开发中）    |              |
 | Strrationalism | [YukimiScript](https://github.com/Strrationalism/YukimiScript)              | C++          | 不能理解它到底有多少是属于非Galgame的，处于观察中 |                          |              |                |  √（艰难开发中）              |           |
@@ -26,6 +31,7 @@
 | 橙光     | iFAction             | 可视化       | 活跃         |                          |              |                |                | √            |
 | 橙光     | EvkWorld幻境         | 可视化       | 未知         |                          |              |                |                | √            |
 
+~~另有TUNA正在研发的Gal引擎，可见[“开源软件供应链点亮计划——暑期2022”项目提案](https://tuna.moe/blog/2022/ospp-summer-2022/)~~
 
 ## 目前各类语言的编辑器内着色器详表
 
