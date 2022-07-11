@@ -7,18 +7,20 @@
 
 ## UniGal对各引擎的支持详表
 
+大部分并未收录在[github/linguist](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)里
+
 | 引擎代系 | 引擎名称             | 引擎主流语言 | 存活状态     | 引擎原生支持             | 双向导入导出 | 可从Unigal导入 | 可导出为Unigal | 暂无支持计划 | 是否自由 |
 | -------- | -------------------- | ------------ | ------------ | ------------------------ | ------------ | -------------- | -------------- | ------------ | -- |
 | Krkr     | Krkr                 | TJS          | 已停止维护   |                          |              |                | √（开发中）    |              | |
-| 面包工坊 | [BKEngine](https://bke.bakery.moe/index.html) | bkspr        | 已停止维护   |                          |              | √（开发中）    |                |              | | |
-| Unity    | [Unity-Nova](https://github.com/Lunatic-Works/Nova) | Lua/C#           | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
-| Unity    | [Unity-Naninovel](https://naninovel.com/) | JS          | **活跃**     | 做梦       | 做梦  | 做梦    | √（开发中）    |              | |
+| 面包工坊 | [BKEngine](https://bke.bakery.moe/index.html) | bkspr (.bkspr)       | 已停止维护   |                          |              | √（开发中）    |                |              | | |
+| Unity    | [Unity-Nova](https://github.com/Lunatic-Works/Nova)([语法](https://github.com/Lunatic-Works/Nova/wiki/NovaScript)) | Lua/C# (.txt)          | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              |
+| Unity    | [Unity-Naninovel](https://naninovel.com/)([语法](https://naninovel.com/guide/naninovel-scripts.html)) | JS (.nani)         | **活跃**     | 做梦       | 做梦  | 做梦    | √（开发中）    |              | |
 | Python   | [Librian](http://librian.net/) | liber        | **活跃**     | （正在说服开发者）       | √（开发中）  | √（开发中）    | √（开发中）    |              | |
 | js       | [AVGPlus](https://avg-engine.com/) | json         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              | |
 | js       | AVG.js               | json         | 未知         |                          |              |                | √（开发中）    |              | |
 | js       | [WebGal](https://github.com/MakinoharaShoko/WebGAL)       | 未知         | 未知         |                          |              |                | √（开发中）    |              | |
 | js       | Renjs                | javascript   | 未知         |                          |              |                | √（开发中）    |              | |
-| Python   | [Renpy](https://www.renpy.org/) | Python       | **活跃**     |                          |              |                | √（开发中）    |              | |
+| Python   | [Renpy](https://www.renpy.org/) | Python (.rpy)      | **活跃**     |                          |              |                | √（开发中）    |              | |
 | Strrationalism | [YukimiScript](https://github.com/Strrationalism/YukimiScript)              | C++          | 不能理解它到底有多少是属于非Galgame的，处于观察中 |                          |              |                |  √（艰难开发中）              |           | |
 | json     | [Monogatari](https://monogatari.io) | json         | **活跃**     |                          |              |                | √（开发中）    |              | |
 | json     | GameCreator          | 未知         | **活跃**     | （考虑要不要联系开发者） |              |                | √（开发中）    |              | |
