@@ -14,7 +14,7 @@ Note: UniGal may change to a BDFL language design mode. (Read in [中文](https:
 
 ~~不过，似乎本语法也不是什么好懂的东西啊（笑）~~
 
-若要直接查看语法标准，请移步[语法标准](./Docs/zh_CN/UniGal-text.md)
+若要直接查看语法标准，请移步[语法标准](./Docs/zh_CN/EngineSide/UniGal-text.md)
 
 UniGal是一个完整的项目，分为标准，实现，提案三部分。
 
