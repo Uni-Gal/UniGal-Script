@@ -11,18 +11,18 @@
 
 ## 引擎相关
 
-### [UniGal-text.md](UniGal-text.md)
+### [UniGal-text.md](EngineSide/UniGal-text.md)
 
 本文档重点强调了各个引擎中的文本控制方式，也是Galgame的核心——文字。
 
 + [BKEngine](../../Manual/zh_CN/UniGal-text-BKEngine.md)
 + [Nova](../../Manual/zh_CN/UniGal-text-Nova.md)
 + [Librian](../../Manual/zh_CN/UniGal-text-Librian.md)
-+ [Renpy](UniGal-text.md#Renpy)
-+ [AVGPlus](UniGal-text.md#AVGPlus)
-+ [Monogatari](UniGal-text.md#Monogatari)
-+ [GameCreator](UniGal-text.md#GameCreator)
-+ [iFAction](UniGal-text.md#iFAction)
++ [Renpy](EngineSide/UniGal-text.md#Renpy)
++ [AVGPlus](EngineSide/UniGal-text.md#AVGPlus)
++ [Monogatari](EngineSide/UniGal-text.md#Monogatari)
++ [GameCreator](EngineSide/UniGal-text.md#GameCreator)
++ [iFAction](EngineSide/UniGal-text.md#iFAction)
 
 ### [UniGal-code-resource.md](UniGal-code-resource.md)
 
