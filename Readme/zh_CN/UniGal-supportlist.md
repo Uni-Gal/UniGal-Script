@@ -32,6 +32,7 @@
 | 橙光     | 橙光文字游戏制作工具 | 可视化       | **生不如死** |                          |              |                |                | √            | |
 | 橙光     | iFAction             | 可视化       | 活跃         |                          |              |                |                | √            | |
 | 橙光     | EvkWorld幻境         | 可视化       | 未知         |                          |              |                |                | √            | |
+| js       | [Ink](https://www.inklestudios.com/ink/) | YAML | 活跃 | | | | | 语法简单适合支持| MIT|
 
 ~~另有TUNA正在研发的Gal引擎，可见[“开源软件供应链点亮计划——暑期2022”项目提案](https://tuna.moe/blog/2022/ospp-summer-2022/)~~
 
