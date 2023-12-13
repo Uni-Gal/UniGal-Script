@@ -9,6 +9,8 @@
 
 大部分并未收录在[github/linguist](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)里
 
+(这个表格可以考虑抽出来了)
+
 | 引擎代系 | 引擎名称             | 引擎主流语言 | 存活状态     | 引擎原生支持             | 双向导入导出 | 可从Unigal导入 | 可导出为Unigal | 暂无支持计划 | 是否自由 |
 | -------- | -------------------- | ------------ | ------------ | ------------------------ | ------------ | -------------- | -------------- | ------------ | -- |
 | Krkr     | Krkr                 | TJS          | 已停止维护   |                          |              |                | √（开发中）    |              | |
@@ -37,6 +39,8 @@
 https://github.com/soryu-ryouji/VNFrameworkCore
 
 ~~另有TUNA正在研发的Gal引擎，可见[“开源软件供应链点亮计划——暑期2022”项目提案](https://tuna.moe/blog/2022/ospp-summer-2022/)~~
+
+另有YeLikesss根据其破解和解包经验完善的引擎与代表作信息，可见 https://github.com/YeLikesss/CNGALTools 。请注意，我们不鼓励破解和反编译等逆向工程。
 
 ## 目前各类语言的编辑器内着色器详表
 
