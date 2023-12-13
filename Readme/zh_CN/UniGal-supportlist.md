@@ -40,7 +40,10 @@ https://github.com/soryu-ryouji/VNFrameworkCore
 
 ~~另有TUNA正在研发的Gal引擎，可见[“开源软件供应链点亮计划——暑期2022”项目提案](https://tuna.moe/blog/2022/ospp-summer-2022/)~~
 
-另有YeLikesss根据其破解和解包经验完善的引擎与代表作信息，可见 https://github.com/YeLikesss/CNGALTools 。请注意，我们不鼓励破解和反编译等逆向工程。
+另可参考如下网友根据其破解和解包经验完善的引擎与代表作信息。请注意，我们不鼓励破解和反编译等逆向工程。
+
++ YeLikesss的 https://github.com/YeLikesss/CNGALTools 
++ 2439905184的 https://github.com/2439905184/Galgame-Engine-Collect#%E6%AD%A3%E9%A2%98
 
 ## 目前各类语言的编辑器内着色器详表
 
