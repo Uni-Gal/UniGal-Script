@@ -92,6 +92,11 @@ http://fountain.io/
 https://sspai.com/post/40467
 ```
 
+## 目前的通用脚本语言还有？
+
+* [UniGal系](https://github.com/Uni-Gal/)
+* [PrepPipe系](https://github.com/PrepPipe/)
+
 ## 联系我们
 
 遥远的未来，我们也将随着自己标准的制定，不断推出更完善的官方编译器（complier）（Alang2Blang）和官方解释器（Unigal runtime）。但是我们觉得，我们自己做出来的解释器，无论如何都跟不上标准的不断变大和制定。并且我们本意不是做一个游戏引擎，因此不要奢求我们能做出多么好的解释器，我们只是想定义一个标准
